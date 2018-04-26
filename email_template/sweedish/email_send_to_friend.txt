@@ -1,0 +1,14 @@
+Hello,
+
+It's me, %%mail_from%% sending you an e-mail from %%site_url%%.
+
+I saw this great video %%video_name%% and I thought you might like to watch it.
+
+Here's a direct link to it: %%video_name%%
+
+%%site_url%%/watch.php?vid=%%video_id%%
+
+See you on %%site_url%%
+
+Enjoy,
+%%mail_from%%

@@ -1,0 +1,17 @@
+Thanks for registering!
+
+You're now a member of %%mail_sitename%%.
+
+Here are your login details. Please keep them in a safe place:
+
+Username: %%mail_username%%
+Password: %%mail_password%%
+The administrator of this site has requested all new accounts to be activated
+by the users who created them thus your account is currently inactive.
+To activate your account, please visit this link:
+
+%%mail_activation_link%% 
+
+Thanks,
+%%mail_sitename%% Team
+%%mail_url%%

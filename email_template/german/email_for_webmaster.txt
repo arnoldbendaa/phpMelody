@@ -1,0 +1,11 @@
+Nachricht von %%post_name%%
+
+
+%%msg%%
+
+
+
+Email: %%post_email%%
+Bedeutung: %%importance%%
+Thema: %%topic%%
+IP Adresse: %%ip%%

@@ -1,0 +1,12 @@
+Thanks for registering!
+
+Your account has been created and it is awaiting approval.
+
+Here are your login details. Please keep them in a safe place:
+
+Username: %%mail_username%%
+Password: %%mail_password%%
+
+Thanks,
+%%mail_sitename%% Team
+%%mail_url%%

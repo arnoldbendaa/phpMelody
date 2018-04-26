@@ -1,0 +1,135 @@
+
+
+
+/*COLORME - Earhty */
+#adminSecondary,#adminSecondary ul,.wide-header{background-color:#59524c;border-color:#59524c}
+.wide-header h1 a{color:#FFF}
+#admin-pane{color:#FFF;background-color:transparent}
+#admin-pane:hover{background-color:#46403c}
+#upload-pane{background-color:#7daa03;color:#FFF}
+#upload-pane a{color:#FFF}
+#upload-pane a:active{background-color:#7daa03}
+#upload-pane:hover{text-shadow:none;background-color:#7daa03}
+ul#sideNav li.pm-menu a{color:#ccc}
+ul#sideNav li.active,ul#sideNav li:hover{color:#FFF;background-color:#c7a589}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #46403c;border-left:3px solid #46403c}
+ul#sideNav ul li:hover,ul#sideNav ul.pm-sub-menu li.active,ul#sideNav ul.pm-sub-menu li.active:hover{border-left:3px solid #46403c;background-color:#46403c}
+ul#sideNav li.pm-menu:hover>a,ul#sideNav li.pm-menu.active>a,ul#sideNav li.pm-menu a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu li a{color:#ccc}
+ul#sideNav ul.pm-sub-menu li a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:transparent}
+ul.pm-sub-menu-side li,ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:#46403c !important;border-color:#46403c !important;border-top-color:#46403c;border-bottom-color:#46403c}
+.pm-sub-menu-side:after{border-right-color:#46403c}
+ul#sideNav ul.pm-sub-menu li:hover a,ul#sideNav ul.pm-sub-menu li.active a,ul#sideNav ul.pm-sub-menu li.active:hover a{color:#FFF}
+ul#sideNav .pm-submenu-count,ul#sideNav .pm-menu-count{border-color:#dd823b;background-color:#dd823b;background-image:none;color:#FFF}
+
+/*COLORME - Midnight Blues*/
+.wide-header{background-color:#363b3f;border-color:#363b3f}
+#adminSecondary,#adminSecondary ul{background-color:#363b3f}
+.wide-header h1 a{color:#FFF}
+#admin-pane{color:#FFF;background-color:transparent}
+#admin-pane:hover{background-color:#11171c}
+#upload-pane{background-color:#e76049}
+#upload-pane a{color:#FFF}
+#upload-pane a:active{background-color:#e76049}
+#upload-pane:hover{text-shadow:none;background-color:#e76049}
+ul#sideNav li.active,ul#sideNav li:hover{color:#FFF;background-color:#cc4d4d}
+ul#sideNav ul li:hover,ul#sideNav ul.pm-sub-menu li.active,ul#sideNav ul.pm-sub-menu li.active:hover{border-left:3px solid #e76049;background-color:#26292c;color:#e76049}
+ul#sideNav li.pm-menu:hover>a,ul#sideNav li.pm-menu.active>a,ul#sideNav li.pm-menu a:hover{color:#FFF}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #26292c;border-left:3px solid #26292c}
+ul#sideNav ul.pm-sub-menu li a{color:#FFF}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:transparent}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{border-top:4px solid #000;border-bottom:4px solid #000}
+ul.pm-sub-menu-side li{background-color:#000 !important;border-color:#000 !important}
+.pm-sub-menu-side:after{border-right-color:#000}
+ul#sideNav ul.pm-sub-menu li:hover a,ul#sideNav ul.pm-sub-menu li.active a,ul#sideNav ul.pm-sub-menu li.active:hover a{color:#FFF}
+ul#sideNav .pm-menu-count{border-color:#e76049;background-color:#e76049;background-image:none}
+
+/*COLORME - Sky / At the beach*/
+#adminSecondary,#adminSecondary ul,.wide-header{background-color:#5e8ec9;border-color:#5e8ec9}
+.wide-header h1 a{color:#FFF}
+#admin-pane{color:#FFF;background-color:transparent}
+#admin-pane:hover{background-color:#223449}
+#upload-pane{background-color:#7daa03;color:#FFF}
+#upload-pane a{color:#FFF}
+#upload-pane a:active{background-color:#7daa03}
+#upload-pane:hover{text-shadow:none;background-color:#7daa03}
+ul#sideNav li.pm-menu a{color:#ddd}
+ul#sideNav li.active,ul#sideNav li:hover{color:#FFF;background-color:#466a96}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #384049;border-left:3px solid #384049}
+ul#sideNav ul li:hover,ul#sideNav ul.pm-sub-menu li.active,ul#sideNav ul.pm-sub-menu li.active:hover{border-left:3px solid #384049;background-color:#384049}
+ul#sideNav li.pm-menu:hover>a,ul#sideNav li.pm-menu.active>a,ul#sideNav li.pm-menu a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu li a{color:#a1b7d2}
+ul#sideNav ul.pm-sub-menu li a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:transparent}
+ul.pm-sub-menu-side li,ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:#223449 !important;border-color:#223449 !important;border-top-color:#223449;border-bottom-color:#223449}
+.pm-sub-menu-side:after{border-right-color:#223449}
+ul#sideNav ul.pm-sub-menu li:hover a,ul#sideNav ul.pm-sub-menu li.active a,ul#sideNav ul.pm-sub-menu li.active:hover a{color:#FFF}
+ul#sideNav .pm-submenu-count,ul#sideNav .pm-menu-count{border-color:#ffdf6b;background-color:#ffdf6b;background-image:none;color:#000}
+
+/*COLORME - red mess*/
+#adminSecondary,#adminSecondary ul,.wide-header{background-color:#cb484c;border-color:#cb484c}
+.wide-header h1 a{color:#FFF}
+#admin-pane{color:#FFF;background-color:transparent}
+#admin-pane:hover{background-color:#dd823b}
+#upload-pane{background-color:#111;color:#FFF}
+#upload-pane a{color:#FFF}
+#upload-pane a:active{background-color:#439c24}
+#upload-pane:hover{text-shadow:none;background-color:#439c24}
+ul#sideNav li.pm-menu a{color:#ddd}
+ul#sideNav li.active,ul#sideNav li:hover{color:#FFF;background-color:#dd823b}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #ba3539;border-left:3px solid #ba3539}
+ul#sideNav ul li:hover,ul#sideNav ul.pm-sub-menu li.active,ul#sideNav ul.pm-sub-menu li.active:hover{border-left:3px solid #46403c;background-color:#46403c}
+ul#sideNav li.pm-menu:hover>a,ul#sideNav li.pm-menu.active>a,ul#sideNav li.pm-menu a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu li a{color:#ccc}
+ul#sideNav ul.pm-sub-menu li a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:transparent}
+ul.pm-sub-menu-side li,ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:#ba3539 !important;border-color:#ba3539 !important;border-top-color:#ba3539;border-bottom-color:#ba3539}
+.pm-sub-menu-side:after{border-right-color:#ba3539}
+ul#sideNav ul.pm-sub-menu li:hover a,ul#sideNav ul.pm-sub-menu li.active a,ul#sideNav ul.pm-sub-menu li.active:hover a{color:#FFF}
+ul#sideNav .pm-submenu-count,ul#sideNav .pm-menu-count{border-color:#4f1c1a;background-color:#4f1c1a;background-image:none;color:#FFF}
+
+/*COLORME - Midnight Blues*/
+.wide-header{background-color:#363b3f;border-color:#363b3f}
+#adminSecondary,#adminSecondary ul{background-color:#363b3f}
+.wide-header h1 a{color:#FFF}
+#admin-pane{color:#FFF;background-color:transparent}
+#admin-pane:hover{background-color:#11171c}
+#upload-pane{background-color:#e76049}
+#upload-pane a{color:#FFF}
+#upload-pane a:active{background-color:#e76049}
+#upload-pane:hover{text-shadow:none;background-color:#e76049}
+ul#sideNav li.active,ul#sideNav li:hover{color:#FFF;background-color:#cc4d4d}
+ul#sideNav ul li:hover,ul#sideNav ul.pm-sub-menu li.active,ul#sideNav ul.pm-sub-menu li.active:hover{border-left:3px solid #e76049;background-color:#26292c;color:#e76049}
+ul#sideNav li.pm-menu:hover>a,ul#sideNav li.pm-menu.active>a,ul#sideNav li.pm-menu a:hover{color:#FFF}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #26292c;border-left:3px solid #26292c}
+ul#sideNav ul.pm-sub-menu li a{color:#FFF}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:transparent}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{border-top:4px solid #000;border-bottom:4px solid #000}
+ul.pm-sub-menu-side li{background-color:#000 !important;border-color:#000 !important}
+.pm-sub-menu-side:after{border-right-color:#000}
+ul#sideNav ul.pm-sub-menu li:hover a,ul#sideNav ul.pm-sub-menu li.active a,ul#sideNav ul.pm-sub-menu li.active:hover a{color:#FFF}
+ul#sideNav .pm-menu-count{border-color:#e76049;background-color:#e76049;background-image:none}
+
+/*COLORME - Dark https://dribbble.com/shots/1149909-1-Discover-Backpacker/attachments/148605 */
+#adminSecondary,#adminSecondary ul,.wide-header{background-color:#161d20;border-color:#161d20}
+#adminSecondary,#adminSecondary ul{background-color:#1f282d}
+.wide-header h1 a{color:#2eb398}
+#admin-pane{color:#FFF;background-color:transparent}
+#admin-pane:hover{background-color:#2f373c}
+#upload-pane{background-color:#e76049;color:#FFF}
+#upload-pane a{color:#FFF}
+#upload-pane a:active{background-color:#e76049}
+#upload-pane:hover{text-shadow:none;background-color:#e76049}
+ul#sideNav li.pm-menu a{color:#ddd}
+ul#sideNav li.active,ul#sideNav li:hover{color:#FFF;background-color:#2f373c}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #ba3539;border-left:3px solid #ba3539}
+ul#sideNav ul li:hover,ul#sideNav ul.pm-sub-menu li.active,ul#sideNav ul.pm-sub-menu li.active:hover{border-left:3px solid #000;background-color:#000}
+ul#sideNav li.pm-menu:hover>a,ul#sideNav li.pm-menu.active>a,ul#sideNav li.pm-menu a:hover{color:#FFF}
+ul#sideNav .pm-sub-menu li{background:none repeat scroll 0 0 #111;border-left:3px solid #111}
+ul#sideNav ul.pm-sub-menu li a:hover{color:#FFF}
+ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:transparent}
+ul.pm-sub-menu-side li,ul#sideNav ul.pm-sub-menu.pm-sub-menu-side{background-color:#000 !important;border-color:#000 !important;border-top-color:#000;border-bottom-color:#000}
+.pm-sub-menu-side:after{border-right-color:#000}
+ul#sideNav ul.pm-sub-menu li:hover a,ul#sideNav ul.pm-sub-menu li.active a,ul#sideNav ul.pm-sub-menu li.active:hover a{color:#FFF}
+ul#sideNav .pm-submenu-count,ul#sideNav .pm-menu-count{border-color:#e76049;background-color:#e76049;background-image:none;color:#FFF}

@@ -1,0 +1,17 @@
+Merci de vous inscrire!
+
+Vous êtes maintenant membre du %%mail_sitename%%.
+
+Voici vos informations de connexion. S'il vous plaît gardez-les en lieu sûr:
+
+Nom d'utilisateur: %%mail_username%%
+Mot de passe: %%mail_password%%
+L'administrateur de ce site a demandé à tous les nouveaux comptes à activer
+par les utilisateurs qui les ont créés ainsi que votre compte est actuellement inactif.
+Pour activer votre compte, s'il vous plaît visitez ce lien:
+
+%%mail_activation_link%% 
+
+Merci,
+%%mail_sitename%% L'équipe
+%%mail_url%%

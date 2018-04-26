@@ -1,0 +1,4 @@
+<files ~ "\.php$">
+Order Deny,Allow
+Deny from all
+</files>

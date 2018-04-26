@@ -1,0 +1,17 @@
+Grazie per la registrazione!
+
+Ora sei un membro di %%mail_sitename%%.
+
+Ecco i tuoi dati di accesso. Si prega di tenerli in un luogo sicuro:
+
+Username: %%mail_username%%
+Password: %%mail_password%%
+L'Amministratore del sito ha richiesto che i nuovi account siano attivati
+dagli utenti che li hanno creati. Pertanto il tuo account è attualmente inattivo.
+Per attivare il tuo account clicca sul seguente link:
+
+%%mail_activation_link%%
+
+Grazie,
+Il Team di %%mail_sitename%%
+%%mail_url%%

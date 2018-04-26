@@ -1,0 +1,11 @@
+Sie sind jetzt ein Mitglied bei %%mail_sitename%%.
+
+Hier sind Ihre Login-Daten. Bewahren diese an einem sicheren Ort auf:
+
+Benutzername: %%mail_username%%
+Passwort: %%mail_password%%
+
+
+Danke,
+%%mail_sitename%% Team
+%%mail_url%%

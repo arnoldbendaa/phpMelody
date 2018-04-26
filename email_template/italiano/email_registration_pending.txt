@@ -1,0 +1,12 @@
+Grazie per la registrazione!
+
+Il tuo account è stato creato ed è in attesa di approvazione.
+
+Ecco i tuoi dati di accesso. Si prega di tenerli in un luogo sicuro:
+
+Username: %%mail_username%%
+Password: %%mail_password%%
+
+Grazie,
+Il Team di %%mail_sitename%%
+%%mail_url%%

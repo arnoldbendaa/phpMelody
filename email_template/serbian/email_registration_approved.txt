@@ -1,0 +1,9 @@
+Hello %%mail_username%%,
+
+Your account has been approved! 
+
+You can now log into your account at: %%mail_loginurl%%
+
+Thanks,
+%%mail_sitename%% Team
+%%mail_url%% 

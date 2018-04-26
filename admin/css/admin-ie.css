@@ -1,0 +1,47 @@
+.row-fluid [class*="span"] {
+    min-height: 20px;
+}
+@media (min-width: 1200px) {
+    .row-fluid [class*="span"] {
+        min-height: 30px;
+    }
+}
+*:focus { outline: 0 !important; }
+input {
+    font-family: Arial, Verdana, sans-serif !important;
+	outline: 0 !important;
+}
+a {
+    outline: 0 !important;
+}
+img {
+	width: auto\9;	
+	height: auto\9;
+}
+.user-avatar-img {
+	width: 27px;
+	height: 27px;
+	display: block;
+}
+.user-avatar-img img {
+	width: auto\9;	
+}
+ul#sideNav li.pm-menu a {
+	font-weight: normal;
+}
+.blueImg, .redImg, .greenImg {
+	width: auto;
+	height: 35px;
+	margin-left: 10px;
+	margin-right: 0;
+}
+.blueImg img {
+	padding: 4px;
+}
+
+.pagination a.active,
+.pagination .active,
+.pagination li a,
+.pagination li a.active {  background: #f7f7f7; background-image: none; filter:none; }
+
+.pagination a:focus { color: #000; }

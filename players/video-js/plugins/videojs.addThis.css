@@ -1,0 +1,89 @@
+
+.video-js .vjs-menu-button ul li {
+	padding: 4px 0;
+	list-style: none;
+}
+
+.video-js .vjs-control[class^="icon-"]:before,
+.video-js .vjs-control[class*=" icon-"]:before {
+	font-family:'FontAwesome';
+
+}
+
+
+.video-js .vjs-social-button .vjs-menu .vjs-menu-content {
+	
+	height: auto;
+	max-height: none;
+}
+.video-js .vjs-social-button .vjs-menu .vjs-menu-content li.vjs-menu-item {
+	width: 2.775em;
+	float: left;
+	font-size: 1.8em;
+	padding: 5px 0;
+}
+
+.video-js .vjs-embed-window {
+	position: fixed;
+	z-index: 100;
+	
+	left: 35%;
+	top: 40%;
+		
+	width: 30%;
+	height: 20%;
+	
+	background: rgba(7, 40, 50, 0.7);
+	-webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+	box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+	
+	/* Fade */
+	
+	-webkit-transition: visibility 0.5s, opacity 0.5s;
+     -moz-transition: visibility 0.5s, opacity 0.5s;
+      -ms-transition: visibility 0.5s, opacity 0.5s;
+       -o-transition: visibility 0.5s, opacity 0.5s;
+          transition: visibility 0.5s, opacity 0.5s;
+}
+
+/* Fading sytles, used to fade embed window. */
+.video-js .vjs-embed-window.vjs-fade-in {
+  display: block !important;
+  visibility: visible; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1;
+}
+.video-js .vjs-embed-window.vjs-fade-out {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.video-js .vjs-embed-window .vjs-embed-title {
+	margin-top: 0;
+	padding: 5px 7px;
+	background: rgba(16, 108, 136, 0.7);
+	border-bottom: 2px solid rgba(27,201,255,0.7);
+	color: #fff;
+}
+
+.video-js .vjs-embed-window textarea {
+	width: 92%;
+	height: 60%;
+	margin: 0 2% 5px;
+	padding: 2%;
+	border: 0;
+	background: rgba(27,201,255,0.5);
+	color: #fff;
+}
+
+.video-js .vjs-embed-window .icon-remove-sign {
+	position: absolute;
+	top: 3px;
+	right: 7px;
+	
+	cursor: pointer;
+	
+	font-size: 1.5em;
+	color: #fff;
+}

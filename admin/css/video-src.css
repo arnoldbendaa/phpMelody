@@ -1,0 +1,77 @@
+.sprite { background-image: url('../img/video-src.png'); background-color: transparent; background-repeat: no-repeat; }
+.nhaccuatui { width: 25px; height: 25px; background-position: 0px -86px; }
+.123video, .123videonl { width: 22px; height: 22px; background-position: 0px -64px; }
+.tudou { width: 20px; height: 20px; background-position: -16px 0px; }
+.cloudyec { width: 16px; height: 16px; background-position: -25px -84px; }
+.embed { width: 16px; height: 16px; background-position: -16px -20px; }
+.facebook { width: 16px; height: 16px; background-position: 0px -48px; }
+.mail, .mailru { width: 16px; height: 16px; background-position: -16px -36px; }
+.myvideoge { width: 16px; height: 16px; background-position: 0px -32px; }
+.novamov { width: 16px; height: 16px; background-position: -22px -52px; }
+.rutube { width: 16px; height: 16px; background-position: 0px -16px; }
+.vevo { width: 16px; height: 16px; background-position: -22px -68px; }
+.vk { width: 16px; height: 16px; background-position: -32px -20px; }
+.3g2 { width: 16px; height: 16px; background-position: -36px 0px; }
+.3gp { width: 16px; height: 16px; background-position: -38px -68px; }
+.5min { width: 16px; height: 16px; background-position: -32px -36px; }
+.alloclips { width: 16px; height: 16px; background-position: -25px -100px; }
+.asf { width: 16px; height: 16px; background-position: -41px -100px; }
+.avi { width: 16px; height: 16px; background-position: -48px -16px; }
+.bliptv { width: 16px; height: 16px; background-position: -52px 0px; }
+.break { width: 16px; height: 16px; background-position: -54px -64px; }
+.clip, .clipvn { width: 16px; height: 16px; background-position: -54px -48px; }
+.clipfish { width: 16px; height: 16px; background-position: -57px -96px; }
+.current { width: 16px; height: 16px; background-position: -57px -80px; }
+.dailymotion { width: 16px; height: 16px; background-position: -48px -32px; }
+.default { width: 16px; height: 16px; background-position: -64px -16px; }
+.divx { width: 16px; height: 16px; background-position: -70px -64px; }
+.embed_flash { width: 16px; height: 16px; background-position: -70px -48px; }
+.eyespot { width: 16px; height: 16px; background-position: -73px -96px; }
+.filebox { width: 16px; height: 16px; background-position: -73px -80px; }
+.flv { width: 16px; height: 16px; background-position: -64px -32px; }
+.funnyordie { width: 16px; height: 16px; background-position: -84px 0px; }
+.izlesene { width: 16px; height: 16px; background-position: -86px -64px; }
+.justin { width: 16px; height: 16px; background-position: -86px -48px; }
+.kure { width: 16px; height: 16px; background-position: -89px -96px; }
+.liveleak { width: 16px; height: 16px; background-position: -89px -80px; }
+.livestream { width: 16px; height: 16px; background-position: -80px -16px; }
+.localhost { width: 16px; height: 16px; background-position: -100px 0px; }
+.m4a { width: 16px; height: 16px; background-position: -96px -32px; }
+.m4v { width: 16px; height: 16px; background-position: -80px -32px; }
+.metacafe { width: 16px; height: 16px; background-position: -102px -64px; }
+.mkv { width: 16px; height: 16px; background-position: -102px -48px; }
+.mov { width: 16px; height: 16px; background-position: -96px -16px; }
+.mp3 { width: 16px; height: 16px; background-position: -68px 0px; }
+.mp4 { width: 16px; height: 16px; background-position: 0px 0px; }
+.mtvmusic { width: 16px; height: 16px; background-position: -105px -96px; }
+.musicme { width: 16px; height: 16px; background-position: -105px -80px; }
+.musicplayon { width: 16px; height: 16px; background-position: -38px -52px; }
+.mynet { width: 16px; height: 16px; background-position: -41px -84px; }
+.myspace { width: 16px; height: 16px; background-position: -112px -32px; }
+.myvideo { width: 16px; height: 16px; background-position: -112px -16px; }
+.onsmash { width: 16px; height: 16px; background-position: -116px 0px; }
+.other { width: 16px; height: 16px; background-position: -118px -64px; }
+.publicdomainflicks { width: 16px; height: 16px; background-position: -118px -48px; }
+.revver { width: 16px; height: 16px; background-position: -121px -96px; }
+.sevenload { width: 16px; height: 16px; background-position: -121px -80px; }
+.smotri { width: 16px; height: 16px; background-position: -128px -32px; }
+.spike { width: 16px; height: 16px; background-position: -128px -16px; }
+.supervideo { width: 16px; height: 16px; background-position: -132px 0px; }
+.trilulilu { width: 16px; height: 16px; background-position: -134px -64px; }
+.ustream { width: 16px; height: 16px; background-position: -134px -48px; }
+.vbox7 { width: 16px; height: 16px; background-position: -137px -96px; }
+.veevr { width: 16px; height: 16px; background-position: -137px -80px; }
+.veoh { width: 16px; height: 16px; background-position: -144px -32px; }
+.videobb { width: 16px; height: 16px; background-position: -144px -16px; }
+.videozer { width: 16px; height: 16px; background-position: -148px 0px; }
+.vidivodo { width: 16px; height: 16px; background-position: -150px -64px; }
+.vimeo { width: 16px; height: 16px; background-position: -150px -48px; }
+.vplay { width: 16px; height: 16px; background-position: -153px -96px; }
+.wma { width: 16px; height: 16px; background-position: -153px -80px; }
+.wmv { width: 16px; height: 16px; background-position: -160px -32px; }
+.yahoo, .yahoomusic { width: 16px; height: 16px; background-position: -164px 0px; }
+.youku { width: 16px; height: 16px; background-position: -166px -64px; }
+.youtube, .youtube-channel { width: 16px; height: 16px; background-position: -166px -48px; }
+.peteava { width: 16px; height: 15px; background-position: -169px -80px; }
+.imgur { width: 16px; height: 16px; background-position: -160px -16px; }
+.gfycat {width: 16px; height: 16px; background-position: -169px -96px;}

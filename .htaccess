@@ -1,0 +1,49 @@
+Options -MultiViews
+RewriteEngine On
+RewriteRule ^index.html$ index.php
+RewriteRule ^browse.html$ category.php
+RewriteRule ^browse-(.*)-videos.html$ category.php?cat=$1
+RewriteRule ^browse-(.*)-videos-([0-9]+)-(.*).html$ category.php?cat=$1&page=$2&sortby=$3
+RewriteRule ^videos.flv(.*)$ videos.php$1
+RewriteRule ^videos.mp4(.*)$ videos.php$1
+RewriteRule ^register.html$ register.php
+RewriteRule ^contact_us.html$ contact_us.php
+RewriteRule ^edit_profile.html$ edit_profile.php
+RewriteRule ^suggest.html$ suggest.php
+RewriteRule ^upload.html$ upload.php
+RewriteRule ^upload_avatar.html$ upload_avatar.php
+RewriteRule ^suggest.html$ suggest.php
+RewriteRule ^favorites.html(.*)$ favorites.php$1
+RewriteRule ^login.html(.*)$ login.php$1
+RewriteRule ^newvideos.html(.*)$ newvideos.php$1
+RewriteRule ^topvideos.html(.*)$ topvideos.php$1
+RewriteRule ^profile.html(.*)$ profile.php$1
+RewriteRule ^user/([^/]+)/?$ user.php?u=$1
+RewriteRule ^user/([^/]+)/(.*)/?$ user.php?u=$1&view=$2
+RewriteRule ^memberlist.html(.*)$ memberlist.php$1
+RewriteRule ^playlists.html(.*)$ playlists.php$1
+RewriteRule ^articles/index-([0-9]+).html$ article.php?page=$1
+RewriteRule ^articles/browse-(.*)-([0-9]+).html$ article.php?c=$1&page=$2
+RewriteRule ^articles/tag/([^/]+)/page-([0-9]+)(/)?$ article.php?tag=$1&page=$2
+RewriteRule ^articles/tag/([^/]+)(/)?$ article.php?tag=$1&page=1
+RewriteRule ^articles/popular-([0-9]+).html$ article.php?show=popular&page=$1
+RewriteRule ^articles/(.*)_([0-9]+).html$ article_read.php?a=$2
+RewriteRule ^articles(\/|.html)?$ article.php
+RewriteRule ^article(\/|.html)?$ article.php
+RewriteRule ^pages/(.*)\.html$ page.php?name=$1
+RewriteRule ^playlist/(.*)/([^/]+)(/)?$ watch.php?playlist=$1&vid=$2
+RewriteRule ^playlist/(.*)$ playlists.php?playlist=$1
+RewriteRule ^tags/([^/]+)/$ tag.php?t=$1&page=1
+RewriteRule ^tags/([^/]+)/page-([0-9]+)(/)?$ tag.php?t=$1&page=$2
+RewriteRule ^embed/([^/]+)$ embed.php?vid=$1
+RewriteRule ^([^/]*)_([a-zA-Z0-9]{9}).html$ watch.php?vid=$2
+RewriteRule ^fpembed-(.*).swf$ fpembed.php?vid=$1
+RewriteRule ^uploads/thumbs/(.*)-social.(jpg|gif|png)$ social-thumb.php?vid=$1
+RewriteRule ^rss.xml$ rss.php 
+
+# Allow access from all domains for webfonts.
+<IfModule mod_headers.c>
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+</IfModule>

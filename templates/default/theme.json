@@ -1,0 +1,11 @@
+{
+	"version": "2.7.3",
+	"homepage": "http://www.phpmelody.com/",
+	"license": "Commercial",
+	"authors": [
+		{
+			"name": "PHPSUGAR",
+			"homepage": "http://www.phpsugar.com"
+		}
+	]
+}

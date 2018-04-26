@@ -1,0 +1,12 @@
+Message from %%post_name%% 
+
+
+%%msg%%
+
+
+
+Email: %%post_email%% 
+Importance: %%importance%%
+Topic: %%topic%%
+Sender IP: %%ip%%
+ 

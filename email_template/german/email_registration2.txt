@@ -1,0 +1,19 @@
+Hallo %%mail_username%%,
+
+Herzlich Willkommen bei %%mail_sitename%%!
+Vielen Dank, dass Sie sich bei uns registriert haben!
+
+Hier sind Ihre Login-Daten. Bewahren Sie diese an einem sicheren Ort auf:
+
+Username: %%mail_username%%
+Passwort: %%mail_password%%
+
+Es fehlt nur noch ein Schritt, damit Ihr Account bei uns aktiviert wird.
+
+Klicken Sie bitte auf folgenden Link, um die Anmeldung abzuschliessen:
+
+%%mail_activation_link%%
+
+Danke,
+Ihr %%mail_sitename%% Team
+%%mail_url%%

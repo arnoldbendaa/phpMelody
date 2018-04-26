@@ -1,0 +1,9 @@
+Ciao %%mail_username%%,
+
+Il tuo account è stato approvato!
+
+Ora puoi accedere con il tuo account all'indirizzo: %%mail_loginurl%%
+
+Grazie,
+Il Team di %%mail_sitename%%
+%%mail_url%%

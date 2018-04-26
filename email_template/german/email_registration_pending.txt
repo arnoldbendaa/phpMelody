@@ -1,0 +1,12 @@
+Danke, für die Registrierung!
+
+Ihr Konto wurde erstellt und wartet auf die Genehmigung.
+
+Hier sind Ihre Login-Daten. Bewahren Sie diese an einem sicheren Ort auf:
+
+Username: %%mail_username%%
+Passwort: %%mail_password%%
+
+Danke,
+%%mail_sitename%% Team
+%%mail_url%%

@@ -1,0 +1,14 @@
+Hallo,
+
+Ich bin es, %%mail_from%% und schicke Dir eine Email von %%site_url%%.
+
+Ich sah dieses Video %%video_name%% und ich dachte, es ist auch was fuer Dich.
+
+Hier ist der Link: %%video_name%%
+
+%%site_url%%/watch.php?vid=%%video_id%%
+
+Wir sehen uns auf %%site_url%%
+
+Viel Spass,
+%%mail_from%%
