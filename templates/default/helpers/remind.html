@@ -1,0 +1,37 @@
+<div class="wrap-popup rounded">
+    <div class="popup popup-standart">
+        <div class="popup-content">
+            <div class="popup-container">
+                <div class="popup-title bold wrap-icon">
+                    <svg class="svg-icon" width="16px" height="23px">
+                        <use xlink:href="#lock"></use>
+                    </svg>
+                    <span>Password reminder form</span>
+                </div>
+                <div class="popup-prompt">
+                    <p>Please enter email which you used in your account settings.</p>
+                </div>
+                <div class="popup-indent"></div>
+                <div class="form-container">
+                    <form id="reminder_form" action="" method="post" class="form1">
+                        <input type="hidden" name="action" value="remind" />
+                        <input type="hidden" name="mode" value="async" />
+                        <div class="form-row">
+                            <div class="holder">
+                                <input type="mail" name="email" placeholder="Email" class="finp" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="prompt">Please confirm that you are Human by entering security code from the image below.</div>
+                        </div>
+                        <div class="form-row">
+                            <div class="notedit">
+                                <button type="submit" class="btn confirm full">Get Password</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

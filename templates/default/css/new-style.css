@@ -920,8 +920,8 @@ nav.wide-nav .navbar a.btn-register:active {
 @media screen and (min-width: 980px) {
 	#wrapper
 	{
-		width: 1024px;
-		max-width: 1024px;
+		width: 100%;
+		/*max-width: 1024px;*/
 	}
 }
 #primary {

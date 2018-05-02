@@ -1,0 +1,87 @@
+<div class="wrap-popup rounded">
+    <div class="popup popup-wides wrap-popup-side-panel">
+        <div class="popup-main-panel">
+            <div class="popup-content">
+                <div class="popup-container">
+                    <div class="popup-tabs">
+                        <div class="popup-tab active">
+                            <a href="#" data-href="helpers/upload-video-step1.html" data-max-width="850" class="popup-tab-link wrap-icon js__btn-popup">
+                                <svg class="svg-icon" width="29px" height="24px">
+                                    <use xlink:href="#upload2"></use>
+                                </svg>
+                                <span>Upload Video</span>
+                            </a>
+                        </div>
+                        <div class="popup-tab">
+                            <a href="#" data-href="helpers/upload-album-step1.html" data-max-width="850" class="popup-tab-link wrap-icon js__btn-popup">
+                                <svg class="svg-icon" width="29px" height="24px">
+                                    <use xlink:href="#upload2"></use>
+                                </svg>
+                                <span>Upload Photo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="steps step1">
+                        <div class="steps-captions">
+                            <div class="steps-caption-left">Upload file</div>
+                            <div class="steps-caption-right">Add Info</div>
+                        </div>
+                        <div class="steps-progress">
+                            <div class="circle first"></div>
+                            <div class="circle last"></div>
+                            <div class="wrap-overflow">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <form id="signup_form" action="#" method="post" class="form1"></form>
+                        <div class="form-row">
+                            <div class="form-sub-row">
+                                <div class="wrap-fcustominp"><span class="fcustominp green">
+                    <input id="upload_file" type="radio" name="upload" value="upload_file" checked="checked"/>
+                    <label for="upload_file"></label></span>
+                                    <label for="upload_file" class="fcustominp-label">Upload file from your local disk:</label>
+                                </div>
+                            </div>
+                            <div class="holder">
+                                <div class="pseudoFile">
+                                    <input id="pseudoFileLoadLocal" type="text" placeholder="Select video file here" class="inputFileText" />
+                                    <input id="load_local" type="file" name="load_local" maxlength="100" size="60" onchange="document.getElementById('pseudoFileLoadLocal').value = this.value" class="fileInput" /><span class="choose">Browse...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-sub-row">
+                                <div class="wrap-fcustominp"><span class="fcustominp green">
+                    <input id="upload_url" type="radio" name="upload" value="upload_url"/>
+                    <label for="upload_url"></label></span>
+                                    <label for="upload_url" class="fcustominp-label">Upload file from Internet URL:</label>
+                                </div>
+                            </div>
+                            <div class="holder">
+                                <input id="load_url" type="text" name="load_url" maxlength="100" value="" placeholder="specity video file URL here" class="finp" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="notedit"><a href="#" data-href="helpers/upload-video-step2.html" data-max-width="850" class="btn confirm full js__btn-popup">Continue </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-side-panel">
+            <div class="popup-container">
+                <div class="popup-title wrap-icon"><span> Upload Rules</span>
+                    <div class="popup-text">
+                        <p>Only upload videos that you made or that you are authorized to use.</p>
+                    </div>
+                    <div class="popup-text">
+                        <p>All videos are subject to removal by site administration without prior notice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

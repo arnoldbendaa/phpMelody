@@ -20,9 +20,9 @@
 					</li>
 					{/if}
 				{/foreach}
-				</ul>	
+				</ul>
 			</div><!-- #primary -->
 			</div><!-- #content -->
 		</div><!-- .row-fluid -->
 	</div><!-- .container-fluid -->
-{include file="footer.tpl" tpl_name="video-categories-page"} 
+{include file="footer.tpl" tpl_name="video-categories-page"}

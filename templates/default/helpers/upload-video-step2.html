@@ -1,0 +1,885 @@
+<div class="wrap-popup rounded">
+    <div class="popup popup-wides wrap-popup-side-panel">
+        <div class="popup-main-panel">
+            <div class="popup-content">
+                <div class="popup-container">
+                    <div class="popup-tabs">
+                        <div class="popup-tab active">
+                            <a href="#" data-href="helpers/upload-video-step1.html" data-max-width="850" class="popup-tab-link wrap-icon js__btn-popup">
+                                <svg class="svg-icon" width="29px" height="24px">
+                                    <use xlink:href="#upload2"></use>
+                                </svg>
+                                <span>Upload Video</span>
+                            </a>
+                        </div>
+                        <div class="popup-tab">
+                            <a href="#" data-href="helpers/upload-album-step1.html" data-max-width="850" class="popup-tab-link wrap-icon js__btn-popup">
+                                <svg class="svg-icon" width="29px" height="24px">
+                                    <use xlink:href="#upload2"></use>
+                                </svg>
+                                <span>Upload Photo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="steps step2">
+                        <div class="steps-captions">
+                            <div class="steps-caption-left">Upload file</div>
+                            <div class="steps-caption-right">Add Info</div>
+                        </div>
+                        <div class="steps-progress">
+                            <div class="circle first"></div>
+                            <div class="circle last"></div>
+                            <div class="wrap-overflow">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <form id="signup_form" action="#" method="post" class="form1"></form>
+                        <div class="form-row">
+                            <label class="flabel">Title (*):</label>
+                            <div class="holder">
+                                <input id="name" type="text" name="name" maxlength="100" value="" placeholder="type video title here" class="finp" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="flabel">Description (*):</div>
+                            <div class="holder">
+                                <textarea id="about_me" name="about_me" placeholder="type description here" class="ftext"></textarea>
+                            </div>
+                        </div>
+                        <div class="wrap-list-selector">
+                            <div class="form-row">
+                                <div class="flabel">Categories (*):</div>
+                                <div class="holder wrap-ficon">
+                                    <input type="text" placeholder="please select no more than 3 categories" readonly="readonly" class="finp" />
+                                    <div class="ficon">
+                                        <svg class="svg-icon" width="20px" height="18px">
+                                            <use xlink:href="#list-checked"></use>
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-selector-popup">
+                                <div class="list-selector-popup-inner">
+                                    <div class="list-selector-popup-cols">
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-list-selector">
+                            <div class="form-row">
+                                <div class="flabel">Models:</div>
+                                <div class="holder wrap-ficon">
+                                    <input type="text" placeholder="please select no more than 3 models" readonly="readonly" class="finp" />
+                                    <div class="ficon">
+                                        <svg class="svg-icon" width="20px" height="18px">
+                                            <use xlink:href="#list-checked"></use>
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-selector-popup">
+                                <div class="list-selector-popup-inner">
+                                    <div class="list-selector-popup-cols">
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="model_1" type="checkbox" data-label="{{$item.title}}" name="model_ids[]"/>
+                            <label for="model_1"></label></span>
+                                                    <label for="model_1" class="fcustominp-label">Model Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="flabel">Tags (*):</div>
+                            <div class="holder">
+                                <select id="select-search-tag" style="width: 100%;" multiple="multiple" class="js__select-tags2">
+                                    <option selected="selected">Doctor</option>
+                                    <option value="white">Winter</option>
+                                    <option value="purple">Harley Davidson</option>
+                                    <option value="red">Hardcore</option>
+                                    <option value="blue">blue</option>
+                                    <option value="green">green</option>
+                                    <option value="green">red</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="flabel">Change default screenshot:</label>
+                            <div class="holder">
+                                <div class="pseudoFile">
+                                    <input id="pseudoscreenshot" type="text" placeholder="Select image file here" class="inputFileText" />
+                                    <input id="screenshot" type="file" name="screenshot" maxlength="100" size="60" onchange="document.getElementById('pseudoscreenshot').value = this.value" class="fileInput" /><span class="choose">Browse...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="flabel">Visibility:</label>
+                            <div class="wrap-columns-double">
+                                <div class="col">
+                                    <div class="holder">
+                                        <div class="wrap-fcustominp"><span class="fcustominp green">
+                        <input id="public" type="radio" name="upload" value="public" checked="checked"/>
+                        <label for="public"></label></span>
+                                            <label for="public" class="fcustominp-label">Public, visible for all</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="holder">
+                                        <div class="wrap-fcustominp"><span class="fcustominp green">
+                        <input id="private" type="radio" name="upload" value="private"/>
+                        <label for="private"></label></span>
+                                            <label for="private" class="fcustominp-label">Private, only for members</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="notedit">
+                                <button type="submit" class="btn confirm full js__btn-popup">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-side-panel">
+            <div class="popup-container">
+                <div class="popup-title wrap-icon"><span> Video preview</span>
+                </div>
+                <div class="preview-uploading">
+                    <img src="static/img/content/preview-upload.jpg" alt="" />
+                </div>
+                <div class="popup-indent"></div>
+                <div class="popup-title wrap-icon"><span> Upload Rules</span>
+                    <div class="popup-text">
+                        <p>Only upload videos that you made or that you are authorized to use.</p>
+                    </div>
+                    <div class="popup-text">
+                        <p>All videos are subject to removal by site administration without prior notice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

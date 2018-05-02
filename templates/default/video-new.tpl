@@ -31,6 +31,7 @@
 	    {if $video_data.yt_length != 0}<span class="pm-label-duration border-radius3 opac7">{$video_data.duration}</span>{/if}
 	    {if $video_data.mark_new}<span class="label label-new">{$lang._new}</span>{/if}
 		{if $video_data.mark_popular}<span class="label label-pop">{$lang._popular}</span>{/if}
+
 		{if $logged_in}
 		<span class="watch-later hide">
 			<button class="btn btn-mini watch-later-add-btn-{$video_data.id}" onclick="watch_later_add({$video_data.id}); return false;" rel="tooltip" title="{$lang.add_to} {$lang.watch_later}"><i class="icon-time"></i></button>

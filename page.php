@@ -15,12 +15,10 @@
 // +------------------------------------------------------------------------+
 
 session_start();
-
 require('config.php');
 require_once(ABSPATH .'include/user_functions.php');
 require_once(ABSPATH .'include/islogged.php');
 require_once(ABSPATH .'include/article_functions.php');
-
 
 if ($_GET['p'] != '')
 {

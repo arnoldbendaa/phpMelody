@@ -1,0 +1,89 @@
+<div class="wrap-popup bordered">
+    <div class="popup popup-standart">
+        <div class="popup-content">
+            <div class="block-share">
+                <div class="popup-container">
+                    <div class="popup-subtitle">Playlist</div>
+                    <div class="form-content">
+                        <div class="list-playlists">
+                            <div class="item">
+                                <div class="wrap-fcustominp"><span class="fcustominp">
+                    <input type="checkbox" id="playlist1" data-playlist-id="1"/>
+                    <label for="playlist1"></label></span>
+                                    <label for="playlist1" class="white fcustominp-label">Loremo Doloreto Ipaso</label>
+                                </div><span class="privacy">
+            <svg class="svg-icon" width="16px" height="16px">
+                <use xlink:href="#world"></use>
+            </svg>
+        </span>
+                            </div>
+                            <div class="item">
+                                <div class="wrap-fcustominp"><span class="fcustominp">
+                    <input type="checkbox" id="playlist2" data-playlist-id="2"/>
+                    <label for="playlist2"></label></span>
+                                    <label for="playlist2" class="white fcustominp-label">Doloreto Ipaso</label>
+                                </div><span class="privacy">
+            <svg class="svg-icon svg-lock" width="16px" height="23px">
+                <use xlink:href="#lock"></use>
+            </svg>
+        </span>
+                            </div>
+                            <div class="item">
+                                <div class="wrap-fcustominp"><span class="fcustominp">
+                    <input type="checkbox" id="playlist3" data-playlist-id="3"/>
+                    <label for="playlist3"></label></span>
+                                    <label for="playlist3" class="white fcustominp-label">Loremo Doloreto Ipaso</label>
+                                </div><span class="privacy">
+            <svg class="svg-icon" width="16px" height="16px">
+                <use xlink:href="#world"></use>
+            </svg>
+        </span>
+                            </div>
+                            <div class="item">
+                                <div class="wrap-fcustominp"><span class="fcustominp">
+                    <input type="checkbox" id="playlist4" data-playlist-id="4"/>
+                    <label for="playlist4"></label></span>
+                                    <label for="playlist4" class="white fcustominp-label">Doloreto Ipaso</label>
+                                </div><span class="privacy">
+            <svg class="svg-icon svg-lock" width="16px" height="23px">
+                <use xlink:href="#lock"></use>
+            </svg>
+        </span>
+                            </div>
+                        </div>
+                        <div class="buttons-plst-holder">
+                            <button type="button" class="btn confirm full js__create-playlist"><span>Create New Playlist</span>
+                            </button>
+                        </div>
+                        <div class="create-playlist g_hidden">
+                            <form id="playlist_form" action="">
+                                <input type="hidden" name="action" value="add_new_complete" />
+                                <input type="hidden" name="mode" value="async" />
+                                <div class="form-row">
+                                    <div class="wrap-overflow">
+                                        <input id="playlist-title" required="required" type="text" name="title" placeholder="Name" class="finp" />
+                                        <div id="error_playlist_1" class="failure g_hidden">The field is required</div>
+                                        <div id="error_playlist_2" class="failure g_hidden">You already have playlist with the same title</div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <textarea id="playlist-description" name="description" placeholder="Description" class="ftext"></textarea>
+                                </div>
+                                <div class="form-row">
+                                    <select name="is_private" style="width: 100%; z-index: 2050;" class="js__select-popup">
+                                        <option value="1" data-icon="ico icon-private">Private, only for you</option>
+                                        <option value="0" data-icon="ico icon-public">Public, other users can watch</option>
+                                    </select>
+                                </div>
+                                <div class="wrap-overflow">
+                                    <button class="btn confirm full right"><span>Create</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

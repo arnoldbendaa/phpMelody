@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $('#pm-addthis').scrollToFixed({ 
+  $('#pm-addthis').scrollToFixed({
 	  preFixed: function() { $('.addthis_floating_style').css({ 'opacity':'0.7' }); },
 	  postFixed: function() { $('.addthis_floating_style').css({ 'opacity':'1.0' }); }
-  });	
+  });
 
   $('#sticky').scrollToFixed();
   $('.sticky_ads').scrollToFixed();
@@ -29,7 +29,7 @@ $(document).ready(function() {
 		  btn.button('reset')
 	  }, 900)
   });
-  
+
   $("input:file").uniform();
 });
 
