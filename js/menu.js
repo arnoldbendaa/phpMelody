@@ -1,3 +1,4 @@
+
 if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requires jQuery"); + function(t) {
     "use strict";
     var e = t.fn.jquery.split(" ")[0].split(".");
@@ -8734,9 +8735,6 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
                     closeBtn: '<a title="Close" class="fancybox-item fancybox-close dark" href="javascript:;"><svg class="svg-icon" width="10px" height="10px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></a>'
                 },
                 afterShow: function() {
-                    this.inner.find('[data-form="ajax"]').each(function () {
-                        utilitiesAjaxForm($(this));
-                    });
                     $(".wrap-popup").mCustomScrollbar({
                         theme: "minimal-dark"
                     }), $(".wrap-scroll-popup").mCustomScrollbar({

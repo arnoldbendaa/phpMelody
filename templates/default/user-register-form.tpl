@@ -42,7 +42,7 @@
         <div class="control-group">
             <div class="controls">
                 <input type="text" name="imagetext" class="input-large" autocomplete="off" placeholder="{$lang.enter_captcha}">
-                <img src="{$smarty.const._URL}/include/securimage_show.php?sid={echo_securimage_sid}" id="image" align="absmiddle" alt="" class="img-rounded">
+                <img src="{$smarty.const._URL}/include/securimage_show.php?sid={echo_securimage_sid}" id="image" align="absmiddle" alt="" class="img-rounded" >
                 <button class="btn btn-link btn-large" onclick="document.getElementById('image').src = '{$smarty.const._URL}/include/securimage_show.php?sid=' + Math.random(); return false">
                 <i class="icon-refresh"></i>
                 </button>

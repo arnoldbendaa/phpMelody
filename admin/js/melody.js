@@ -59,7 +59,8 @@ $('.ajax-modal').click(function(e) {
     }
 });
 $(document).ready(function() {
-$("#to_modal").live('click', function() {
+// $("#to_modal").live('click', function() {
+$("body").on('click', "#to_modal",function() {
     var url = $(this).attr('url');
     var modal_id = $(this).attr('data-controls-modal');
     $("#" + modal_id).load(url);

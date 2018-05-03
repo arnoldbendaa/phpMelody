@@ -16,21 +16,21 @@
                     <div class="popup-indent"></div>
                     <div class="form-container">
                         <form action="register.php" method="post" class="form1"  id="register-form" name="register-form">
-                            <input type="hidden" name="action" value="signup" />
+                            <input type="hidden" name="Register" value="Register" />
                             <input type="hidden" name="mode" value="async" />
                             <div class="form-row">
                                 <div class="holder">
-                                    <input type="text" class="input-large finp" name="name" value="" maxlength="100" placeholder="Your name">
+                                    <input type="text" class="input-large finp" name="name" value="aaa" maxlength="100" placeholder="Your name" >
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="holder">
-                                    <input type="text" class="input-large finp" name="username" maxlength="100" placeholder="User name" value="">
+                                    <input type="text" class="input-large finp" name="username" maxlength="100" placeholder="User name" value="bbb">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="holder">
-                                    <input type="email" class="input-large finp" id="email" name="email" value="" autocomplete="off" placeholder="Email address">
+                                    <input type="email" class="input-large finp" id="email" name="email" value="arnoldbendaa@gmail.com" autocomplete="off" placeholder="Email address">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="holder">
-                                    <select name="country" size="1">
+                                    <select name="country" id="country" size="1">
                                         <option value="-1">Select one</option>
                                         <option value="500">USA</option>
                                         <option value="184">Albania</option>
@@ -312,20 +312,31 @@
                                         <option value="503">Libya</option>
                                         <option value="504">Eritrea</option>
                                     </select>
+                                    <input type="text" name="website" class="input-large botmenot" maxlength="32">
+
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="wrap-fcustominp">
-                                    <span class="fcustominp">
-                                        <input type="checkbox" class="checkbox" id="agree" name="agree" />
-                                        <label for="agree"></label>
-                                    </span>
-                                    <label for="agree" class="fcustominp-label">I accept terms and conditions or Remeber me</label>
+                                <div class="holder">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox" id="agree" name="agree" checked="checked">
+                                        <span class="help-inline">I agree with terms of agreement</span>
+                                    </label>
                                 </div>
                             </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input type="text" name="imagetext" class="input-large" autocomplete="off" placeholder="Enter the validation code">
+                                    <img src="include/securimage_show.php?sid=555" id="image" align="absmiddle" alt="" class="img-rounded" >
+                                    <button class="btn btn-link btn-large" id="btnRefresh" onclick="document.getElementById('image').src = 'include/securimage_show.php?sid=' + Math.random(); return false">
+                                        <i class="icon-refresh"></i>
+                                    </button>
+                                </div>
+                            </div>
+
                             <div class="form-row">
                                 <div class="notedit">
-                                    <button type="submit" class="btn confirm full">Sign up for free</button>
+                                    <button type="submit" id="registerSubmit" class="btn confirm full">Sign up for free</button>
                                 </div>
                             </div>
                         </form>
@@ -406,3 +417,85 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+//        document.getElementById('image').src = 'include/securimage_show.php?sid=' + Math.random();
+        $( "#btnRefresh" ).trigger( "click" );
+        $("#register-form").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                username: {
+                    required: true,
+                    minlength: 2
+                },
+                pass: {
+                    required: true,
+                    minlength: 5
+                },
+                confirm_pass: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#register-form #pass"
+                },
+                country:{
+                  required:true
+                },
+                imagetext: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                agree: "required"
+            },
+            messages: {
+                name: {
+                    required: pm_lang.validate_name,
+                    minlength: pm_lang.validate_name_long
+                },
+                username: {
+                    required: pm_lang.validate_username,
+                    minlength: pm_lang.validate_username_long
+                },
+                pass: {
+                    required: pm_lang.validate_pass,
+                    minlength: pm_lang.validate_pass_long
+                },
+                confirm_pass: {
+                    required: pm_lang.validate_pass,
+                    minlength: pm_lang.validate_pass_long,
+                    equalTo: pm_lang.validate_confirm_pass_long
+                },
+                country:{
+                  required:"Please select a country"
+                },
+                imagetext: {
+                    required: pm_lang.validate_captcha
+                },
+                email: pm_lang.validate_email,
+                agree: pm_lang.validate_agree
+            },
+            errorClass: "error",
+            submitHandler:function(form){
+                form.submit();
+            }
+        });
+        $("#registerSubmit").click(function (e) {
+            if ($('#register-form').length) {
+                if ( ! $('input[name="website"]').is(":visible")) {
+                    $('input[name="website"]').val(Math.floor(Date.now() / 1000));
+                }
+            }
+        })
+    });
+
+</script>
+<style>
+    #agree{
+        margin-left:0;
+    }
+</style>

@@ -36,7 +36,7 @@
 {if $ad_2 != ''}
 <div class="pm-ad-zone" align="center">{$ad_2}</div>
 {/if}
-	
+
 <footer>
 <div class="row-fluid fixed960">
 	<div class="span8">
@@ -66,7 +66,7 @@
 	</p>
 	</div>
 	<div class="span3">
-	 
+
 	</div>
 	<div class="span1">
 	{if count($langs_array) > 0}
@@ -90,8 +90,8 @@
 
 {literal}
 
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/js/jquery.browser.min.js"></script>
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/jquery.cookee.js" type="text/javascript"></script>
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/jquery.validate.min.js" type="text/javascript"></script>
@@ -100,7 +100,7 @@
 
 {if $smarty.const._EU_WARNING == '1'}
 {literal}
-<script type="text/javascript"> 
+<script type="text/javascript">
 window.cookieconsent_options = {"message":"{/literal}{$lang.eu_cookie_warn_message}{literal}","dismiss":"{/literal}{$lang.i_agree}{literal}","learnMore":"{/literal}{$lang.more_info}{literal}","link":null,"theme":"cookieconsent-{/literal}{$smarty.const._EU_WARNING_POSITION}{literal}"};
 </script>
 <script type="text/javascript" src="{/literal}{$smarty.const._URL}/js/cookieconsent.min.js"></script>
@@ -196,11 +196,11 @@ $(document).ready(function () {
 				success: function(b) {
 					if (b.length > 0) {
 						$("#autoSuggestionsList").html(b);
-						
+
 						$(".suggestionsBox").show(function() {
-							
+
 							var $listItems = $('#autoSuggestionsList').find('li');
-							
+
 							$('#appendedInputButton').keydown(function(e) {
 								var key = e.keyCode,
 									$selected = $listItems.filter('.selected'),
@@ -270,7 +270,7 @@ $(document).ready(function()
 		Socialite.load($(this)[0]);
 	});
 });
-</script>                
+</script>
 {/literal}
 {/if}
 
@@ -289,7 +289,7 @@ $(document).ready(function(){
 });
 </script>
 {/literal}
-{/if} 
+{/if}
 
 {if $p == "detail" && $playlist}
 {literal}
@@ -325,7 +325,7 @@ $(document).ready(function () {
 		$('.entry-title').removeClass('ellipsis');
 	}
 
-	$("#player_extend").click(function() {	
+	$("#player_extend").click(function() {
 		if ($(this).find('i').hasClass("icon-resize-full")) {
 			$(this).find('i').removeClass("icon-resize-full").addClass("icon-resize-small");
 		} else {
@@ -368,7 +368,7 @@ $(document).ready(function() {
 
 	$("ul[class^='pm-ul-carousel-videos']").each(
 	function() {
-	
+
 		var id = $(this).data("slider-id");
 		var slides = $(this).data("slides");
 		var video_carousel = $('#pm-carousel_' + id);
@@ -376,7 +376,7 @@ $(document).ready(function() {
 		if(slides == null) {
 			var slides = 4;
 		}
-		
+
 		video_carousel.carouFredSel({
 			items				: slides,
 			circular			: false,
@@ -415,11 +415,11 @@ $(document).ready(function() {
 		width       		: null,
 		infinite			: false,
 		responsive			: true,
-		prev	: {	
+		prev	: {
 			button	: "#pm-slide-prev",
 			key		: "left"
 		},
-		next	: { 
+		next	: {
 			button	: "#pm-slide-next",
 			key		: "right"
 		},
@@ -432,8 +432,8 @@ $(document).ready(function() {
 		event			: "click",
 	},
 	auto: false
-				
-	});	
+
+	});
 });
 
 $(document).ready(function() {
@@ -451,15 +451,15 @@ $(document).ready(function() {
 		duration: 150
 	},
 	auto: false,
-		prev	: {	
+		prev	: {
 			button	: "#pm-slide-top-prev",
 			key		: "left"
 		},
-		next	: { 
+		next	: {
 			button	: "#pm-slide-top-next",
 			key		: "right"
 		}
-	});	
+	});
 });
 </script>
 {/literal}
@@ -476,7 +476,7 @@ $(document).ready(function() {
 {if $smarty.const._MOD_SOCIAL == '1'}
 {literal}
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/waypoints.min.js" type="text/javascript"></script>
-<script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/melody.social.dev.js" type="text/javascript"></script> 
+<script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/melody.social.dev.js" type="text/javascript"></script>
 {/literal}
 {/if}
 
@@ -493,35 +493,35 @@ function timer_pad(number, length) {
 
 var preroll_timer;
 var preroll_player_called = false;
-var skippable = {/literal}{if $preroll_ad_data.skip != 1}0{else}1{/if}{literal}; 
+var skippable = {/literal}{if $preroll_ad_data.skip != 1}0{else}1{/if}{literal};
 var skippable_timer_current = {/literal}{if $preroll_ad_data.skip_delay_seconds}{$preroll_ad_data.skip_delay_seconds}{else}0{/if}{literal} * 1000;
 var preroll_disable_stats = {/literal}{if $preroll_ad_data.disable_stats == 1}1{else}0{/if}{literal};
-	
+
 $(document).ready(function(){
 	if (skippable == 1) {
 		$('#preroll_skip_btn').hide();
 	}
-	
+
 	var preroll_timer_current = {/literal}{$preroll_ad_data.duration}{literal} * 1000;
-	
+
 	preroll_timer = $.timer(function(){
-	
+
 		var seconds = parseInt(preroll_timer_current / 1000);
 		var hours = parseInt(seconds / 3600);
 		var minutes = parseInt((seconds / 60) % 60);
 		var seconds = parseInt(seconds % 60);
-		
+
 		var output = "00";
 		if (hours > 0) {
 			output = timer_pad(hours, 2) +":"+ timer_pad(minutes, 2) +":"+ timer_pad(seconds, 2);
-		} else if (minutes > 0) { 
+		} else if (minutes > 0) {
 			output = timer_pad(minutes, 2) +":"+ timer_pad(seconds, 2);
 		} else {
 			output = timer_pad(seconds, 1);
 		}
-		
+
 		$('.preroll_timeleft').html(output);
-		
+
 		if (preroll_timer_current == 0 && preroll_player_called == false) {
 
 			$.ajax({
@@ -540,7 +540,7 @@ $(document).ready(function(){
 					$('#preroll_placeholder').replaceWith(data);
 				}
 			});
-			
+
 			preroll_player_called = true;
 			preroll_timer.stop();
 		} else {
@@ -550,27 +550,27 @@ $(document).ready(function(){
 			}
 		}
 	}, 1000, true);
-	
+
 	if (skippable == 1) {
-		
+
 		skippable_timer = $.timer(function(){
-	
+
 			var seconds = parseInt(skippable_timer_current / 1000);
 			var hours = parseInt(seconds / 3600);
 			var minutes = parseInt((seconds / 60) % 60);
 			var seconds = parseInt(seconds % 60);
-			
+
 			var output = "00";
 			if (hours > 0) {
 				output = timer_pad(hours, 2) +":"+ timer_pad(minutes, 2) +":"+ timer_pad(seconds, 2);
-			} else if (minutes > 0) { 
+			} else if (minutes > 0) {
 				output = timer_pad(minutes, 2) +":"+ timer_pad(seconds, 2);
 			} else {
 				output = timer_pad(seconds, 1);
 			}
-			
+
 			$('.preroll_skip_timeleft').html(output);
-			
+
 			if (skippable_timer_current == 0 && preroll_player_called == false) {
 				$('#preroll_skip_btn').show();
 				$('.preroll_skip_countdown').hide();
@@ -582,7 +582,7 @@ $(document).ready(function(){
 				}
 			}
 		}, 1000, true);
-		
+
 		$('#preroll_skip_btn').click(function(){
 			preroll_timer_current = 0;
 			skippable_timer_current = 0;
@@ -611,7 +611,7 @@ $(document).ready(function(){
 
 {/literal}
 {/if}
-{if $allow_emojis && ($tpl_name == 'article-read' || $tpl_name == 'video-watch' || $tpl_name == 'channel')} 
+{if $allow_emojis && ($tpl_name == 'article-read' || $tpl_name == 'video-watch' || $tpl_name == 'channel')}
 <!-- Emoji provided free by http://emojione.com -->
 <script src="{$smarty.const._URL}/js/jquery.textcomplete.min.js"></script>
 <script src="{$smarty.const._URL}/js/melody.emoji.js"></script>
@@ -629,16 +629,16 @@ $(document).ready(function(){
 {if $profile_data.id == $s_user_id}
 {literal}
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/jquery.cropit.js" type="text/javascript"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 $(function() {
 	var cropit_avatar_notify = null;
 	var cropit_cover_notify = null;
 	var cropit_notify_type = 'info';
-	
+
 	// Avatar
 	$('.pm-profile-avatar-pic').cropit({
 		smallImage: 'allow',
-		// width: {/literal}{if $smarty.const.THUMB_W_AVATAR}{$smarty.const.THUMB_W_AVATAR}{else}180{/if}{literal}, 
+		// width: {/literal}{if $smarty.const.THUMB_W_AVATAR}{$smarty.const.THUMB_W_AVATAR}{else}180{/if}{literal},
 		// height: {/literal}{if $smarty.const.THUMB_H_AVATAR}{$smarty.const.THUMB_H_AVATAR}{else}180{/if}{literal},
 		width: 120,
 		height: 120,
@@ -667,16 +667,16 @@ $(function() {
 	});
 
 	$('form#cropit-avatar-form').submit(function() {
-		
+
 		var image_data = $('.pm-profile-avatar-pic').cropit('export', {
 			type: 'image/jpeg',
 			quality: .9,
 			fillBg: '#333'
 		});
-		
+
 		// Move cropped image data to hidden input
 		$('.hidden-avatar-data-img').val(image_data);
-		
+
 		$.ajax({
 			url: MELODYURL2 + "/ajax.php",
 			type: "POST",
@@ -691,20 +691,20 @@ $(function() {
 		})
 		.done(function(data){
 			cropit_avatar_notify.close();
-			if (data.success) { 
-				// hide form action buttons 
+			if (data.success) {
+				// hide form action buttons
 				$('#cropit-avatar-form').css('visibility', 'hidden');
-				
-				// reset background with uploaded image 
+
+				// reset background with uploaded image
 				$('.pm-profile-avatar-pic .cropit-image-preview img').attr('src', data.file_url);
-				
+
 				// stop image movement ability
 				$('.pm-profile-avatar-pic .cropit-image-preview').addClass('animated fadeIn');
 				// timeout required to allow time for the uploaded image to load before removing the current image obj (and avoid a image-swapping 'glitch')
 				setTimeout(function(){
 					$('.pm-profile-avatar-pic .cropit-image-preview').removeClass('cropit-image-loaded')
 				}, 700);
-				
+
 				// unload selected image to let the user re-select the same image
 				$('.pm-profile-avatar-pic input.cropit-image-input')[0].value = null;
 			}
@@ -713,12 +713,12 @@ $(function() {
 
 		return false;
 	});
-	
+
 	var cropit_cover_height = parseInt($('.pm-profile-cover-preview').attr('data-cropit-height'));
 	if ( ! cropit_cover_height) {
 		cropit_cover_height = 200;
 	}
-		
+
 	// Cover
 	$('.pm-profile-cover-preview').cropit({
 		smallImage: 'allow',
@@ -747,16 +747,16 @@ $(function() {
 	});
 
 	$('form#cropit-cover-form').submit(function() {
-		
+
 		var image_data = $('.pm-profile-cover-preview').cropit('export', {
 			type: 'image/jpeg',
 			quality: .9,
 			fillBg: '#333'
 		});
-		
+
 		// Move cropped image data to hidden input
 		$('.hidden-cover-data-img').val(image_data);
-		
+
 		$.ajax({
 			url: MELODYURL2 + "/ajax.php",
 			type: "POST",
@@ -771,20 +771,20 @@ $(function() {
 		})
 		.done(function(data){
 			cropit_cover_notify.close();
-			if (data.success) { 
-				// hide form action buttons 
+			if (data.success) {
+				// hide form action buttons
 				$('#cropit-cover-form').css('visibility', 'hidden');
-				
-				// reset background with uploaded image 
+
+				// reset background with uploaded image
 				$('.pm-profile-cover-preview .cropit-image-preview img').attr('src', data.file_url);
-				
+
 				// stop image movement ability
 				$('.pm-profile-cover-preview .cropit-image-preview').addClass('animated fadeIn');
 				// timeout required to allow time for the uploaded image to load before removing the current image obj (and avoid a image-swapping 'glitch')
 				setTimeout(function(){
 					$('.pm-profile-cover-preview .cropit-image-preview').removeClass('cropit-image-loaded')
 				}, 700);
-				
+
 				// unload selected image to let the user re-select the same image
 				$('.pm-profile-cover-preview input.cropit-image-input')[0].value = null;
 			}
@@ -807,7 +807,7 @@ $(document).ready(function(){
 {/literal}
 {/if}
 {$smarty.const._HTMLCOUNTER}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <script type="text/javascript" src="{$smarty.const._URL}/js/menu.js"></script>
 
 </body>

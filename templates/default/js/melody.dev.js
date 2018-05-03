@@ -98,7 +98,7 @@ $(document).ready(function() {
 			},
 			email: {
 				required: true,
-				email: true	
+				email: true
 			},
 			agree: "required"
 		},
@@ -112,7 +112,7 @@ $(document).ready(function() {
 				minlength: pm_lang.validate_username_long
 			},
 			pass: {
-				required: pm_lang.validate_pass, 
+				required: pm_lang.validate_pass,
 				minlength: pm_lang.validate_pass_long
 			},
 			confirm_pass: {
@@ -126,7 +126,10 @@ $(document).ready(function() {
 			email: pm_lang.validate_email,
 			agree: pm_lang.validate_agree
 		},
-		errorClass: "error"
+		errorClass: "error",
+        submitHandler:function(form){
+			form.submit();
+		}
 	});
 });
 
@@ -146,7 +149,7 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-	
+
 	$('#list').click(function() {
 		$('#pm-grid').fadeOut(200, function() {
 			$(this).removeClass('grid').fadeIn(200);
@@ -220,7 +223,8 @@ $('.ajax-modal').click(function(e) {
     }
 });
 $(document).ready(function() {
-$("#to_modal").live('click', function() {
+// $("#to_modal").live('click', function() {
+$("body").on('click', "#to_modal",function() {
     var url = $(this).attr('url');
     var modal_id = $(this).attr('data-controls-modal');
     $("#" + modal_id).load(url);
@@ -246,7 +250,7 @@ $('#tags_upload').tagsInput({
 
 
 $("[rel=tooltip]").tooltip();
-	
+
 $('#myModal').modal({
   keyboard: true,
   show: false
@@ -271,7 +275,7 @@ $(document).ready(function() {
 
 /* language selector */
 $(document).ready(function() {
-$(".lang_selected").click( 
+$(".lang_selected").click(
  function() {
 	var submenu = $(".lang_submenu");
 	if( submenu.css("display") == "block" )
@@ -286,7 +290,7 @@ $(".lang_selected").click(
 		$(this).removeClass();
 		$(this).addClass("lang_selected_onclick");
 	}
- } 
+ }
 );
 
 $("a[id^='lang_select_']").each(
@@ -328,7 +332,7 @@ $(document).ready(function() {
 
 $(function() {
 	var input = document.createElement("input");
-	if(('placeholder' in input)==false) { 
+	if(('placeholder' in input)==false) {
 		$('[placeholder]').focus(function() {
 			var i = $(this);
 			if(i.val() == i.attr('placeholder')) {
@@ -336,10 +340,10 @@ $(function() {
 				if(i.hasClass('password')) {
 					i.removeClass('password');
 					this.type='password';
-				}			
+				}
 			}
 		}).blur(function() {
-			var i = $(this);	
+			var i = $(this);
 			if(i.val() == '' || i.val() == i.attr('placeholder')) {
 				if(this.type=='password') {
 					i.addClass('password');

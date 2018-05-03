@@ -190,8 +190,6 @@
 							</span>
 						</div>
 					</div>
-
-
                         {foreachelse}
                         {$lang.top_videos_msg2}
                     {/foreach}
@@ -290,4 +288,6 @@
 			</div>
 		</div>
 	</div><!-- .container-fluid -->
+
+
 {include file="footer.tpl" tpl_name="video-categories-page"}
