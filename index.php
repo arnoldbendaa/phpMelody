@@ -120,6 +120,8 @@ if ($total_featured_videos == 1)
 	$smarty->assign('video_subtitles', (array) get_video_subtitles($featured_videos[0]['uniq_id']));
 }
 
+
+
 $smarty->assign('total_playingnow', $total_playingnow);
 $smarty->assign('playingnow', $playingnow);
 

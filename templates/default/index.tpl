@@ -18,7 +18,7 @@
 					<div class="swiper-slide">
 						<div class="thumb">
 							<span class="thumb-preview video">
-								<a href="trailer.html">
+								<a href="{$video_data.video_href}">
 									<img src="{$video_data.thumb_img_url}" alt="{$video_data.attr_alt}">
 									<span class="new">new</span>
 									<span class="add-favorite wrap-icon">
@@ -43,7 +43,16 @@
 										<svg class="svg-icon" width="35.97px" height="40.031px">
 											<use xlink:href="#like"></use>
 										</svg>
-        								<span>92%</span>
+										{assign var=voteCount value=$video_data.up_vote_count+$video_data.down_vote_count}
+										{$voteCount}**********{$video_data.up_vote_count}&&&{$video_data.down_vote_count}
+										{if empty($voteCount)}
+											<span>100%</span>
+										{else}
+											<span>{math equation="height * width / division"
+                                            height=$video_data.up_vote_count
+                                            width=100
+                                            division=$voteCount}%</span>
+										{/if}
 									</span>
 								</a>
 							</span>
@@ -173,7 +182,17 @@
 										<svg class="svg-icon" width="35.97px" height="40.031px">
 											<use xlink:href="#like"></use>
 										</svg>
-										<span>92%</span>
+                                        {assign var=voteCount value=$video_data.up_vote_count+$video_data.down_vote_count}
+                                        {$voteCount}**********{$video_data.up_vote_count}&&&{$video_data.down_vote_count}
+                                        {if empty($voteCount)}
+											<span>100%</span>
+										{else}
+											<span>{math equation="height * width / division"
+                                            height=$video_data.up_vote_count
+                                            width=100
+                                            division=$voteCount}%</span>
+                                        {/if}
+
 									</span>
 								</a>
 							</span>

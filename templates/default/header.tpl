@@ -236,6 +236,7 @@ window.mmswitch_options = {
 					</svg>
 
 				</div>
+                {if $logged_in != '1'}
 				<div class="menu-register">
 					<a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/signup.html" data-max-width="850" class="link wrap-icon js__btn-popup">
 						<svg class="svg-icon" width="15px" height="15px">
@@ -250,6 +251,38 @@ window.mmswitch_options = {
 						<span>Login  </span>
 					</a>
 				</div>
+                {else}
+					<span class="avatar-img">
+						<a href="#" id="notification_counter" title="{$lang.notifications}">
+							{if $smarty.const._MOD_SOCIAL && $logged_in && $notification_count > 0}
+								<span class="notifications">{$notification_count}</span>
+							{else}
+							{/if}
+							<img src="{$s_avatar_url}" width="25" height="25" alt="" style="display: inline;">
+						</a>
+					</span>
+					<div class="user-menu dropdown" style="display:inline">
+						<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">{$s_name}<i class="icon-chevron-down"></i></a>
+						<ul class="dropdown-menu pull-right pm-ul-user-menu" role="menu" aria-labelledby="dLabel">
+							{if $is_admin == 'yes' || $is_moderator == 'yes' || $is_editor == 'yes'}
+								<li><a href="{$smarty.const._URL}/{$smarty.const._ADMIN_FOLDER}/index.php">{$lang.admin_area}</a></li>
+							{/if}
+							<li><a tabindex="-1" href="{$current_user_data.profile_url}">{if $smarty.const._MOD_SOCIAL} {$lang.my_channel} {else} {$lang.my_profile} {/if}</a></li>
+							<li><a tabindex="-1" href="{$smarty.const._URL}/edit_profile.{$smarty.const._FEXT}">{$lang.edit_profile}</a></li>
+							{if $smarty.const._ALLOW_USER_SUGGESTVIDEO == '1'}
+								<li><a tabindex="-1" href="{$smarty.const._URL}/suggest.{$smarty.const._FEXT}">{$lang.suggest}</a></li>
+							{/if}
+							{if $smarty.const._ALLOW_USER_UPLOADVIDEO == '1'}
+								<li><a tabindex="-1" href="{$smarty.const._URL}/upload.{$smarty.const._FEXT}">{$lang.upload_video}</a></li>
+							{/if}
+							<li><a tabindex="-1" href="{$smarty.const._URL}/playlists.{$smarty.const._FEXT}">{$lang.my_playlists}</a></li>
+							<li><a tabindex="-1" href="{$smarty.const._URL}/memberlist.{$smarty.const._FEXT}">{$lang.members_list}</a></li>
+							{if isset($mm_menu_logged_inject)}{$mm_menu_logged_inject}{/if}
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="{$smarty.const._URL}/login.{$smarty.const._FEXT}?do=logout">{$lang.logout}</a></li>
+						</ul>
+					</div>
+            	{/if}
 			</div>
 			<div class="menu-languages">
 				<div data-toggle="dropdown" class="menu-languages-btn wrap-icon">
@@ -291,11 +324,17 @@ window.mmswitch_options = {
 						</a>
 					</li>
 				</ul>
-			</div><a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/upload-video-step1.html" data-max-width="850" class="btn-upload js__btn-popup"><span class="wrap-svg">
-            <svg class="svg-icon" width="10px" height="12px">
-                <use xlink:href="#upload-arr"></use>
-            </svg>
-        </span><span class="text">Upload</span></a>
+			</div>
+            {if $logged_in == '1'}
+				<a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/upload-video-step1.html" data-max-width="850" class="btn-upload js__btn-popup" style="margin-top:0">
+					<span class="wrap-svg">
+						<svg class="svg-icon" width="10px" height="12px">
+							<use xlink:href="#upload-arr"></use>
+						</svg>
+					</span>
+					<span class="text">Upload</span>
+				</a>
+			{/if}
 		</div>
 		<div class="wrap-search claerfix">
 			<form action="#" class="form1">
@@ -303,7 +342,7 @@ window.mmswitch_options = {
 					<div class="search">
 						<div class="search-inner">
 							<select id="select-search-tag" style="width: 100%;" multiple="multiple" class="js__select-tags">
-								<option selected="selected">Doctor</option>
+								<option>Doctor</option>
 								<option value="white">Winter</option>
 								<option value="purple">Harley Davidson</option>
 								<option value="red">Hardcore</option>
@@ -358,88 +397,89 @@ window.mmswitch_options = {
 			</form>
 		</div>
 	</div>
+	<div class="wrap-navigation">
+		<div id="nav-toggle" class="cross">
+			<svg viewbox="0 0 800 600">
+				<path id="nav-toggle-top" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"></path>
+				<path id="nav-toggle-middle" d="M300,320 L540,320"></path>
+				<path id="nav-toggle-bottom" d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+			</svg>
+		</div>
+		<div class="navigation clearfix">
+			<ul>
+				<li><a href="videos.html" data-toggle="dropdown" class="nav-item"><span>Videos</span></a>
+					<div class="nav-drop">
+						<ul style="margin:0;">
+							<li>
+								<a href="#" class="wrap-icon">
+									<svg class="svg-icon" width="40px" height="40.031px">
+										<use xlink:href="#new"></use>
+									</svg>
+									<span>Newest</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="wrap-icon">
+									<svg class="svg-icon" width="40px" height="40px">
+										<use xlink:href="#eye"></use>
+									</svg>
+									<span>Popular</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="wrap-icon">
+									<svg class="svg-icon" width="39.97px" height="37px">
+										<use xlink:href="#top-rated"></use>
+									</svg>
+									<span>Top rated</span>
+								</a>
+							</li>
+							<li class="active">
+								<a href="#" class="wrap-icon">
+									<svg class="svg-icon" width="35.97px" height="40.031px">
+										<use xlink:href="#like"></use>
+									</svg>
+									<span>Most Liked</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="wrap-icon">
+									<svg class="svg-icon" width="40px" height="37px">
+										<use xlink:href="#list"></use>
+									</svg>
+									<span>Playlists</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="wrap-icon">
+									<svg class="svg-icon" width="37px" height="39.969px">
+										<use xlink:href="#tv"></use>
+									</svg>
+									<span>Channels</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="categories.html" class="nav-item"><span>Categories</span></a>
+				</li>
+				<li><a href="albums.html" class="nav-item"><span>Providers</span></a>
+				</li>
+				<li><a href="models.html" class="nav-item"><span>Casinos</span></a>
+				</li>
+				<li><a href="channels.html" class="nav-item"><span>Community</span></a>
+				</li>
+				<li class="show-mob"><a href="#" class="nav-item"><span>Upload</span></a>
+				</li>
+				<li class="show-mob"><a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/signup.html" data-max-width="850" class="nav-item js__btn-popup"><span>Register</span></a>
+				</li>
+				<li class="show-mob"><a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/login.html" data-max-width="460" class="nav-item js__btn-popup"><span>Login</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 </header>
-<div class="wrap-navigation">
-	<div id="nav-toggle" class="cross">
-		<svg viewbox="0 0 800 600">
-			<path id="nav-toggle-top" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"></path>
-			<path id="nav-toggle-middle" d="M300,320 L540,320"></path>
-			<path id="nav-toggle-bottom" d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-		</svg>
-	</div>
-	<div class="navigation clearfix">
-		<ul>
-			<li><a href="videos.html" data-toggle="dropdown" class="nav-item"><span>Videos</span></a>
-				<div class="nav-drop">
-					<ul style="margin:0;">
-						<li>
-							<a href="#" class="wrap-icon">
-								<svg class="svg-icon" width="40px" height="40.031px">
-									<use xlink:href="#new"></use>
-								</svg>
-								<span>Newest</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="wrap-icon">
-								<svg class="svg-icon" width="40px" height="40px">
-									<use xlink:href="#eye"></use>
-								</svg>
-								<span>Popular</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="wrap-icon">
-								<svg class="svg-icon" width="39.97px" height="37px">
-									<use xlink:href="#top-rated"></use>
-								</svg>
-								<span>Top rated</span>
-							</a>
-						</li>
-						<li class="active">
-							<a href="#" class="wrap-icon">
-								<svg class="svg-icon" width="35.97px" height="40.031px">
-									<use xlink:href="#like"></use>
-								</svg>
-								<span>Most Liked</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="wrap-icon">
-								<svg class="svg-icon" width="40px" height="37px">
-									<use xlink:href="#list"></use>
-								</svg>
-								<span>Playlists</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="wrap-icon">
-								<svg class="svg-icon" width="37px" height="39.969px">
-									<use xlink:href="#tv"></use>
-								</svg>
-								<span>Channels</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li><a href="categories.html" class="nav-item"><span>Categories</span></a>
-			</li>
-			<li><a href="albums.html" class="nav-item"><span>Providers</span></a>
-			</li>
-			<li class="active"><a href="models.html" class="nav-item"><span>Casinos</span></a>
-			</li>
-			<li><a href="channels.html" class="nav-item"><span>Community</span></a>
-			</li>
-			<li class="show-mob"><a href="#" class="nav-item"><span>Upload</span></a>
-			</li>
-			<li class="show-mob"><a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/signup.html" data-max-width="850" class="nav-item js__btn-popup"><span>Register</span></a>
-			</li>
-			<li class="show-mob"><a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/login.html" data-max-width="460" class="nav-item js__btn-popup"><span>Login</span></a>
-			</li>
-		</ul>
-	</div>
-</div>
 
 <a id="top"></a>
 {if $ad_1 != ''}

@@ -18,17 +18,17 @@
             </div>
             <div class="popup-indent"></div>
             <div class="form-container">
-                <form id="logon_form" action="" method="post" class="form1">
-                    <input type="hidden" name="action" value="login" />
+                <form id="logon_form" action="/login.php" method="post" class="form1">
+                    <input type="hidden" name="Login" value="Login" />
                     <input type="hidden" name="mode" value="async" />
                     <div class="form-row">
                         <div class="holder">
-                            <input type="text" name="username" placeholder="User name" class="finp" />
+                            <input type="text" name="username" id="hocusfocus" placeholder="User name" class="finp" />
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="holder">
-                            <input type="password" name="pass" placeholder="Password" class="finp error" />
+                            <input type="password" name="pass" placeholder="Password" id="pass" class="finp error"  maxlength="32"/>
                             <div id="user_error2" class="field_error">Invalid login or password</div>
                         </div>
                     </div>

@@ -15,7 +15,6 @@
 // +------------------------------------------------------------------------+
 
 session_start();
-
 @header( 'Expires: Wed, 11 Jan 1984 05:00:00 GMT' );
 @header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
 @header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
@@ -47,10 +46,10 @@ $success = 0;
 $redir = '';
 $mode = ($_GET['do']) ? $_GET['do'] : '';
 
-switch($mode){ 
+switch($mode){
 	default:
 	case 'login':
-		
+		echo "test1";
 		$smarty->assign('display_form', 'login');
 
 		// get the last referer so that we can redirect the user to his last visited page after logging him in.
@@ -68,10 +67,12 @@ switch($mode){
 			header("Location: ". _URL . $redir);
 			exit();
 		}
-		
-		//	check if the form has been submitted
+
+        //	check if the form has been submitted
 		if( isset($_POST['Login'])) 
 		{
+            echo "test2";
+
 			$email = $username = '';
 			if (strpos($_POST['username'], '@') !== false && strlen($_POST['username']) > 5)
 			{
