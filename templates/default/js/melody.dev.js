@@ -239,14 +239,6 @@ $('#tags_suggest').tagsInput({
 	'minChars' : 3,
 	'maxChars' : 30
 });
-$('#tags_upload').tagsInput({
-	'removeWithBackspace' : true,
-	'height':'auto',
-	'width':'auto',
-	'defaultText':'',
-	'minChars' : 3,
-	'maxChars' : 30
-});
 
 
 $("[rel=tooltip]").tooltip();

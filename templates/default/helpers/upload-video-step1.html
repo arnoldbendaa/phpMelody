@@ -1,4 +1,9 @@
-<div class="wrap-popup rounded">
+<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/jquery.iframe-transport.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<div class="wrap-popup rounded" id="upload-video-dropzone">
     <div class="popup popup-wides wrap-popup-side-panel">
         <div class="popup-main-panel">
             <div class="popup-content">
@@ -12,42 +17,23 @@
                                 <span>Upload Video</span>
                             </a>
                         </div>
-                        <div class="popup-tab">
-                            <a href="#" data-href="helpers/upload-album-step1.html" data-max-width="850" class="popup-tab-link wrap-icon js__btn-popup">
-                                <svg class="svg-icon" width="29px" height="24px">
-                                    <use xlink:href="#upload2"></use>
-                                </svg>
-                                <span>Upload Photo</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="steps step1">
-                        <div class="steps-captions">
-                            <div class="steps-caption-left">Upload file</div>
-                            <div class="steps-caption-right">Add Info</div>
-                        </div>
-                        <div class="steps-progress">
-                            <div class="circle first"></div>
-                            <div class="circle last"></div>
-                            <div class="wrap-overflow">
-                                <div class="line"></div>
-                            </div>
-                        </div>
                     </div>
                     <div class="form-container">
                         <form id="signup_form" action="#" method="post" class="form1"></form>
                         <div class="form-row">
                             <div class="form-sub-row">
-                                <div class="wrap-fcustominp"><span class="fcustominp green">
-                    <input id="upload_file" type="radio" name="upload" value="upload_file" checked="checked"/>
-                    <label for="upload_file"></label></span>
-                                    <label for="upload_file" class="fcustominp-label">Upload file from your local disk:</label>
+                                <div class="wrap-fcustominp">
+                                    <span class="fcustominp green">
+                                        <input id="check" type="radio" name="upload" value="upload_file" checked="checked"/>
+                                        <label for="check"></label>
+                                    </span>
+                                    <label for="check" class="fcustominp-label">Upload file from your local disk:</label>
                                 </div>
                             </div>
                             <div class="holder">
                                 <div class="pseudoFile">
                                     <input id="pseudoFileLoadLocal" type="text" placeholder="Select video file here" class="inputFileText" />
-                                    <input id="load_local" type="file" name="load_local" maxlength="100" size="60" onchange="document.getElementById('pseudoFileLoadLocal').value = this.value" class="fileInput" /><span class="choose">Browse...</span>
+                                    <input id="upload-video-file-btn" type="file" name="upload-video-file-btn" maxlength="100" size="60" onchange="document.getElementById('pseudoFileLoadLocal').value = this.value" class="fileInput" /><span class="choose">Browse...</span>
                                 </div>
                             </div>
                         </div>
@@ -85,3 +71,175 @@
         </div>
     </div>
 </div>
+
+<style>
+    .fancybox-skin{
+        overflow: hidden;
+    }
+    .fancybox-inner{
+        overflow: hidden !important;
+    }
+    .hideDlgdiv{
+        display:none !important;
+    }
+    #upload-video-form.height100{
+        height:100% !important;
+    }
+</style>
+
+
+
+
+
+
+<form id="upload-video-form" class="wrap-popup rounded upload-form-only">
+    <div class="popup popup-wides wrap-popup-side-panel">
+        <div class="popup-main-panel">
+            <div class="popup-content">
+                <div class="popup-container">
+                    <div class="popup-tabs">
+                        <div class="popup-tab active">
+                            <a href="#" data-href="helpers/upload-video-step1.html" data-max-width="850" class="popup-tab-link wrap-icon js__btn-popup">
+                                <svg class="svg-icon" width="29px" height="24px">
+                                    <use xlink:href="#upload2"></use>
+                                </svg>
+                                <span>Upload Video</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="steps step2">
+                        <div class="steps-captions">
+                            <div class="steps-caption-left">Upload file</div>
+                            <div class="steps-caption-right">Add Info</div>
+                        </div>
+                        <div class="steps-progress">
+                            <div class="circle first"></div>
+                            <div class="circle last"></div>
+                            <div class="wrap-overflow">
+                                <div class="holder">
+                                    <ol id="upload-video-selected-files-container"></ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <div class="form-row">
+                            <label class="flabel">Change default screenshot:</label>
+                            <div class="holder">
+                                <div class="pseudoFile">
+                                    <input id="pseudoscreenshot" type="text" placeholder="Select image file here" class="inputFileText" />
+
+                                    <input type="file" name="capture" class="capture" value="" size="40" /><span class="choose">Browse...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="flabel">Title (*):</label>
+                            <div class="holder">
+                                <input type="text" name="video_title" maxlength="100" value="" placeholder="type video title here" class="finp" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="flabel">Description (*):</div>
+                            <div class="holder">
+                                <textarea id="about_me" name="about_me" placeholder="type description here" class="ftext"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="flabel">Duration(*):</div>
+                            <div class="holder">
+                                <input id="duration" name="duration" class="input-mini" type="text" style="text-align:center;">
+                            </div>
+                        </div>
+                        <div class="wrap-list-selector">
+                            <div class="form-row">
+                                <div class="flabel">Categories (*):</div>
+                                <div class="holder wrap-ficon">
+                                    <input type="text" placeholder="please select no more than 3 categories" readonly="readonly" class="finp" />
+                                    <div class="ficon">
+                                        <svg class="svg-icon" width="20px" height="18px">
+                                            <use xlink:href="#list-checked"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-selector-popup">
+                                <div class="list-selector-popup-inner">
+                                    <div class="list-selector-popup-cols">
+                                        <div class="list-selector-popup-col">
+                                            <div class="form-row">
+                                                <div class="wrap-fcustominp"><span class="fcustominp">
+                            <input id="category_1" type="checkbox" data-label="{{$item.title}}" name="category_ids[]"/>
+                            <label for="category_1"></label></span>
+                                                    <label for="category_1" class="fcustominp-label">Amateur</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="flabel">Tags (*):</div>
+                            <div class="holder">
+                                <select id="select-search-tag" style="width: 100%;" multiple="multiple" class="js__select-tags2">
+                                    <option value="Providers">Providers</option>
+                                    <option value="white">Casinos</option>
+                                    <option value="purple">Community</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="flabel">Visibility:</label>
+                            <div class="wrap-columns-double">
+                                <div class="col">
+                                    <div class="holder">
+                                        <div class="wrap-fcustominp"><span class="fcustominp green">
+                        <input id="public" type="radio" name="upload" value="public" checked="checked"/>
+                        <label for="public"></label></span>
+                                            <label for="public" class="fcustominp-label">Public, visible for all</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="holder">
+                                        <div class="wrap-fcustominp"><span class="fcustominp green">
+                        <input id="private" type="radio" name="upload" value="private"/>
+                        <label for="private"></label></span>
+                                            <label for="private" class="fcustominp-label">Private, only for members</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="notedit">
+                                <button type="submit" class="btn confirm full js__btn-popup">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-side-panel">
+            <div class="popup-container">
+                <div class="popup-title wrap-icon"><span> Video preview</span>
+                </div>
+                <div class="preview-uploading">
+                    <img src="static/img/content/preview-upload.jpg" alt="" />
+                </div>
+                <div class="popup-indent"></div>
+                <div class="popup-title wrap-icon"><span> Upload Rules</span>
+                    <div class="popup-text">
+                        <p>Only upload videos that you made or that you are authorized to use.</p>
+                    </div>
+                    <div class="popup-text">
+                        <p>All videos are subject to removal by site administration without prior notice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

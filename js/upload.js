@@ -167,8 +167,10 @@ $(document).ready(function() {
 	// disable submit button on page load
 	$('#upload-video-submit-btn').prop('disabled', true).addClass('disabled');
 	$('#upload-video-submit-btn').click(function(e) {
+		// console.log("okllll");
 		$('#upload-video-form').submit();
-		
+		//
+        $.fancybox.close();
 		return false;
 	});
 	
@@ -278,10 +280,11 @@ $(function () {
 			// upload media file
 			if (file_errors.length == 0) {
 				
-				$('#upload-video-dropzone').addClass('animated zoomOut').hide();
-				$('#upload-video-form').css('height', '100%').addClass('animated zoomIn');
+				$('#upload-video-dropzone').addClass('animated zoomOut hideDlgdiv').hide();
 
-				var file_node = '<li id="selected-file-' + index + '" >' +
+				$('#upload-video-form').css('height', '100%').addClass('animated zoomIn height100');
+                $.fancybox.update();
+				var file_node = '<li id="selected-file-' + index + '" >' +'<div class="progressbar" style="  "><div class="progress" style="width:0%;"></div></div>' +
 							pm_lang.swfupload_file + ': <em>' +
 							file.name +
 							'</em> (' +
@@ -289,7 +292,7 @@ $(function () {
 							' KB)' +
 							' <span class="progressvalue"></span>' +
 							' <span class="cancel" data-selected-file-id="'+ index +'">'+ pm_lang.swfupload_btn_cancel +'</span>' +
-							'<div class="progressbar" style="  "><div class="progress" style="width:0%;"></div></div>' +
+
 							'<p class="status"></p>' +
 							'</li>';
 				$('#upload-video-selected-files-container').html(file_node);
@@ -438,4 +441,12 @@ $(document).bind('dragover', function (e) {
 		window.dropZoneTimeout = null;
 		dropZone.removeClass('in hover');
 	}, 100);
+});
+$('#tags_upload').tagsInput({
+    'removeWithBackspace' : true,
+    'height':'auto',
+    'width':'auto',
+    'defaultText':'',
+    'minChars' : 3,
+    'maxChars' : 30
 });

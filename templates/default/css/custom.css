@@ -5,3 +5,26 @@ input.finp{
     background-image:none;
 }
 
+div#wrapper{
+    margin-top:54px;
+}
+ #Playerholder_display_button{
+     display:table !important;
+     cursor:pointer !important;
+     width:150px !important;
+     height:150px !important;
+     background-color:transparent !important;
+     background-size:0 !important;
+     margin-top:-75px !important;
+ }
+#Playerholder_display_button_play{
+    background-size:cover !important;
+    background-image:url(../img/assets/embed/play.png) !important;
+}
+#Playerholder_logo{
+    display:none;
+}
+
+ .fancybox-wrap{
+     background-color:white;
+ }

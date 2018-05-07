@@ -97,6 +97,7 @@
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="{/literal}{$smarty.const._URL}/templates/{$template_dir}{literal}/js/theme.js" type="text/javascript"></script>
 {/literal}
+<script type="text/javascript" src="js/video.js"></script>
 
 {if $smarty.const._EU_WARNING == '1'}
 {literal}

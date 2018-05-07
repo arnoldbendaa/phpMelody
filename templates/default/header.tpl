@@ -326,7 +326,7 @@ window.mmswitch_options = {
 				</ul>
 			</div>
             {if $logged_in == '1'}
-				<a href="#" data-href="{$smarty.const._URL}/templates/{$template_dir}/helpers/upload-video-step1.html" data-max-width="850" class="btn-upload js__btn-popup" style="margin-top:0">
+				<a href="#" data-href="{$smarty.const._URL}/upload.php" data-max-width="850" class="btn-upload js__btn-popup" style="margin-top:0">
 					<span class="wrap-svg">
 						<svg class="svg-icon" width="10px" height="12px">
 							<use xlink:href="#upload-arr"></use>
@@ -337,26 +337,20 @@ window.mmswitch_options = {
 			{/if}
 		</div>
 		<div class="wrap-search claerfix">
-			<form action="#" class="form1">
+			<form action="{$smarty.const._URL}/search.php" id="search" method="get"  name="search" onSubmit="return validateSearch('true');" class="form1">
 				<div class="wrap-search-input">
 					<div class="search">
 						<div class="search-inner">
-							<select id="select-search-tag" style="width: 100%;" multiple="multiple" class="js__select-tags">
-								<option>Doctor</option>
-								<option value="white">Winter</option>
-								<option value="purple">Harley Davidson</option>
-								<option value="red">Hardcore</option>
-								<option value="blue">blue</option>
-								<option value="green">green</option>
-								<option value="green">red</option>
-							</select>
+							<input class="span10 pm-search-field" id="appendedInputButton" size="16" name="keywords" type="text" placeholder="{$lang.submit_search}..."
+								   x-webkit-speech speech onwebkitspeechchange="this.form.submit();">
+							<button class="btn" type="submit"><i class="icon-search"></i></button>
 						</div>
 					</div>
-					<a href="searches.html" class="button-search wrap-icon">
+					<button type="submit" class="button-search wrap-icon btn">
 						<svg class="svg-icon" width="16px" height="16px">
-							<use xlink:href="#search"></use>
+							<use xlink:href="#searchIcon"></use>
 						</svg>
-					</a>
+					</button>
 				</div>
 				<div class="wrap-search-select">
 					<div class="search-select">
@@ -411,7 +405,7 @@ window.mmswitch_options = {
 					<div class="nav-drop">
 						<ul style="margin:0;">
 							<li>
-								<a href="#" class="wrap-icon">
+								<a href="{$smarty.const._URL}"  class="wrap-icon">
 									<svg class="svg-icon" width="40px" height="40.031px">
 										<use xlink:href="#new"></use>
 									</svg>
@@ -461,7 +455,7 @@ window.mmswitch_options = {
 						</ul>
 					</div>
 				</li>
-				<li><a href="categories.html" class="nav-item"><span>Categories</span></a>
+				<li><a href="category.php" class="nav-item"><span>Categories</span></a>
 				</li>
 				<li><a href="albums.html" class="nav-item"><span>Providers</span></a>
 				</li>
@@ -638,7 +632,7 @@ window.mmswitch_options = {
 	<symbol id="rss" viewBox="0 0 16 16">
 		<path d="M15.751 16h-3.113a.248.248 0 0 1-.245-.247c0-6.704-5.448-12.158-12.146-12.158A.247.247 0 0 1 0 3.349V.248C0 .111.111 0 .247 0c8.651 0 15.696 7.023 15.739 15.675l.014.078a.25.25 0 0 1-.249.247zM.247 5.226c5.771 0 10.475 4.682 10.518 10.449l.012.077a.248.248 0 0 1-.248.247H7.506a.248.248 0 0 1-.247-.247c0-3.87-3.147-7.019-7.012-7.019A.247.247 0 0 1 0 8.487V5.474c0-.137.111-.248.247-.248zm2.125 6.028a2.375 2.375 0 0 1 2.372 2.374A2.376 2.376 0 0 1 2.372 16 2.376 2.376 0 0 1 0 13.628a2.375 2.375 0 0 1 2.372-2.374z" class="cls-1"></path>
 	</symbol>
-	<symbol id="search" viewBox="0 0 16 16">
+	<symbol id="searchIcon" viewBox="0 0 16 16">
 		<path d="M15.706 14.29l-4.819-4.819A5.962 5.962 0 0 0 12 6 6 6 0 0 0 0 6a6 6 0 0 0 6 6 5.963 5.963 0 0 0 3.471-1.112l4.819 4.819a.998.998 0 0 0 1.416 0 1 1 0 0 0 0-1.417zM9.258 8.312l-.393.553-.553.393A3.971 3.971 0 0 1 6 10c-2.206 0-4-1.794-4-4 0-2.205 1.794-4 4-4s4 1.795 4 4c0 .831-.256 1.63-.742 2.312z" class="cls-1"></path>
 	</symbol>
 	<symbol id="settings" viewBox="0 0 20 20">
