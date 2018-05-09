@@ -271,7 +271,7 @@
 							width: "100%",
 							{/literal}{if $playlist}{literal}
 							height: "401",
-							autostart: true, 
+							autostart: true,
 							{/literal}{else}{literal}
 							height: "{/literal}{$smarty.const._PLAYER_H}{literal}",
 							autostart: "{/literal}{$video_data.video_player_autoplay}{literal}", 
@@ -354,12 +354,12 @@
 							//image: '{/literal}{$video_data.preview_image}',
 						{/if}
 						{literal}
-						flashplayer: "{/literal}{$smarty.const._URL2}{literal}/players/jwplayer7/jwplayer.flash.swf",                        
+						flashplayer: "{/literal}{$smarty.const._URL2}{literal}/players/jwplayer7/jwplayer.flash.swf",
 						primary: "html5",
 						width: "100%",
 						{/literal}{if $playlist}{literal}
 						height: "401",
-						autostart: true, 
+						autostart: true,
 						{/literal}{else}{literal}
 						height: "{/literal}{$smarty.const._PLAYER_H}{literal}",
 						autostart: "{/literal}{$video_data.video_player_autoplay}{literal}", 

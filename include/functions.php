@@ -5735,8 +5735,49 @@ function session_save_footprint()
 		}
 	}
 }
-
-function smarty_get_advanced_video_list($params, &$smarty)
+function smarty_get_user_videos($user_id){
+    global $time_now_minute;
+    $defaults = array(
+        'category_id' => 0,
+        'user_id' => 0,
+        'submitted_user_id' => 0,
+        'username' => '',
+        'submitted' => '',
+        'tag' => '',
+        'restricted' => false,	// false, 1 or 0
+        'featured' => false,	// false, 1 or 0
+        'days_ago' => 0, 		// last X days OR "recent"; "recent" uses 'pm_chart' table
+        'order_by' => 'added', 	// "rating" or table column name; "rating" uses 'pm_bin_rating_meta' table
+        'sort' => 'DESC',		// DESC or ASC
+        'from' => 0,
+        'limit' => 10
+    );
+    $sql_where = '';
+    $sql_join = '';
+    $order_by = 'yt_length';
+    $sql_where .= ($sql_where != '') ? " AND " : '';
+    $sql_where .= " submitted_user_id = '". secure_sql($user_id) ."'";
+    $sql_where .= ($sql_where != '') ? ' AND ' : '';
+    $sql_where .= " added <= '". $time_now_minute ."' ";
+    $sql = 'SELECT id ';
+    $sql .= ' FROM pm_videos '. $sql_join .'  
+			  WHERE '. $sql_where .' 
+			  ORDER BY '. $order_by;
+    $list = array();
+    $result = mysql_query($sql);
+    if ($result)
+    {
+        $ids = array();
+        $i = 0;
+        while ($row = mysql_fetch_assoc($result))
+        {
+            $ids[$i++] = $row['id'];
+        }
+        $list = get_video_list('', '', 0, 5, 0, $ids);
+    }
+    return $list;
+}
+function smarty_get_advanced_video_list($userId)
 {
 	global $time_now_minute;
 	/*
@@ -5901,7 +5942,7 @@ function smarty_get_advanced_video_list($params, &$smarty)
 	}
 
 	$smarty->assign($params['assignto'], $list);
-	return;
+	return ;
 }
 
 function get_preroll_ad($ad_id = false)
@@ -7391,6 +7432,7 @@ function playlist_get_items($list_id, $start = 0, $limit = 20, $order_by = false
  */
 function playlist_has_video($playlist_id, $video_id)
 {
+
 	if ( ! $video_id && ! $playlist_id)
 		return false;
 
@@ -7411,7 +7453,7 @@ function playlist_has_video($playlist_id, $video_id)
 			WHERE list_id IN (". $sql_in .") 
 			  AND video_id = ". $video_id;
 	$result = mysql_query($sql);
-	
+//    echo $sql;
 	if (mysql_num_rows($result) > 0)
 	{
 		if (is_array($playlist_id))
@@ -7958,4 +8000,13 @@ function pm_get_image_mime( $file ) {
 	}
 
 	return $mime;
+}
+function get_comment_count($uniq_id){
+    $sql = "SELECT count(*) as cnt
+			FROM pm_comments
+			WHERE uniq_id = '". secure_sql($uniq_id) ."'";
+    $result = mysql_query($sql);
+    $row = mysql_fetch_assoc($result);
+
+    return (int) $row['cnt'];
 }

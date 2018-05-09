@@ -196,7 +196,6 @@ else
 $tmp_parts = explode(',', $video['category']);
 $related_video_list = get_related_video_list($tmp_parts, $video['video_title'], $config['watch_related_limit'], $video['id']);
 $top_rated_video_list = get_top_rated_video_list(array_pop($tmp_parts), $config['watch_toprated_limit'] , $video['id']);
-unset($same_category_id);
 
 // exclude current video from these lists
 foreach ($related_video_list as $k => $vid)
@@ -229,6 +228,9 @@ if (is_array($related_video_list) && count($related_video_list) > 0
 	$video['autoplay_next'] = ($_COOKIE['pm_autoplay_next'] == 'on') ? true : false; 
 }
 
+
+$videoComment = get_comment_count($video_uniq_id);
+$video['comment_count'] = $videoComment;
 $smarty->assign('video_data', $video);
 $smarty->assign('my_playlists', array()); // gets loaded via ajax.php
 $smarty->assign('playlist', $playlist);
@@ -254,6 +256,7 @@ $smarty->register_function('list_categories', 'list_categories');
 $smarty->assign('tags', $tags);
 $smarty->assign('guests_can_comment', ($video_is_restricted) ? 0 : $config['guests_can_comment']);
 $smarty->assign('user_id', $userdata['id']);
+$smarty->assign('username',$userdata['name']);
 $smarty->assign('bin_rating_vote_value', bin_rating_user_has_voted($video['uniq_id'])); // value = 1, 0 or false
 
 serve_preroll_ad('detail', $video);
@@ -264,5 +267,45 @@ $smarty->assign('meta_title', htmlspecialchars($meta_title));
 $smarty->assign('meta_keywords', $meta_keywords);
 $smarty->assign('meta_description', $meta_description);
 $smarty->assign('template_dir', $template_f);
+
+
+
+//$video_id = $video['id'];
+//$my_playlists_count = (int) count_entries('pm_playlists', 'user_id', $userdata['id']);
+//$my_playlists = get_user_playlists($userdata['id'], false, false, 0, $my_playlists_count);
+//$playlist_ids = array();
+//
+//foreach ($my_playlists as $k => $playlist_data)
+//{
+//    // remove 'History' and 'Liked' from this list
+//    if ($playlist_data['type'] == PLAYLIST_TYPE_HISTORY || $playlist_data['type'] == PLAYLIST_TYPE_LIKED)
+//    {
+//        unset($my_playlists[$k]);
+//        continue;
+//    }
+//
+//    $playlist_ids[] = $playlist_data['list_id'];
+//}
+//
+//
+//$playlist_ids = playlist_has_video($playlist_ids, $video_id);
+//if ($playlist_ids)
+//{
+//    foreach ($my_playlists as $k => $playlist_data)
+//    {
+//        if (in_array($playlist_data['list_id'], $playlist_ids))
+//        {
+//            $my_playlists[$k]['has_current_video'] = true;
+//        }
+//    }
+//    unset($playlist_ids);
+//}
+//$smarty->assign('my_playlists', $my_playlists);
+
+
+
+
+
+
 $modframework->trigger_hook('detail_bottom');
 $smarty->display('video-watch.tpl');

@@ -327,8 +327,8 @@ window.mmswitch_options = {
 			</div>
             {if $logged_in == '1'}
 				<a href="#" data-href="{$smarty.const._URL}/upload.php" data-max-width="850" class="btn-upload js__btn-popup" style="margin-top:0">
-					<span class="wrap-svg">
-						<svg class="svg-icon" width="10px" height="12px">
+					<span class="wrap-svg" style="height:29px;">
+						<svg class="svg-icon" width="10px" height="12px" style="height:25px;">
 							<use xlink:href="#upload-arr"></use>
 						</svg>
 					</span>
@@ -354,8 +354,8 @@ window.mmswitch_options = {
 				</div>
 				<div class="wrap-search-select">
 					<div class="search-select">
-						<div data-toggle="dropdown" class="search-select-btn wrap-icon">
-							<svg class="svg-icon" width="55.2px" height="33px">
+						<div data-toggle="dropdown" class="search-select-btn wrap-icon" >
+							<svg class="svg-icon" width="55.2px" height="33px" >
 								<use xlink:href="#camera"></use>
 							</svg>
 

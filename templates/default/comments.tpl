@@ -1,6 +1,7 @@
+<div style="width:600px; padding:15px">
 {if $allow_comments == '1'}
 
-	<h2 class="upper-blue">{$lang.post_comment}</h2>
+	<h2 class="upper-blue" >{$lang.post_comment}</h2>
 	{if ($comment_system_native + $comment_system_facebook + $comment_system_disqus) > 1}
 	<ul class="nav nav-tabs nav-comments">
 		{if $comment_system_native}
@@ -64,6 +65,7 @@
 			        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 			    })();
+
 			</script>
 			{/literal}
 		</div>
@@ -72,3 +74,69 @@
 {else}
 	<div>{$lang.comments_disabled}</div>
 {/if}
+</div>
+{literal}
+	<script>
+        $("#c_submit").click(function(){
+            $("#mycommentspan").html('<img src="' + TemplateP + '/img/ajax-loading.gif" alt="Loading" id="loading" /> Posting...').show();
+            var b = $("#c_user_id").val();
+            var e = $("#c_vid").val();
+            var d = $("#c_comment_txt").val();
+            var f = $("#c_username").val();
+            var c = $("#captcha").val();
+            if (b == 0) {
+                $.post(MELODYURL2 + "/comment.php", {
+                    username: f,
+                    captcha: c,
+                    vid: e,
+                    user_id: b,
+                    comment_txt: d
+                }, function(g){
+                    if (g.cond == true) {
+                        $("#pm-post-form").slideUp("normal", function(){
+                            $("#mycommentspan").html(g.html).show();
+                            if (g.preview == true) {
+                                $("#be_the_first").hide();
+                                $("#preview_comment").html(g.preview_html).fadeIn(700)
+                            }
+                        })
+                    }
+                    else {
+                        if (g.cond == false) {
+                            $("#c_submit").show();
+                            $("#mycommentspan").html(g.html).show();
+                        }
+                    }
+                }, "json")
+            }
+            else {
+                if (b > 0) {
+                    $.post(MELODYURL2 + "/comment.php", {
+                        vid: e,
+                        user_id: b,
+                        comment_txt: d
+                    }, function(g){
+                        if (g.cond == true) {
+                            $("#pm-post-form").slideUp("normal", function(){
+                                $("#mycommentspan").html(g.html).show();
+                                if (g.preview == true) {
+                                    $("#be_the_first").hide();
+                                    $("#preview_comment").html(g.preview_html).fadeIn(700)
+                                }
+                            })
+                        }
+                        else {
+                            if (g.cond == false) {
+                                $("#c_submit").show();
+                                $("#mycommentspan").html(g.html).show();
+                            }
+                        }
+                    }, "json")
+                }
+            }
+            return false
+        });
+
+	</script>
+
+{/literal}

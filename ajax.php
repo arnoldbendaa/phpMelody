@@ -1197,7 +1197,38 @@ switch ($page)
 				}
 				
 			break;
-			
+            case 'getRelated':
+                $category = $_GET['category'];
+                $videoId= $_GET['videoId'];
+                $title= $_GET['title'];
+                $tmp_parts = explode(',', $category);
+                $related_video_list = get_related_video_list($tmp_parts, $title, $config['watch_related_limit'], $videoId);
+                foreach ($related_video_list as $k => $vid)
+                {
+                    if ($vid['id'] == $videoId)
+                    {
+                        unset($related_video_list[$k]);
+                    }
+                }
+                echo json_encode($related_video_list);
+                exit();
+                break;
+            case 'getUserVideo':
+                $user_id = $_GET['userId'];
+                $videoId = $_GET['videoId'];
+
+                $lists = smarty_get_user_videos($user_id);
+                $result = [];
+                foreach ($lists as $k => $vid)
+                {
+                    if ($vid['id'] != $videoId)
+                    {
+                        array_push($result,$lists[$k]);
+                    }
+                }
+
+                echo json_encode($result);
+                exit(); break;
 			default:
 				exit();
 			break;
