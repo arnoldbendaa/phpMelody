@@ -11,16 +11,16 @@
 				</div>
 				<div class="sortings-navbar magic-line">
 					<div class="sortings-navbar-inner">
-						<div class="sorting">
+						<div class="sorting {if $order=='date'||$order==''}active{/if}">
 							<a href="{$smarty.const._URL}/category.php?sortby=date" aria-expanded="false"  class="sorting-choice">Newest</a>
 						</div>
-						<div class="sorting">
+						<div class="sorting {if $order=='rating'}active{/if}">
 							<a href="{$smarty.const._URL}/category.php?sortby=rating"  class="sorting-choice" aria-expanded="false">Top Rated</a>
 						</div>
-						<div class="sorting">
+						<div class="sorting {if $order=='views'}active{/if}">
 							<a href="{$smarty.const._URL}/category.php?sortby=views"  class="sorting-choice" aria-expanded="false">Most Popular</a>
 						</div>
-						<div class="sorting">
+						<div class="sorting {if $order=='title'}active{/if}">
 							<a href="{$smarty.const._URL}/category.php?sortby=title" class="sorting-choice">Title</a>
 						</div>
 					</div>
@@ -28,10 +28,7 @@
 			</div>
 			<div class="wrap-thumbs">
 				<div class="thumbs-lists">
-
-
                     {foreach from=$categories_data key=k item=category_data}
-                        {if $category_data.parent_id == 0}
 					<div class="thumbs-item">
 						<div class="thumb">
 							<a href="{$category_data.url}">
@@ -54,9 +51,8 @@
 							</a>
 						</div>
 					</div>
-                        {/if}
-                    {/foreach}
 
+                    {/foreach}
 
 				</div>
 			</div>
@@ -65,56 +61,44 @@
 			<div class="sidebar-block">
 				<div class="sidebar-title"><span class="highlight">Top </span>Categories</div>
 				<ul class="sidebar-lists">
+					<li class="sidebar-lists-item">
+						<a  href="{$categories_data[1].url}" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
+							<svg class="svg-icon" width="40px" height="37px">
+								<use xlink:href="#list"></use>
+							</svg>
+							<span class="text-truncate">{smarty_fewchars s=$categories_data[1].name length=32}</span></span>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="sidebar-block">
+				<div class="sidebar-title"><span class="highlight">Top </span>Casinos</div>
+				<ul class="sidebar-lists">
 					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
+            <svg class="svg-icon" width="11px" height="10.969px">
+                <use xlink:href="#model"></use>
             </svg>
         <span class="text-truncate">AZ Gals</span></span></a>
 					</li>
+				</ul>
+			</div>
+			<div class="sidebar-block">
+				<div class="sidebar-title"><span class="highlight">Top </span>Providers</div>
+				<ul class="sidebar-lists">
 					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
+            <svg class="svg-icon" width="11px" height="10.969px">
+                <use xlink:href="#link"></use>
             </svg>
-        <span class="text-truncate">Big Tits Fans Site</span></span></a>
-					</li>
-					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
-            </svg>
-        <span class="text-truncate">Big Tits Galleries</span></span></a>
-					</li>
-					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
-            </svg>
-        <span class="text-truncate">Bob's Best Boobs</span></span></a>
-					</li>
-					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
-            </svg>
-        <span class="text-truncate">Curvy Erotic</span></span></a>
-					</li>
-					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
-            </svg>
-        <span class="text-truncate">Lanas Big Boobs</span></span></a>
-					</li>
-					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
-            </svg>
-        <span class="text-truncate">Live Sex</span></span></a>
-					</li>
-					<li class="sidebar-lists-item"><a href="#" class="sidebar-lists-link clearfix"><span class="name wrap-icon">
-            <svg class="svg-icon" width="40px" height="37px">
-                <use xlink:href="#list"></use>
-            </svg>
-        <span class="text-truncate">Small &amp; Big Tits Porn  </span></span></a>
+        <span class="text-truncate">AZ Gals</span></span></a>
 					</li>
 				</ul>
 			</div>
+
+
+
+
 		</div>
 	</div>
 </div>
