@@ -428,14 +428,6 @@ window.mmswitch_options = {
 									<span>Top rated</span>
 								</a>
 							</li>
-							<li class="active">
-								<a href="#" class="wrap-icon">
-									<svg class="svg-icon" width="35.97px" height="40.031px">
-										<use xlink:href="#like"></use>
-									</svg>
-									<span>Most Liked</span>
-								</a>
-							</li>
 							<li>
 								<a href="#" class="wrap-icon">
 									<svg class="svg-icon" width="40px" height="37px">

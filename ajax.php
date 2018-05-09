@@ -3915,7 +3915,22 @@ switch ($page)
 		}
 
 	break;
-	
+    case 'search':
+        switch ($action)
+        {
+            case 'getVideoHtml':
+                $video_uniq_id = $_GET['videoId'];
+                $video = request_video($video_uniq_id);
+                $videoComment = get_comment_count($video_uniq_id);
+                $video['comment_count'] = $videoComment;
+                $smarty->assign('video_data', $video);
+                $html = $smarty->fetch('my-player.tpl');
+                echo $html;
+                exit();
+                break;
+        }	//	end switch ($page)
+    break;
+
 }	//	end switch ($page)
 
 exit();

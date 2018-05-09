@@ -68,22 +68,6 @@
 	<div class="span3">
 
 	</div>
-	<div class="span1">
-	{if count($langs_array) > 0}
-	 <div id="lang_selector">
-	  <div class="btn-group dropup lang-selector hidden-phone" id="lang-selector">
-	  <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><img src="{$langs_array.$current_lang_id.ico}" width="16" height="10" alt="{$langs_array.$current_lang_id.title}" title="{$langs_array.$current_lang_id.title}" align="texttop"> <span class="hide">{$langs_array.$current_lang_id.title}</span> <span class="caret"></span></a>
-
-	  <ul class="dropdown-menu border-radius0 pullleft lang_submenu">
-	  {foreach from=$langs_array item=language key=k}
-	   {if $k != $current_lang_id}
-	   <li><a href="#" title="{$language.title}" name="{$k}" id="lang_select_{$k}">{$language.title}</a></li>
-	   {/if}
-	  {/foreach}
-	  </ul>
-	 </div>
-	{/if}
-	</div>
 </div>
 </footer>
 <div id="lights-overlay"></div>

@@ -236,7 +236,7 @@ if(!empty($page)) {
 $meta_title = sprintf($meta_title, _SITENAME);
 $meta_description = $meta_title;
 // end
-
+$smarty->assign('keyword',$searchstring);
 $smarty->assign('error_msg', $error_msg);
 $smarty->assign('searchstring', htmlspecialchars($_GET['keywords']));
 $smarty->assign('results', $list);
