@@ -1,13 +1,11 @@
 {include file='header.tpl' p="general" tpl_name="video-categories-page"}
 
-
-
 <div class="content clearfix" id="wrapper">
 	<div class="container">
 		<div class="main">
 			<div class="wrap-heading clearfix">
 				<div class="switch-blocks">
-					<a href="categories.html" class="active">Categories</a>
+					<a class="active">Categories</a>
 				</div>
 				<div class="sortings-navbar magic-line">
 					<div class="sortings-navbar-inner">
@@ -29,6 +27,7 @@
 			<div class="wrap-thumbs">
 				<div class="thumbs-lists">
                     {foreach from=$categories_data key=k item=category_data}
+						{if $category_data.parent_id == 0}
 					<div class="thumbs-item">
 						<div class="thumb">
 							<a href="{$category_data.url}">
@@ -39,19 +38,13 @@
 									</span>
 								</span>
 								<span class="thumb-info"><span class="ctg-info">
-										<span class="rating wrap-icon">
-										<svg class="svg-icon" width="35.97px" height="40.031px">
-											<use xlink:href="#like"></use>
-										</svg>
-        								<span>10%</span>
-										</span>
-										<span class="text text-truncate">99,456 videos</span>
+										<span class="text text-truncate">{$category_data.total_videos} videos</span>
 									</span>
 								</span>
 							</a>
 						</div>
 					</div>
-
+						{/if}
                     {/foreach}
 
 				</div>

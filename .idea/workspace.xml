@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99fc3c99-095b-407b-ab21-eb1c9091e8ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/default/user-video-list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video-comment.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/temp/backup_details.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax.php" afterPath="$PROJECT_DIR$/ajax.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/casinos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/community.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/providers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/default/community.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/default/video-casino.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/default/video-provider.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/default/video-providers-page.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category.php" afterPath="$PROJECT_DIR$/category.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/functions.php" afterPath="$PROJECT_DIR$/include/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/comments.tpl" afterPath="$PROJECT_DIR$/templates/default/comments.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/css/main.min.css" afterPath="$PROJECT_DIR$/templates/default/css/main.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/header.tpl" afterPath="$PROJECT_DIR$/templates/default/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/player.tpl" afterPath="$PROJECT_DIR$/templates/default/player.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/video-watch.tpl" afterPath="$PROJECT_DIR$/templates/default/video-watch.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/watch.php" afterPath="$PROJECT_DIR$/watch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/video-categories-page.tpl" afterPath="$PROJECT_DIR$/templates/default/video-categories-page.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,115 +28,19 @@
       <file leaf-file-name="video-categories-page.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/default/video-categories-page.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1995">
-              <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+            <state relative-caret-position="460">
+              <caret line="20" column="67" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="98" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video-watch.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/default/video-watch.tpl">
+      <file leaf-file-name="video-category.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/video-category.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="436" column="37" lean-forward="true" selection-start-line="436" selection-start-column="37" selection-end-line="436" selection-end-column="37" />
+            <state relative-caret-position="437">
+              <caret line="19" column="72" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="60" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/default/index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/default/player.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1932">
-              <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
-              <folding>
-                <element signature="e#25080#43179#0#Smarty" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1554">
-              <caret line="1218" column="0" lean-forward="false" selection-start-line="1218" selection-start-column="0" selection-end-line="1218" selection-end-column="0" />
-              <folding>
-                <element signature="e#1483#10519#0#PHP" expanded="false" />
-                <element signature="e#10566#11249#0#PHP" expanded="false" />
-                <element signature="e#11257#12632#0#PHP" expanded="false" />
-                <element signature="e#12693#14065#0#PHP" expanded="false" />
-                <element signature="e#14073#17008#0#PHP" expanded="false" />
-                <element signature="e#17016#37414#0#PHP" expanded="false" />
-                <element signature="e#38719#66039#0#PHP" expanded="false" />
-                <element signature="e#66043#69329#0#PHP" expanded="false" />
-                <element signature="e#69333#72907#0#PHP" expanded="false" />
-                <element signature="e#72909#84449#0#PHP" expanded="false" />
-                <element signature="e#84453#97797#0#PHP" expanded="false" />
-                <element signature="e#97801#117483#0#PHP" expanded="false" />
-                <marker date="1525806379256" expanded="true" signature="4143:4230" ph="SELECT id, u... pm_comments" />
-                <marker date="1525806379256" expanded="true" signature="4341:4575" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="4673:4804" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="4863:4934" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="4993:5064" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="5642:5778" ph="SELECT uniq_... pm_comments" />
-                <marker date="1525806379256" expanded="true" signature="8524:8720" ph="UPDATE pm_co... " />
-                <marker date="1525806379256" expanded="true" signature="9606:9738" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="9811:9904" ph="UPDATE pm_co... " />
-                <marker date="1525806379256" expanded="true" signature="10033:10161" ph="INSERT INTO pm_comments_reported... " />
-                <marker date="1525806379256" expanded="true" signature="10234:10327" ph="UPDATE pm_co... " />
-                <marker date="1525806379256" expanded="true" signature="17652:17694" ph="SELECT * FRO... pm_temp" />
-                <marker date="1525806379256" expanded="true" signature="20078:21427" ph="INSERT INTO pm_videos_trash... " />
-                <marker date="1525806379256" expanded="true" signature="21504:21548" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="21660:21740" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="21869:21925" ph="UPDATE pm_ca... " />
-                <marker date="1525806379256" expanded="true" signature="23140:23181" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="27716:27769" ph="SELECT * FRO... pm_temp" />
-                <marker date="1525806379256" expanded="true" signature="28212:28255" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="31261:31521" ph="UPDATE pm_vi... " />
-                <marker date="1525806379256" expanded="true" signature="32356:32502" ph="UPDATE pm_vi... " />
-                <marker date="1525806379256" expanded="true" signature="32678:32836" ph="UPDATE pm_ca... " />
-                <marker date="1525806379256" expanded="true" signature="32946:33104" ph="UPDATE pm_ca... " />
-                <marker date="1525806379256" expanded="true" signature="34705:34774" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="34871:35129" ph="UPDATE pm_te... " />
-                <marker date="1525806379256" expanded="true" signature="64160:64231" ph="SELECT COUNT... pm_videos" />
-                <marker date="1525806379256" expanded="true" signature="65379:65442" ph="SELECT list_... pm_playlists" />
-                <marker date="1525806379256" expanded="true" signature="66721:66783" ph="SELECT * FRO... pm_users" />
-                <marker date="1525806379256" expanded="true" signature="67558:67633" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="68581:68667" ph="INSERT INTO pm_banlist... " />
-                <marker date="1525806379256" expanded="true" signature="74563:74680" ph="SELECT COUNT... pm_videos_urls" />
-                <marker date="1525806379256" expanded="true" signature="75061:75168" ph="SELECT COUNT... pm_temp" />
-                <marker date="1525806379256" expanded="true" signature="78090:78189" ph="SELECT COUNT... pm_videos_urls" />
-                <marker date="1525806379256" expanded="true" signature="78571:78672" ph="SELECT COUNT... pm_temp" />
-                <marker date="1525806379256" expanded="true" signature="82919:83590" ph="INSERT INTO pm_temp... " />
-                <marker date="1525806379256" expanded="true" signature="86301:86389" ph="SELECT COUNT... pm_users" />
-                <marker date="1525806379256" expanded="true" signature="88069:88157" ph="SELECT follo... pm_users" />
-                <marker date="1525806379256" expanded="true" signature="90042:90130" ph="SELECT follo... pm_users" />
-                <marker date="1525806379256" expanded="true" signature="97143:97280" ph="SELECT COUNT... pm_playlists" />
-                <marker date="1525806379256" expanded="true" signature="100071:100206" ph="UPDATE pm_us... " />
-                <marker date="1525806379256" expanded="true" signature="103529:103744" ph="SELECT COUNT... pm_temp" />
-                <marker date="1525806379256" expanded="true" signature="105014:105396" ph="INSERT INTO pm_temp... " />
-                <marker date="1525806379256" expanded="true" signature="110881:110930" ph="SELECT * FRO... pm_temp" />
-                <marker date="1525806379256" expanded="true" signature="114974:115017" ph="DELETE FROM " />
-                <marker date="1525806379256" expanded="true" signature="115462:115823" ph="UPDATE pm_te... " />
-                <marker date="1525806379256" expanded="true" signature="118110:118168" ph="SELECT COUNT... ${$sql_table}" />
-                <marker date="1525806379256" expanded="true" signature="118371:118507" ph="INSERT INTO pm_ads_log... " />
-                <marker date="1525806379256" expanded="true" signature="118520:118556" ph="UPDATE impre... " />
-                <marker date="1525806379256" expanded="true" signature="119493:119551" ph="SELECT COUNT... ${$sql_table}" />
-                <marker date="1525806379256" expanded="true" signature="119746:119874" ph="INSERT INTO pm_ads_log... " />
-                <marker date="1525806379256" expanded="true" signature="119886:119910" ph="UPDATE skips... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -143,154 +48,183 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27678">
-              <caret line="1331" column="24" lean-forward="false" selection-start-line="1331" selection-start-column="20" selection-end-line="1331" selection-end-column="24" />
+            <state relative-caret-position="370">
+              <caret line="915" column="19" lean-forward="true" selection-start-line="915" selection-start-column="19" selection-end-line="915" selection-end-column="19" />
               <folding>
-                <element signature="e#158011#159489#0#PHP" expanded="false" />
-                <element signature="e#159503#159966#0#PHP" expanded="false" />
-                <marker date="1525800070413" expanded="true" signature="4209:4263" ph="SELECT ${$co... ${$db_table}" />
-                <marker date="1525800070413" expanded="true" signature="14410:14537" ph="SELECT uniq_... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="14585:14689" ph="SELECT uniq_... pm_bin_rating_meta" />
-                <marker date="1525800070413" expanded="true" signature="14735:14818" ph="SELECT uniq_... pm_chart" />
-                <marker date="1525800070413" expanded="true" signature="15225:15301" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="15468:15545" ph="SELECT uniq_... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="15969:16042" ph="SELECT * FRO... pm_videos_trash" />
-                <marker date="1525800070413" expanded="true" signature="16067:16283" ph="SELECT pm_vi... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="19053:19132" ph="SELECT * FRO... pm_embed_code" />
-                <marker date="1525800070413" expanded="true" signature="32087:32138" ph="UPDATE pm_vi... " />
-                <marker date="1525800070413" expanded="true" signature="32911:33066" ph="SELECT video... pm_playlist_items" />
-                <marker date="1525800070413" expanded="true" signature="33483:33517" ph="SELECT * FRO... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="39194:39376" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="39504:39789" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="40085:40370" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="40983:41397" ph="SELECT pm_vi... pm_bin_rating_meta" />
-                <marker date="1525800070413" expanded="true" signature="41529:41714" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="42213:42300" ph="SELECT COUNT... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="42598:42716" ph="SELECT uniq_... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="42870:42963" ph="SELECT uniq_... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="67031:67101" ph="SELECT COUNT... ${$table}" />
-                <marker date="1525800070413" expanded="true" signature="67139:67169" ph="SELECT COUNT... ${$table}" />
-                <marker date="1525800070413" expanded="true" signature="69119:69188" ph="SELECT email... pm_users" />
-                <marker date="1525800070413" expanded="true" signature="82549:82641" ph="SELECT COUNT... pm_users" />
-                <marker date="1525800070413" expanded="true" signature="88613:88988" ph="SELECT pm_co... pm_comments" />
-                <marker date="1525800070413" expanded="true" signature="99456:99510" ph="SELECT * FRO... pm_countries" />
-                <marker date="1525800070413" expanded="true" signature="99760:99786" ph="SELECT * FRO... pm_countries" />
-                <marker date="1525800070413" expanded="true" signature="100808:100901" ph="SELECT yt_id... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="106734:106824" ph="SELECT video... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="107643:107755" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="122454:122540" ph="SELECT * FRO... pm_tags" />
-                <marker date="1525800070413" expanded="true" signature="123070:123136" ph="SELECT * FRO... pm_tags" />
-                <marker date="1525800070413" expanded="true" signature="123547:123627" ph="SELECT tag_i... pm_tags" />
-                <marker date="1525800070413" expanded="true" signature="124881:125012" ph="INSERT INTO pm_log... " />
-                <marker date="1525800070413" expanded="true" signature="125334:125480" ph="INSERT INTO pm_chart... " />
-                <marker date="1525800070413" expanded="true" signature="125614:125787" ph="SELECT pm_ch... pm_chart" />
-                <marker date="1525800070413" expanded="true" signature="126253:126389" ph="UPDATE pm_ch... " />
-                <marker date="1525800070413" expanded="true" signature="126433:126469" ph="DELETE FROM " />
-                <marker date="1525800070413" expanded="true" signature="127704:127728" ph="SELECT * FRO... pm_sources" />
-                <marker date="1525800070413" expanded="true" signature="128672:128790" ph="SELECT COUNT... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="128988:129027" ph="SELECT COUNT... pm_users" />
-                <marker date="1525800070413" expanded="true" signature="129206:129288" ph="SELECT COUNT... pm_users" />
-                <marker date="1525800070413" expanded="true" signature="130929:131014" ph="SELECT * FRO... pm_favorites" />
-                <marker date="1525800070413" expanded="true" signature="131534:131630" ph="SELECT COUNT... pm_reports" />
-                <marker date="1525800070413" expanded="true" signature="131813:132023" ph="INSERT INTO pm_reports... " />
-                <marker date="1525800070413" expanded="true" signature="132202:132229" ph="SELECT * FRO... pm_config" />
-                <marker date="1525800070413" expanded="true" signature="132506:132544" ph="SELECT * FRO... pm_config" />
-                <marker date="1525800070413" expanded="true" signature="132789:132870" ph="INSERT INTO pm_config... " />
-                <marker date="1525800070413" expanded="true" signature="133229:133307" ph="UPDATE pm_co... " />
-                <marker date="1525800070413" expanded="true" signature="134948:135100" ph="INSERT INTO pm_meta... " />
-                <marker date="1525800070413" expanded="true" signature="135488:135554" ph="SELECT meta_... pm_meta" />
-                <marker date="1525800070413" expanded="true" signature="135579:135732" ph="SELECT meta_... pm_meta" />
-                <marker date="1525800070413" expanded="true" signature="136054:136080" ph="UPDATE pm_me... " />
-                <marker date="1525800070413" expanded="true" signature="136250:136429" ph="UPDATE pm_me... " />
-                <marker date="1525800070413" expanded="true" signature="136730:136790" ph="DELETE FROM " />
-                <marker date="1525800070413" expanded="true" signature="136815:136914" ph="DELETE FROM " />
-                <marker date="1525800070413" expanded="true" signature="137149:137272" ph="SELECT meta_... pm_meta" />
-                <marker date="1525800070413" expanded="true" signature="138092:138197" ph="SELECT * FRO... pm_meta" />
-                <marker date="1525800070413" expanded="true" signature="149568:149664" ph="INSERT INTO pm_internal_log... " />
-                <marker date="1525800070413" expanded="true" signature="153057:153198" ph="SELECT COUNT... pm_comments_reported" />
-                <marker date="1525800070413" expanded="true" signature="163723:163795" ph="SELECT * FRO... pm_preroll_ads" />
-                <marker date="1525800070413" expanded="true" signature="166285:166320" ph="SELECT * FRO... pm_preroll_ads" />
-                <marker date="1525800070413" expanded="true" signature="168111:168228" ph="SELECT id, h... pm_videoads" />
-                <marker date="1525800070413" expanded="true" signature="171261:172471" ph="INSERT INTO pm_videos... " />
-                <marker date="1525800070413" expanded="true" signature="172661:172713" ph="UPDATE pm_ca... " />
-                <marker date="1525800070413" expanded="true" signature="173092:173247" ph="INSERT INTO pm_videos_urls... " />
-                <marker date="1525800070413" expanded="true" signature="173342:173466" ph="INSERT INTO pm_embed_code... " />
-                <marker date="1525800070413" expanded="true" signature="173626:173747" ph="INSERT INTO pm_embed_code... " />
-                <marker date="1525800070413" expanded="true" signature="173987:174082" ph="UPDATE pm_me... " />
-                <marker date="1525800070413" expanded="true" signature="174448:174555" ph="INSERT INTO pm_tags... " />
-                <marker date="1525800070413" expanded="true" signature="175086:175178" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="176954:177046" ph="SELECT id FR... pm_videos" />
-                <marker date="1525800070413" expanded="true" signature="182788:182795" ph="×" />
-                <marker date="1525800070413" expanded="true" signature="184298:184389" ph="SELECT list_... pm_playlists" />
-                <marker date="1525800070413" expanded="true" signature="185552:185952" ph="INSERT INTO pm_playlists... " />
-                <marker date="1525800070413" expanded="true" signature="186090:186134" ph="DELETE FROM " />
-                <marker date="1525800070413" expanded="true" signature="186206:186257" ph="DELETE FROM " />
-                <marker date="1525800070413" expanded="true" signature="186364:186647" ph="UPDATE pm_pl... " />
-                <marker date="1525800070413" expanded="true" signature="187125:187183" ph="SELECT * FRO... pm_playlists" />
-                <marker date="1525800070413" expanded="true" signature="189741:189798" ph="SELECT usern... pm_users" />
-                <marker date="1525800070413" expanded="true" signature="190341:190403" ph="SELECT list_... pm_playlists" />
-                <marker date="1525800070413" expanded="true" signature="191663:191714" ph="SELECT * FRO... pm_playlists" />
-                <marker date="1525800070413" expanded="true" signature="195521:195580" ph="SELECT usern... pm_users" />
-                <marker date="1525800070413" expanded="true" signature="196270:196372" ph="SELECT COUNT... pm_playlist_items" />
-                <marker date="1525800070413" expanded="true" signature="196609:196683" ph="SELECT MAX(p... pm_playlist_items" />
-                <marker date="1525800070413" expanded="true" signature="196859:196968" ph="INSERT INTO pm_playlist_items... " />
-                <marker date="1525800070413" expanded="true" signature="197041:197119" ph="UPDATE pm_pl... " />
-                <marker date="1525800070413" expanded="true" signature="197282:197361" ph="DELETE FROM " />
-                <marker date="1525800070413" expanded="true" signature="197445:197523" ph="UPDATE pm_pl... " />
-                <marker date="1525800070413" expanded="true" signature="198023:198086" ph="SELECT video... pm_playlist_items" />
-                <marker date="1525800070413" expanded="true" signature="200786:200886" ph="SELECT list_... pm_playlist_items" />
-                <marker date="1525800070413" expanded="true" signature="200786:200887" ph="SELECT list_... pm_playlist_items" />
-                <marker date="1525800070413" expanded="true" signature="201507:201602" ph="SELECT * FRO... pm_video_subtitles" />
-                <marker date="1525800070413" expanded="true" signature="214628:214718" ph="SELECT count... pm_comments" />
+                <element signature="e#183364#184842#0#PHP" expanded="false" />
+                <element signature="e#184856#185319#0#PHP" expanded="false" />
+                <marker date="1526008808025" expanded="true" signature="4209:4263" ph="SELECT ${$co... ${$db_table}" />
+                <marker date="1526008808025" expanded="true" signature="6320:6374" ph="SELECT ${$co... ${$db_table}" />
+                <marker date="1526008808025" expanded="true" signature="8404:8458" ph="SELECT ${$co... ${$db_table}" />
+                <marker date="1526008808025" expanded="true" signature="28249:28376" ph="SELECT uniq_... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="28424:28528" ph="SELECT uniq_... pm_bin_rating_meta" />
+                <marker date="1526008808025" expanded="true" signature="28574:28657" ph="SELECT uniq_... pm_chart" />
+                <marker date="1526008808025" expanded="true" signature="29064:29140" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="29307:29384" ph="SELECT uniq_... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="29808:29881" ph="SELECT * FRO... pm_videos_trash" />
+                <marker date="1526008808025" expanded="true" signature="29906:30122" ph="SELECT pm_vi... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="32892:32971" ph="SELECT * FRO... pm_embed_code" />
+                <marker date="1526008808025" expanded="true" signature="45926:45977" ph="UPDATE pm_vi... " />
+                <marker date="1526008808025" expanded="true" signature="46750:46905" ph="SELECT video... pm_playlist_items" />
+                <marker date="1526008808025" expanded="true" signature="47322:47356" ph="SELECT * FRO... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="52323:52357" ph="SELECT * FRO... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="57270:57304" ph="SELECT * FRO... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="62943:63125" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="63253:63538" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="63834:64119" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="64732:65146" ph="SELECT pm_vi... pm_bin_rating_meta" />
+                <marker date="1526008808025" expanded="true" signature="65278:65463" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="65962:66049" ph="SELECT COUNT... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="66347:66465" ph="SELECT uniq_... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="66619:66712" ph="SELECT uniq_... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="91480:91550" ph="SELECT COUNT... ${$table}" />
+                <marker date="1526008808025" expanded="true" signature="91588:91618" ph="SELECT COUNT... ${$table}" />
+                <marker date="1526008808025" expanded="true" signature="93568:93637" ph="SELECT email... pm_users" />
+                <marker date="1526008808025" expanded="true" signature="106998:107090" ph="SELECT COUNT... pm_users" />
+                <marker date="1526008808025" expanded="true" signature="113062:113437" ph="SELECT pm_co... pm_comments" />
+                <marker date="1526008808025" expanded="true" signature="123905:123959" ph="SELECT * FRO... pm_countries" />
+                <marker date="1526008808025" expanded="true" signature="124209:124235" ph="SELECT * FRO... pm_countries" />
+                <marker date="1526008808025" expanded="true" signature="125257:125350" ph="SELECT yt_id... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="132087:132177" ph="SELECT video... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="132996:133108" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="147807:147893" ph="SELECT * FRO... pm_tags" />
+                <marker date="1526008808025" expanded="true" signature="148423:148489" ph="SELECT * FRO... pm_tags" />
+                <marker date="1526008808025" expanded="true" signature="148900:148980" ph="SELECT tag_i... pm_tags" />
+                <marker date="1526008808025" expanded="true" signature="150234:150365" ph="INSERT INTO pm_log... " />
+                <marker date="1526008808025" expanded="true" signature="150687:150833" ph="INSERT INTO pm_chart... " />
+                <marker date="1526008808025" expanded="true" signature="150967:151140" ph="SELECT pm_ch... pm_chart" />
+                <marker date="1526008808025" expanded="true" signature="151606:151742" ph="UPDATE pm_ch... " />
+                <marker date="1526008808025" expanded="true" signature="151786:151822" ph="DELETE FROM " />
+                <marker date="1526008808025" expanded="true" signature="153057:153081" ph="SELECT * FRO... pm_sources" />
+                <marker date="1526008808025" expanded="true" signature="154025:154143" ph="SELECT COUNT... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="154341:154380" ph="SELECT COUNT... pm_users" />
+                <marker date="1526008808025" expanded="true" signature="154559:154641" ph="SELECT COUNT... pm_users" />
+                <marker date="1526008808025" expanded="true" signature="156282:156367" ph="SELECT * FRO... pm_favorites" />
+                <marker date="1526008808025" expanded="true" signature="156887:156983" ph="SELECT COUNT... pm_reports" />
+                <marker date="1526008808025" expanded="true" signature="157166:157376" ph="INSERT INTO pm_reports... " />
+                <marker date="1526008808025" expanded="true" signature="157555:157582" ph="SELECT * FRO... pm_config" />
+                <marker date="1526008808025" expanded="true" signature="157859:157897" ph="SELECT * FRO... pm_config" />
+                <marker date="1526008808025" expanded="true" signature="158142:158223" ph="INSERT INTO pm_config... " />
+                <marker date="1526008808025" expanded="true" signature="158582:158660" ph="UPDATE pm_co... " />
+                <marker date="1526008808025" expanded="true" signature="160301:160453" ph="INSERT INTO pm_meta... " />
+                <marker date="1526008808025" expanded="true" signature="160841:160907" ph="SELECT meta_... pm_meta" />
+                <marker date="1526008808025" expanded="true" signature="160932:161085" ph="SELECT meta_... pm_meta" />
+                <marker date="1526008808025" expanded="true" signature="161407:161433" ph="UPDATE pm_me... " />
+                <marker date="1526008808025" expanded="true" signature="161603:161782" ph="UPDATE pm_me... " />
+                <marker date="1526008808025" expanded="true" signature="162083:162143" ph="DELETE FROM " />
+                <marker date="1526008808025" expanded="true" signature="162168:162267" ph="DELETE FROM " />
+                <marker date="1526008808025" expanded="true" signature="162502:162625" ph="SELECT meta_... pm_meta" />
+                <marker date="1526008808025" expanded="true" signature="163445:163550" ph="SELECT * FRO... pm_meta" />
+                <marker date="1526008808025" expanded="true" signature="174921:175017" ph="INSERT INTO pm_internal_log... " />
+                <marker date="1526008808025" expanded="true" signature="178410:178551" ph="SELECT COUNT... pm_comments_reported" />
+                <marker date="1526008808025" expanded="true" signature="189076:189148" ph="SELECT * FRO... pm_preroll_ads" />
+                <marker date="1526008808025" expanded="true" signature="191638:191673" ph="SELECT * FRO... pm_preroll_ads" />
+                <marker date="1526008808025" expanded="true" signature="193464:193581" ph="SELECT id, h... pm_videoads" />
+                <marker date="1526008808025" expanded="true" signature="196614:197824" ph="INSERT INTO pm_videos... " />
+                <marker date="1526008808025" expanded="true" signature="198014:198066" ph="UPDATE pm_ca... " />
+                <marker date="1526008808025" expanded="true" signature="198445:198600" ph="INSERT INTO pm_videos_urls... " />
+                <marker date="1526008808025" expanded="true" signature="198695:198819" ph="INSERT INTO pm_embed_code... " />
+                <marker date="1526008808025" expanded="true" signature="198979:199100" ph="INSERT INTO pm_embed_code... " />
+                <marker date="1526008808025" expanded="true" signature="199340:199435" ph="UPDATE pm_me... " />
+                <marker date="1526008808025" expanded="true" signature="199801:199908" ph="INSERT INTO pm_tags... " />
+                <marker date="1526008808025" expanded="true" signature="200439:200531" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="202307:202399" ph="SELECT id FR... pm_videos" />
+                <marker date="1526008808025" expanded="true" signature="208141:208148" ph="×" />
+                <marker date="1526008808025" expanded="true" signature="209651:209742" ph="SELECT list_... pm_playlists" />
+                <marker date="1526008808025" expanded="true" signature="210905:211305" ph="INSERT INTO pm_playlists... " />
+                <marker date="1526008808025" expanded="true" signature="211443:211487" ph="DELETE FROM " />
+                <marker date="1526008808025" expanded="true" signature="211559:211610" ph="DELETE FROM " />
+                <marker date="1526008808025" expanded="true" signature="211717:212000" ph="UPDATE pm_pl... " />
+                <marker date="1526008808025" expanded="true" signature="212478:212536" ph="SELECT * FRO... pm_playlists" />
+                <marker date="1526008808025" expanded="true" signature="215094:215151" ph="SELECT usern... pm_users" />
+                <marker date="1526008808025" expanded="true" signature="215694:215756" ph="SELECT list_... pm_playlists" />
+                <marker date="1526008808025" expanded="true" signature="217016:217067" ph="SELECT * FRO... pm_playlists" />
+                <marker date="1526008808025" expanded="true" signature="220874:220933" ph="SELECT usern... pm_users" />
+                <marker date="1526008808025" expanded="true" signature="221623:221725" ph="SELECT COUNT... pm_playlist_items" />
+                <marker date="1526008808025" expanded="true" signature="221962:222036" ph="SELECT MAX(p... pm_playlist_items" />
+                <marker date="1526008808025" expanded="true" signature="222212:222321" ph="INSERT INTO pm_playlist_items... " />
+                <marker date="1526008808025" expanded="true" signature="222394:222472" ph="UPDATE pm_pl... " />
+                <marker date="1526008808025" expanded="true" signature="222635:222714" ph="DELETE FROM " />
+                <marker date="1526008808025" expanded="true" signature="222798:222876" ph="UPDATE pm_pl... " />
+                <marker date="1526008808025" expanded="true" signature="223376:223439" ph="SELECT video... pm_playlist_items" />
+                <marker date="1526008808025" expanded="true" signature="226139:226239" ph="SELECT list_... pm_playlist_items" />
+                <marker date="1526008808025" expanded="true" signature="226139:226240" ph="SELECT list_... pm_playlist_items" />
+                <marker date="1526008808025" expanded="true" signature="226860:226955" ph="SELECT * FRO... pm_video_subtitles" />
+                <marker date="1526008808025" expanded="true" signature="239981:240071" ph="SELECT count... pm_comments" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article.php">
+      <file leaf-file-name="video-provider.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/video-provider.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1722">
-              <caret line="95" column="8" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+            <state relative-caret-position="415">
+              <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="community.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/community.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="879">
+              <caret line="208" column="27" lean-forward="false" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
               <folding>
-                <marker date="1455630536000" expanded="true" signature="2909:3080" ph="SELECT id, t... " />
-                <marker date="1455630536000" expanded="true" signature="3159:3252" ph="SELECT id, a... art_tags" />
-                <marker date="1455630536000" expanded="true" signature="3765:3875" ph="SELECT COUNT... art_articles" />
-                <marker date="1455630536000" expanded="true" signature="4204:4307" ph="SELECT id FR... art_articles" />
-                <marker date="1455630536000" expanded="true" signature="8177:8384" ph="SELECT COUNT... art_articles" />
-                <marker date="1455630536000" expanded="true" signature="8539:8626" ph="UPDATE art_c... " />
-                <marker date="1455630536000" expanded="true" signature="8643:8909" ph="SELECT COUNT... art_articles" />
-                <marker date="1455630536000" expanded="true" signature="9065:9156" ph="UPDATE art_c... " />
+                <marker date="1526011863014" expanded="true" signature="2182:2308" ph="SELECT COUNT... pm_users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/default/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7287">
-              <caret line="347" column="26" lean-forward="false" selection-start-line="347" selection-start-column="26" selection-end-line="347" selection-end-column="26" />
+            <state relative-caret-position="536">
+              <caret line="455" column="42" lean-forward="false" selection-start-line="455" selection-start-column="42" selection-end-line="455" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="watch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/watch.php">
+      <file leaf-file-name="community.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/community.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3885">
-              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+            <state relative-caret-position="483">
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-video-list.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/default/user-video-list.tpl">
+      <file leaf-file-name="memberlist.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/memberlist.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="207">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="memberlist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/memberlist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+              <folding>
+                <marker date="1463769680000" expanded="true" signature="2129:2255" ph="SELECT COUNT... pm_users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video-providers-page.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/video-providers-page.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -308,42 +242,50 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getrelatedvideo</find>
-      <find>$video_data['</find>
-      <find>$video_data</find>
-      <find>getRelatedVideos</find>
-      <find>$params</find>
-      <find>related videos</find>
-      <find>height: &quot;401&quot;,</find>
-      <find>401</find>
-      <find>height:</find>
-      <find>body{po</find>
-      <find>getuservi</find>
-      <find>get_advan</find>
-      <find>video-watch-load-my-playlists</find>
-      <find>$smarty-&gt;assign</find>
-      <find>pickupApp2018!$#</find>
-      <find>get_related_video_list</find>
-      <find>smarty_get_advanced_video_list</find>
-      <find>getUserVideos</find>
-      <find>params['assignto</find>
-      <find>new</find>
-      <find>get_advanced_video_list</find>
-      <find>$time_now_minute</find>
-      <find>dropdown</find>
-      <find>flashvars = {</find>
-      <find>$my_playlists</find>
-      <find>my_playlists</find>
-      <find>related_video_list</find>
-      <find>my_playlists_foreach</find>
-      <find>getUserVideo</find>
-      <find>`</find>
+      <find>load_categori</find>
+      <find>load_categories</find>
+      <find>categor</find>
+      <find>$cat_name</find>
+      <find>c</find>
+      <find>case</find>
+      <find>case:c</find>
+      <find>case:</find>
+      <find>case:</find>
+      <find>case: c</find>
+      <find>case: ca</find>
+      <find>case: cas</find>
+      <find>load_casinos</find>
+      <find>category_top</find>
+      <find>get_catname</find>
+      <find>list_categories</find>
+      <find>list_categories(</find>
+      <find>get_video</find>
+      <find>$category</find>
+      <find>casinos_data</find>
+      <find>$casinos_data</find>
+      <find>categories_data</find>
+      <find>gv_category_name</find>
+      <find>list_providers</find>
+      <find>cas</find>
+      <find>list_providers_display_item</find>
+      <find>casino</find>
+      <find>categories</find>
+      <find>cat</find>
+      <find>-&gt;display</find>
     </findStrings>
     <replaceStrings>
       <replace>{$smarty.const._URL}/templates/{$template_dir}/img</replace>
       <replace>$order</replace>
       <replace>jQuery_1_8_3</replace>
       <replace>252,87,115</replace>
+      <replace>video_data</replace>
+      <replace>$casino</replace>
+      <replace>load_casino</replace>
+      <replace>load_casinos</replace>
+      <replace>$casinos</replace>
+      <replace>$cas_name</replace>
+      <replace>providers</replace>
+      <replace>provider</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -352,10 +294,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/page.php" />
-        <option value="$PROJECT_DIR$/templates/default/video-new.tpl" />
-        <option value="$PROJECT_DIR$/newvideos.php" />
-        <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/templates/default/css/index.css" />
         <option value="$PROJECT_DIR$/templates/default/helpers/remind.html" />
         <option value="$PROJECT_DIR$/templates/default/js/index.js" />
@@ -377,22 +315,36 @@
         <option value="$PROJECT_DIR$/templates/default/upload.tpl" />
         <option value="$PROJECT_DIR$/js/upload.js" />
         <option value="$PROJECT_DIR$/templates/default/css/new-style.css" />
-        <option value="$PROJECT_DIR$/templates/default/footer.tpl" />
         <option value="$PROJECT_DIR$/js/video.js" />
-        <option value="$PROJECT_DIR$/templates/default/video-categories-page.tpl" />
         <option value="$PROJECT_DIR$/templates/default/css/custom.css" />
         <option value="$PROJECT_DIR$/video-comment.php" />
         <option value="$PROJECT_DIR$/videoComment.php" />
         <option value="$PROJECT_DIR$/js/menu.js" />
         <option value="$PROJECT_DIR$/templates/default/comments.tpl" />
         <option value="$PROJECT_DIR$/templates/default/player.tpl" />
-        <option value="$PROJECT_DIR$/templates/default/header.tpl" />
-        <option value="$PROJECT_DIR$/templates/default/css/main.min.css" />
         <option value="$PROJECT_DIR$/templates/default/user-video-list.tpl" />
-        <option value="$PROJECT_DIR$/include/functions.php" />
         <option value="$PROJECT_DIR$/watch.php" />
+        <option value="$PROJECT_DIR$/templates/default/footer.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/css/main.min.css" />
         <option value="$PROJECT_DIR$/ajax.php" />
         <option value="$PROJECT_DIR$/templates/default/video-watch.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/my-player.tpl" />
+        <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/templates/default/video-search.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/video-category.tpl" />
+        <option value="$PROJECT_DIR$/category.php" />
+        <option value="$PROJECT_DIR$/casino.php" />
+        <option value="$PROJECT_DIR$/templates/video-casinos-page.tpl" />
+        <option value="$PROJECT_DIR$/casinos.php" />
+        <option value="$PROJECT_DIR$/templates/default/video-categories-page.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/video-casino.tpl" />
+        <option value="$PROJECT_DIR$/providers.php" />
+        <option value="$PROJECT_DIR$/templates/default/video-providers-page.tpl" />
+        <option value="$PROJECT_DIR$/include/functions.php" />
+        <option value="$PROJECT_DIR$/templates/default/video-provider.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/community.tpl" />
+        <option value="$PROJECT_DIR$/community.php" />
+        <option value="$PROJECT_DIR$/templates/default/header.tpl" />
       </list>
     </option>
   </component>
@@ -427,6 +379,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -472,64 +425,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpMelody" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpMelody" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpMelody" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpMelody" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpMelody" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpMelody" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PHP Melody" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Casino.Tube/Casino.Tube" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
@@ -630,6 +532,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="99fc3c99-095b-407b-ab21-eb1c9091e8ef" name="Default" comment="" />
@@ -654,21 +559,24 @@
       <workItem from="1525317274379" duration="24441000" />
       <workItem from="1525498496190" duration="92064000" />
       <workItem from="1525802207842" duration="4685000" />
-      <workItem from="1525829481417" duration="83000" />
+      <workItem from="1525829481417" duration="16552000" />
+      <workItem from="1525866010148" duration="9746000" />
+      <workItem from="1525922644738" duration="21692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221608000" />
+    <option name="totallyTimeSpent" value="269515000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2391" y="-9" width="2418" height="1318" extended-state="6" />
+    <frame x="2391" y="-9" width="2418" height="1318" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.041490264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -681,7 +589,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.041490264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -705,175 +612,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/default/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/css/new-style-ie.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/js/melody.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/js/jquery.tagsinput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3217">
-          <caret line="226" column="49" lean-forward="false" selection-start-line="226" selection-start-column="49" selection-end-line="226" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/js/melody.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4135" lean-forward="false" selection-start-line="0" selection-start-column="4135" selection-end-line="0" selection-end-column="4135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.fileupload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="666" column="39" lean-forward="true" selection-start-line="666" selection-start-column="39" selection-end-line="666" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1831">
-          <caret line="351" column="38" lean-forward="true" selection-start-line="351" selection-start-column="38" selection-end-line="351" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/js/melody.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/upload.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="155" column="77" lean-forward="false" selection-start-line="155" selection-start-column="54" selection-end-line="155" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="161" column="48" lean-forward="true" selection-start-line="161" selection-start-column="48" selection-end-line="161" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/css/new-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="337" column="9" lean-forward="false" selection-start-line="337" selection-start-column="2" selection-end-line="337" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="34" />
-          <folding>
-            <marker date="1463769680000" expanded="true" signature="3361:3781" ph="SELECT pm_vi... pm_videos" />
-            <marker date="1463769680000" expanded="true" signature="4818:4973" ph="SELECT COUNT... pm_videos" />
-            <marker date="1463769680000" expanded="true" signature="5134:5221" ph="UPDATE pm_ca... " />
-            <marker date="1463769680000" expanded="true" signature="5240:5423" ph="SELECT COUNT... pm_videos" />
-            <marker date="1463769680000" expanded="true" signature="5584:5675" ph="UPDATE pm_ca... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/video-category.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/helpers/upload-video-step1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="66" column="43" lean-forward="false" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
-          <folding>
-            <marker date="1525153356765" expanded="true" signature="2212:2292" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/img/assets/embed/play.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="603" column="65" lean-forward="false" selection-start-line="603" selection-start-column="65" selection-end-line="603" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/footer.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/js/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/upload.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/default/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -892,6 +630,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,6 +678,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding>
+            <marker date="1455630536000" expanded="true" signature="1869:2074" ph="SELECT * FRO... pm_videos" />
+            <marker date="1455630536000" expanded="true" signature="2211:2491" ph="SELECT * FRO... pm_videos" />
+            <marker date="1455630536000" expanded="true" signature="2838:3119" ph="SELECT * FRO... pm_videos" />
+            <marker date="1455630536000" expanded="true" signature="3435:3883" ph="SELECT pm_vi... pm_videos" />
+            <marker date="1455630536000" expanded="true" signature="4019:4216" ph="SELECT * FRO... pm_videos" />
+            <marker date="1455630536000" expanded="true" signature="4853:4989" ph="..." />
+            <marker date="1455630536000" expanded="true" signature="5415:5446" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -946,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="85" column="54" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,6 +715,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4347">
           <caret line="232" column="55" lean-forward="false" selection-start-line="232" selection-start-column="55" selection-end-line="232" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,13 +730,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="142" column="31" lean-forward="true" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/css/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="2" column="296" lean-forward="false" selection-start-line="2" selection-start-column="296" selection-end-line="2" selection-end-column="296" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -999,27 +741,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7287">
-          <caret line="347" column="26" lean-forward="false" selection-start-line="347" selection-start-column="26" selection-end-line="347" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/video-categories-page.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/default/user-video-list.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,111 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27678">
-          <caret line="1331" column="24" lean-forward="false" selection-start-line="1331" selection-start-column="20" selection-end-line="1331" selection-end-column="24" />
-          <folding>
-            <element signature="e#158011#159489#0#PHP" expanded="false" />
-            <element signature="e#159503#159966#0#PHP" expanded="false" />
-            <marker date="1525800070413" expanded="true" signature="4209:4263" ph="SELECT ${$co... ${$db_table}" />
-            <marker date="1525800070413" expanded="true" signature="14410:14537" ph="SELECT uniq_... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="14585:14689" ph="SELECT uniq_... pm_bin_rating_meta" />
-            <marker date="1525800070413" expanded="true" signature="14735:14818" ph="SELECT uniq_... pm_chart" />
-            <marker date="1525800070413" expanded="true" signature="15225:15301" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="15468:15545" ph="SELECT uniq_... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="15969:16042" ph="SELECT * FRO... pm_videos_trash" />
-            <marker date="1525800070413" expanded="true" signature="16067:16283" ph="SELECT pm_vi... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="19053:19132" ph="SELECT * FRO... pm_embed_code" />
-            <marker date="1525800070413" expanded="true" signature="32087:32138" ph="UPDATE pm_vi... " />
-            <marker date="1525800070413" expanded="true" signature="32911:33066" ph="SELECT video... pm_playlist_items" />
-            <marker date="1525800070413" expanded="true" signature="33483:33517" ph="SELECT * FRO... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="39194:39376" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="39504:39789" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="40085:40370" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="40983:41397" ph="SELECT pm_vi... pm_bin_rating_meta" />
-            <marker date="1525800070413" expanded="true" signature="41529:41714" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="42213:42300" ph="SELECT COUNT... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="42598:42716" ph="SELECT uniq_... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="42870:42963" ph="SELECT uniq_... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="67031:67101" ph="SELECT COUNT... ${$table}" />
-            <marker date="1525800070413" expanded="true" signature="67139:67169" ph="SELECT COUNT... ${$table}" />
-            <marker date="1525800070413" expanded="true" signature="69119:69188" ph="SELECT email... pm_users" />
-            <marker date="1525800070413" expanded="true" signature="82549:82641" ph="SELECT COUNT... pm_users" />
-            <marker date="1525800070413" expanded="true" signature="88613:88988" ph="SELECT pm_co... pm_comments" />
-            <marker date="1525800070413" expanded="true" signature="99456:99510" ph="SELECT * FRO... pm_countries" />
-            <marker date="1525800070413" expanded="true" signature="99760:99786" ph="SELECT * FRO... pm_countries" />
-            <marker date="1525800070413" expanded="true" signature="100808:100901" ph="SELECT yt_id... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="106734:106824" ph="SELECT video... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="107643:107755" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="122454:122540" ph="SELECT * FRO... pm_tags" />
-            <marker date="1525800070413" expanded="true" signature="123070:123136" ph="SELECT * FRO... pm_tags" />
-            <marker date="1525800070413" expanded="true" signature="123547:123627" ph="SELECT tag_i... pm_tags" />
-            <marker date="1525800070413" expanded="true" signature="124881:125012" ph="INSERT INTO pm_log... " />
-            <marker date="1525800070413" expanded="true" signature="125334:125480" ph="INSERT INTO pm_chart... " />
-            <marker date="1525800070413" expanded="true" signature="125614:125787" ph="SELECT pm_ch... pm_chart" />
-            <marker date="1525800070413" expanded="true" signature="126253:126389" ph="UPDATE pm_ch... " />
-            <marker date="1525800070413" expanded="true" signature="126433:126469" ph="DELETE FROM " />
-            <marker date="1525800070413" expanded="true" signature="127704:127728" ph="SELECT * FRO... pm_sources" />
-            <marker date="1525800070413" expanded="true" signature="128672:128790" ph="SELECT COUNT... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="128988:129027" ph="SELECT COUNT... pm_users" />
-            <marker date="1525800070413" expanded="true" signature="129206:129288" ph="SELECT COUNT... pm_users" />
-            <marker date="1525800070413" expanded="true" signature="130929:131014" ph="SELECT * FRO... pm_favorites" />
-            <marker date="1525800070413" expanded="true" signature="131534:131630" ph="SELECT COUNT... pm_reports" />
-            <marker date="1525800070413" expanded="true" signature="131813:132023" ph="INSERT INTO pm_reports... " />
-            <marker date="1525800070413" expanded="true" signature="132202:132229" ph="SELECT * FRO... pm_config" />
-            <marker date="1525800070413" expanded="true" signature="132506:132544" ph="SELECT * FRO... pm_config" />
-            <marker date="1525800070413" expanded="true" signature="132789:132870" ph="INSERT INTO pm_config... " />
-            <marker date="1525800070413" expanded="true" signature="133229:133307" ph="UPDATE pm_co... " />
-            <marker date="1525800070413" expanded="true" signature="134948:135100" ph="INSERT INTO pm_meta... " />
-            <marker date="1525800070413" expanded="true" signature="135488:135554" ph="SELECT meta_... pm_meta" />
-            <marker date="1525800070413" expanded="true" signature="135579:135732" ph="SELECT meta_... pm_meta" />
-            <marker date="1525800070413" expanded="true" signature="136054:136080" ph="UPDATE pm_me... " />
-            <marker date="1525800070413" expanded="true" signature="136250:136429" ph="UPDATE pm_me... " />
-            <marker date="1525800070413" expanded="true" signature="136730:136790" ph="DELETE FROM " />
-            <marker date="1525800070413" expanded="true" signature="136815:136914" ph="DELETE FROM " />
-            <marker date="1525800070413" expanded="true" signature="137149:137272" ph="SELECT meta_... pm_meta" />
-            <marker date="1525800070413" expanded="true" signature="138092:138197" ph="SELECT * FRO... pm_meta" />
-            <marker date="1525800070413" expanded="true" signature="149568:149664" ph="INSERT INTO pm_internal_log... " />
-            <marker date="1525800070413" expanded="true" signature="153057:153198" ph="SELECT COUNT... pm_comments_reported" />
-            <marker date="1525800070413" expanded="true" signature="163723:163795" ph="SELECT * FRO... pm_preroll_ads" />
-            <marker date="1525800070413" expanded="true" signature="166285:166320" ph="SELECT * FRO... pm_preroll_ads" />
-            <marker date="1525800070413" expanded="true" signature="168111:168228" ph="SELECT id, h... pm_videoads" />
-            <marker date="1525800070413" expanded="true" signature="171261:172471" ph="INSERT INTO pm_videos... " />
-            <marker date="1525800070413" expanded="true" signature="172661:172713" ph="UPDATE pm_ca... " />
-            <marker date="1525800070413" expanded="true" signature="173092:173247" ph="INSERT INTO pm_videos_urls... " />
-            <marker date="1525800070413" expanded="true" signature="173342:173466" ph="INSERT INTO pm_embed_code... " />
-            <marker date="1525800070413" expanded="true" signature="173626:173747" ph="INSERT INTO pm_embed_code... " />
-            <marker date="1525800070413" expanded="true" signature="173987:174082" ph="UPDATE pm_me... " />
-            <marker date="1525800070413" expanded="true" signature="174448:174555" ph="INSERT INTO pm_tags... " />
-            <marker date="1525800070413" expanded="true" signature="175086:175178" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="176954:177046" ph="SELECT id FR... pm_videos" />
-            <marker date="1525800070413" expanded="true" signature="182788:182795" ph="×" />
-            <marker date="1525800070413" expanded="true" signature="184298:184389" ph="SELECT list_... pm_playlists" />
-            <marker date="1525800070413" expanded="true" signature="185552:185952" ph="INSERT INTO pm_playlists... " />
-            <marker date="1525800070413" expanded="true" signature="186090:186134" ph="DELETE FROM " />
-            <marker date="1525800070413" expanded="true" signature="186206:186257" ph="DELETE FROM " />
-            <marker date="1525800070413" expanded="true" signature="186364:186647" ph="UPDATE pm_pl... " />
-            <marker date="1525800070413" expanded="true" signature="187125:187183" ph="SELECT * FRO... pm_playlists" />
-            <marker date="1525800070413" expanded="true" signature="189741:189798" ph="SELECT usern... pm_users" />
-            <marker date="1525800070413" expanded="true" signature="190341:190403" ph="SELECT list_... pm_playlists" />
-            <marker date="1525800070413" expanded="true" signature="191663:191714" ph="SELECT * FRO... pm_playlists" />
-            <marker date="1525800070413" expanded="true" signature="195521:195580" ph="SELECT usern... pm_users" />
-            <marker date="1525800070413" expanded="true" signature="196270:196372" ph="SELECT COUNT... pm_playlist_items" />
-            <marker date="1525800070413" expanded="true" signature="196609:196683" ph="SELECT MAX(p... pm_playlist_items" />
-            <marker date="1525800070413" expanded="true" signature="196859:196968" ph="INSERT INTO pm_playlist_items... " />
-            <marker date="1525800070413" expanded="true" signature="197041:197119" ph="UPDATE pm_pl... " />
-            <marker date="1525800070413" expanded="true" signature="197282:197361" ph="DELETE FROM " />
-            <marker date="1525800070413" expanded="true" signature="197445:197523" ph="UPDATE pm_pl... " />
-            <marker date="1525800070413" expanded="true" signature="198023:198086" ph="SELECT video... pm_playlist_items" />
-            <marker date="1525800070413" expanded="true" signature="200786:200886" ph="SELECT list_... pm_playlist_items" />
-            <marker date="1525800070413" expanded="true" signature="200786:200887" ph="SELECT list_... pm_playlist_items" />
-            <marker date="1525800070413" expanded="true" signature="201507:201602" ph="SELECT * FRO... pm_video_subtitles" />
-            <marker date="1525800070413" expanded="true" signature="214628:214718" ph="SELECT count... pm_comments" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/readlog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1152,38 +772,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/watch.php">
+    <entry file="file://$PROJECT_DIR$/templates/default/footer.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3885">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="290">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/player.tpl">
+    <entry file="file://$PROJECT_DIR$/templates/default/css/main.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1932">
-          <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
-          <folding>
-            <element signature="e#25080#43179#0#Smarty" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="66" />
-          <folding />
+        <state relative-caret-position="332">
+          <caret line="4" column="91633" lean-forward="false" selection-start-line="4" selection-start-column="91633" selection-end-line="4" selection-end-column="91633" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1554">
-          <caret line="1218" column="0" lean-forward="false" selection-start-line="1218" selection-start-column="0" selection-end-line="1218" selection-end-column="0" />
+        <state relative-caret-position="741">
+          <caret line="3926" column="49" lean-forward="false" selection-start-line="3926" selection-start-column="49" selection-end-line="3926" selection-end-column="49" />
           <folding>
-            <element signature="e#1483#10519#0#PHP" expanded="false" />
+            <element signature="e#10523#38670#0#PHP" expanded="false" />
             <element signature="e#10566#11249#0#PHP" expanded="false" />
             <element signature="e#11257#12632#0#PHP" expanded="false" />
             <element signature="e#12693#14065#0#PHP" expanded="false" />
@@ -1195,65 +803,454 @@
             <element signature="e#72909#84449#0#PHP" expanded="false" />
             <element signature="e#84453#97797#0#PHP" expanded="false" />
             <element signature="e#97801#117483#0#PHP" expanded="false" />
-            <marker date="1525806379256" expanded="true" signature="4143:4230" ph="SELECT id, u... pm_comments" />
-            <marker date="1525806379256" expanded="true" signature="4341:4575" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="4673:4804" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="4863:4934" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="4993:5064" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="5642:5778" ph="SELECT uniq_... pm_comments" />
-            <marker date="1525806379256" expanded="true" signature="8524:8720" ph="UPDATE pm_co... " />
-            <marker date="1525806379256" expanded="true" signature="9606:9738" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="9811:9904" ph="UPDATE pm_co... " />
-            <marker date="1525806379256" expanded="true" signature="10033:10161" ph="INSERT INTO pm_comments_reported... " />
-            <marker date="1525806379256" expanded="true" signature="10234:10327" ph="UPDATE pm_co... " />
-            <marker date="1525806379256" expanded="true" signature="17652:17694" ph="SELECT * FRO... pm_temp" />
-            <marker date="1525806379256" expanded="true" signature="20078:21427" ph="INSERT INTO pm_videos_trash... " />
-            <marker date="1525806379256" expanded="true" signature="21504:21548" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="21660:21740" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="21869:21925" ph="UPDATE pm_ca... " />
-            <marker date="1525806379256" expanded="true" signature="23140:23181" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="27716:27769" ph="SELECT * FRO... pm_temp" />
-            <marker date="1525806379256" expanded="true" signature="28212:28255" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="31261:31521" ph="UPDATE pm_vi... " />
-            <marker date="1525806379256" expanded="true" signature="32356:32502" ph="UPDATE pm_vi... " />
-            <marker date="1525806379256" expanded="true" signature="32678:32836" ph="UPDATE pm_ca... " />
-            <marker date="1525806379256" expanded="true" signature="32946:33104" ph="UPDATE pm_ca... " />
-            <marker date="1525806379256" expanded="true" signature="34705:34774" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="34871:35129" ph="UPDATE pm_te... " />
-            <marker date="1525806379256" expanded="true" signature="64160:64231" ph="SELECT COUNT... pm_videos" />
-            <marker date="1525806379256" expanded="true" signature="65379:65442" ph="SELECT list_... pm_playlists" />
-            <marker date="1525806379256" expanded="true" signature="66721:66783" ph="SELECT * FRO... pm_users" />
-            <marker date="1525806379256" expanded="true" signature="67558:67633" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="68581:68667" ph="INSERT INTO pm_banlist... " />
-            <marker date="1525806379256" expanded="true" signature="74563:74680" ph="SELECT COUNT... pm_videos_urls" />
-            <marker date="1525806379256" expanded="true" signature="75061:75168" ph="SELECT COUNT... pm_temp" />
-            <marker date="1525806379256" expanded="true" signature="78090:78189" ph="SELECT COUNT... pm_videos_urls" />
-            <marker date="1525806379256" expanded="true" signature="78571:78672" ph="SELECT COUNT... pm_temp" />
-            <marker date="1525806379256" expanded="true" signature="82919:83590" ph="INSERT INTO pm_temp... " />
-            <marker date="1525806379256" expanded="true" signature="86301:86389" ph="SELECT COUNT... pm_users" />
-            <marker date="1525806379256" expanded="true" signature="88069:88157" ph="SELECT follo... pm_users" />
-            <marker date="1525806379256" expanded="true" signature="90042:90130" ph="SELECT follo... pm_users" />
-            <marker date="1525806379256" expanded="true" signature="97143:97280" ph="SELECT COUNT... pm_playlists" />
-            <marker date="1525806379256" expanded="true" signature="100071:100206" ph="UPDATE pm_us... " />
-            <marker date="1525806379256" expanded="true" signature="103529:103744" ph="SELECT COUNT... pm_temp" />
-            <marker date="1525806379256" expanded="true" signature="105014:105396" ph="INSERT INTO pm_temp... " />
-            <marker date="1525806379256" expanded="true" signature="110881:110930" ph="SELECT * FRO... pm_temp" />
-            <marker date="1525806379256" expanded="true" signature="114974:115017" ph="DELETE FROM " />
-            <marker date="1525806379256" expanded="true" signature="115462:115823" ph="UPDATE pm_te... " />
-            <marker date="1525806379256" expanded="true" signature="118110:118168" ph="SELECT COUNT... ${$sql_table}" />
-            <marker date="1525806379256" expanded="true" signature="118371:118507" ph="INSERT INTO pm_ads_log... " />
-            <marker date="1525806379256" expanded="true" signature="118520:118556" ph="UPDATE impre... " />
-            <marker date="1525806379256" expanded="true" signature="119493:119551" ph="SELECT COUNT... ${$sql_table}" />
-            <marker date="1525806379256" expanded="true" signature="119746:119874" ph="INSERT INTO pm_ads_log... " />
-            <marker date="1525806379256" expanded="true" signature="119886:119910" ph="UPDATE skips... " />
+            <element signature="e#117588#120007#0#PHP" expanded="false" />
+            <marker date="1525839034995" expanded="true" signature="4143:4230" ph="SELECT id, u... pm_comments" />
+            <marker date="1525839034995" expanded="true" signature="4341:4575" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="4673:4804" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="4863:4934" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="4993:5064" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="5642:5778" ph="SELECT uniq_... pm_comments" />
+            <marker date="1525839034995" expanded="true" signature="8524:8720" ph="UPDATE pm_co... " />
+            <marker date="1525839034995" expanded="true" signature="9606:9738" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="9811:9904" ph="UPDATE pm_co... " />
+            <marker date="1525839034995" expanded="true" signature="10033:10161" ph="INSERT INTO pm_comments_reported... " />
+            <marker date="1525839034995" expanded="true" signature="10234:10327" ph="UPDATE pm_co... " />
+            <marker date="1525839034995" expanded="true" signature="17652:17694" ph="SELECT * FRO... pm_temp" />
+            <marker date="1525839034995" expanded="true" signature="20078:21427" ph="INSERT INTO pm_videos_trash... " />
+            <marker date="1525839034995" expanded="true" signature="21504:21548" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="21660:21740" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="21869:21925" ph="UPDATE pm_ca... " />
+            <marker date="1525839034995" expanded="true" signature="23140:23181" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="27716:27769" ph="SELECT * FRO... pm_temp" />
+            <marker date="1525839034995" expanded="true" signature="28212:28255" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="31261:31521" ph="UPDATE pm_vi... " />
+            <marker date="1525839034995" expanded="true" signature="32356:32502" ph="UPDATE pm_vi... " />
+            <marker date="1525839034995" expanded="true" signature="32678:32836" ph="UPDATE pm_ca... " />
+            <marker date="1525839034995" expanded="true" signature="32946:33104" ph="UPDATE pm_ca... " />
+            <marker date="1525839034995" expanded="true" signature="34705:34774" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="34871:35129" ph="UPDATE pm_te... " />
+            <marker date="1525839034995" expanded="true" signature="64160:64231" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525839034995" expanded="true" signature="65379:65442" ph="SELECT list_... pm_playlists" />
+            <marker date="1525839034995" expanded="true" signature="66721:66783" ph="SELECT * FRO... pm_users" />
+            <marker date="1525839034995" expanded="true" signature="67558:67633" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="68581:68667" ph="INSERT INTO pm_banlist... " />
+            <marker date="1525839034995" expanded="true" signature="74563:74680" ph="SELECT COUNT... pm_videos_urls" />
+            <marker date="1525839034995" expanded="true" signature="75061:75168" ph="SELECT COUNT... pm_temp" />
+            <marker date="1525839034995" expanded="true" signature="78090:78189" ph="SELECT COUNT... pm_videos_urls" />
+            <marker date="1525839034995" expanded="true" signature="78571:78672" ph="SELECT COUNT... pm_temp" />
+            <marker date="1525839034995" expanded="true" signature="82919:83590" ph="INSERT INTO pm_temp... " />
+            <marker date="1525839034995" expanded="true" signature="86301:86389" ph="SELECT COUNT... pm_users" />
+            <marker date="1525839034995" expanded="true" signature="88069:88157" ph="SELECT follo... pm_users" />
+            <marker date="1525839034995" expanded="true" signature="90042:90130" ph="SELECT follo... pm_users" />
+            <marker date="1525839034995" expanded="true" signature="97143:97280" ph="SELECT COUNT... pm_playlists" />
+            <marker date="1525839034995" expanded="true" signature="100071:100206" ph="UPDATE pm_us... " />
+            <marker date="1525839034995" expanded="true" signature="103529:103744" ph="SELECT COUNT... pm_temp" />
+            <marker date="1525839034995" expanded="true" signature="105014:105396" ph="INSERT INTO pm_temp... " />
+            <marker date="1525839034995" expanded="true" signature="110881:110930" ph="SELECT * FRO... pm_temp" />
+            <marker date="1525839034995" expanded="true" signature="114974:115017" ph="DELETE FROM " />
+            <marker date="1525839034995" expanded="true" signature="115462:115823" ph="UPDATE pm_te... " />
+            <marker date="1525839034995" expanded="true" signature="118110:118168" ph="SELECT COUNT... ${$sql_table}" />
+            <marker date="1525839034995" expanded="true" signature="118371:118507" ph="INSERT INTO pm_ads_log... " />
+            <marker date="1525839034995" expanded="true" signature="118520:118556" ph="UPDATE impre... " />
+            <marker date="1525839034995" expanded="true" signature="119493:119551" ph="SELECT COUNT... ${$sql_table}" />
+            <marker date="1525839034995" expanded="true" signature="119746:119874" ph="INSERT INTO pm_ads_log... " />
+            <marker date="1525839034995" expanded="true" signature="119886:119910" ph="UPDATE skips... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/player.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="283" column="39" lean-forward="false" selection-start-line="283" selection-start-column="39" selection-end-line="283" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cookieconsent.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="321" lean-forward="false" selection-start-line="0" selection-start-column="321" selection-end-line="0" selection-end-column="321" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/my-player.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6384">
+          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/default/video-watch.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="436" column="37" lean-forward="true" selection-start-line="436" selection-start-column="37" selection-end-line="436" selection-end-column="37" />
+        <state relative-caret-position="1610">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2323">
+          <caret line="101" column="75" lean-forward="false" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-search.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2967">
+          <caret line="129" column="37" lean-forward="true" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding>
+            <element signature="e#4874#5616#0#PHP" expanded="false" />
+            <marker date="1525840937131" expanded="true" signature="2171:2263" ph="SELECT COUNT... pm_searches" />
+            <marker date="1525840937131" expanded="true" signature="2440:2509" ph="UPDATE pm_se... " />
+            <marker date="1525840937131" expanded="true" signature="2553:2621" ph="INSERT INTO pm_searches... " />
+            <marker date="1525840937131" expanded="true" signature="3009:3355" ph="SELECT SQL_C... " />
+            <marker date="1525840937131" expanded="true" signature="4456:4597" ph="SELECT SQL_C... pm_videos" />
+            <marker date="1525840937131" expanded="true" signature="4950:5114" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525840937131" expanded="true" signature="5330:5509" ph="SELECT id FR... pm_videos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455630536000" expanded="true" signature="1258:1471" ph="SELECT pm_vi... pm_videos" />
+            <marker date="1455630536000" expanded="true" signature="1691:1764" ph="SELECT * FRO... pm_videos_trash" />
+            <marker date="1455630536000" expanded="true" signature="4512:4620" ph="UPDATE pm_vi... " />
+            <marker date="1455630536000" expanded="true" signature="5410:5509" ph="UPDATE pm_vi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/casino.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4555">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="422" column="9" lean-forward="false" selection-start-line="422" selection-start-column="9" selection-end-line="422" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/mmodframework.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="353" column="25" lean-forward="false" selection-start-line="353" selection-start-column="25" selection-end-line="353" selection-end-column="25" />
+          <folding>
+            <marker date="1447162370000" expanded="true" signature="1744:1821" ph="SELECT plugi... mm_plugins" />
+            <marker date="1447162370000" expanded="true" signature="3002:3057" ph="SELECT id FR... pm_config" />
+            <marker date="1447162370000" expanded="true" signature="3112:3177" ph="INSERT INTO pm_config... " />
+            <marker date="1447162370000" expanded="true" signature="4062:4201" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="4960:5021" ph="SELECT value... mm_settings" />
+            <marker date="1447162370000" expanded="true" signature="5622:5699" ph="SELECT * FRO... mm_plugins" />
+            <marker date="1447162370000" expanded="true" signature="5991:6092" ph="UPDATE mm_pl... " />
+            <marker date="1447162370000" expanded="true" signature="8594:8657" ph="SELECT * FRO... mm_settings" />
+            <marker date="1447162370000" expanded="true" signature="8932:9005" ph="SELECT * FRO... mm_plugins" />
+            <marker date="1447162370000" expanded="true" signature="10292:10303" ph="DROP TABLE $... " />
+            <marker date="1447162370000" expanded="true" signature="29204:29228" ph="SELECT * FRO... mm_plugins" />
+            <marker date="1447162370000" expanded="true" signature="29557:30137" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="29584:29601" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="29658:29701" ph="..." />
+            <marker date="1447162370000" expanded="false" signature="29753:29782" ph="..." />
+            <marker date="1447162370000" expanded="false" signature="29849:29860" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="30165:30717" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="30192:30209" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="30254:30289" ph="..." />
+            <marker date="1447162370000" expanded="false" signature="30341:30370" ph="..." />
+            <marker date="1447162370000" expanded="false" signature="30435:30446" ph="..." />
+            <marker date="1447162370000" expanded="true" signature="31248:31325" ph="SELECT count... mm_settings" />
+            <marker date="1447162370000" expanded="true" signature="31460:31528" ph="DELETE FROM " />
+            <marker date="1447162370000" expanded="true" signature="31555:31622" ph="DELETE FROM " />
+            <marker date="1447162370000" expanded="true" signature="31749:32073" ph="CREATE TABLE... IF" />
+            <marker date="1447162370000" expanded="true" signature="32141:32465" ph="CREATE TABLE... IF" />
+            <marker date="1447162370000" expanded="true" signature="32606:32672" ph="INSERT INTO pm_config... " />
+            <marker date="1447162370000" expanded="true" signature="33306:33382" ph="SELECT count... mm_plugins" />
+            <marker date="1447162370000" expanded="true" signature="33723:33733" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/video-casinos-page.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-casinos-page.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="270" column="32" lean-forward="false" selection-start-line="270" selection-start-column="17" selection-end-line="270" selection-end-column="32" />
+          <folding>
+            <marker date="1525866778397" expanded="true" signature="3395:3815" ph="SELECT pm_vi... pm_videos" />
+            <marker date="1525866778397" expanded="true" signature="4852:5007" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525866778397" expanded="true" signature="5168:5255" ph="UPDATE pm_ca... " />
+            <marker date="1525866778397" expanded="true" signature="5274:5457" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525866778397" expanded="true" signature="5618:5709" ph="UPDATE pm_ca... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/casinos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="167" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding>
+            <marker date="1525977244253" expanded="true" signature="3588:4000" ph="SELECT pm_vi... pm_videos" />
+            <marker date="1525977244253" expanded="true" signature="5333:5480" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525977244253" expanded="true" signature="5670:5754" ph="UPDATE pm_ca... " />
+            <marker date="1525977244253" expanded="true" signature="5777:5952" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525977244253" expanded="true" signature="6142:6230" ph="UPDATE pm_ca... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/providers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="242" column="36" lean-forward="false" selection-start-line="242" selection-start-column="22" selection-end-line="242" selection-end-column="36" />
+          <folding>
+            <marker date="1525979087089" expanded="true" signature="3680:4120" ph="SELECT pm_vi... pm_videos" />
+            <marker date="1525979087089" expanded="true" signature="5466:5641" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525979087089" expanded="true" signature="5831:5922" ph="UPDATE pm_pr... " />
+            <marker date="1525979087089" expanded="true" signature="5945:6148" ph="SELECT COUNT... pm_videos" />
+            <marker date="1525979087089" expanded="true" signature="6338:6433" ph="UPDATE pm_pr... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-casino.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-providers-page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-providers-page.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="20" column="77" lean-forward="true" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="915" column="19" lean-forward="true" selection-start-line="915" selection-start-column="19" selection-end-line="915" selection-end-column="19" />
+          <folding>
+            <element signature="e#183364#184842#0#PHP" expanded="false" />
+            <element signature="e#184856#185319#0#PHP" expanded="false" />
+            <marker date="1526008808025" expanded="true" signature="4209:4263" ph="SELECT ${$co... ${$db_table}" />
+            <marker date="1526008808025" expanded="true" signature="6320:6374" ph="SELECT ${$co... ${$db_table}" />
+            <marker date="1526008808025" expanded="true" signature="8404:8458" ph="SELECT ${$co... ${$db_table}" />
+            <marker date="1526008808025" expanded="true" signature="28249:28376" ph="SELECT uniq_... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="28424:28528" ph="SELECT uniq_... pm_bin_rating_meta" />
+            <marker date="1526008808025" expanded="true" signature="28574:28657" ph="SELECT uniq_... pm_chart" />
+            <marker date="1526008808025" expanded="true" signature="29064:29140" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="29307:29384" ph="SELECT uniq_... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="29808:29881" ph="SELECT * FRO... pm_videos_trash" />
+            <marker date="1526008808025" expanded="true" signature="29906:30122" ph="SELECT pm_vi... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="32892:32971" ph="SELECT * FRO... pm_embed_code" />
+            <marker date="1526008808025" expanded="true" signature="45926:45977" ph="UPDATE pm_vi... " />
+            <marker date="1526008808025" expanded="true" signature="46750:46905" ph="SELECT video... pm_playlist_items" />
+            <marker date="1526008808025" expanded="true" signature="47322:47356" ph="SELECT * FRO... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="52323:52357" ph="SELECT * FRO... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="57270:57304" ph="SELECT * FRO... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="62943:63125" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="63253:63538" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="63834:64119" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="64732:65146" ph="SELECT pm_vi... pm_bin_rating_meta" />
+            <marker date="1526008808025" expanded="true" signature="65278:65463" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="65962:66049" ph="SELECT COUNT... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="66347:66465" ph="SELECT uniq_... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="66619:66712" ph="SELECT uniq_... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="91480:91550" ph="SELECT COUNT... ${$table}" />
+            <marker date="1526008808025" expanded="true" signature="91588:91618" ph="SELECT COUNT... ${$table}" />
+            <marker date="1526008808025" expanded="true" signature="93568:93637" ph="SELECT email... pm_users" />
+            <marker date="1526008808025" expanded="true" signature="106998:107090" ph="SELECT COUNT... pm_users" />
+            <marker date="1526008808025" expanded="true" signature="113062:113437" ph="SELECT pm_co... pm_comments" />
+            <marker date="1526008808025" expanded="true" signature="123905:123959" ph="SELECT * FRO... pm_countries" />
+            <marker date="1526008808025" expanded="true" signature="124209:124235" ph="SELECT * FRO... pm_countries" />
+            <marker date="1526008808025" expanded="true" signature="125257:125350" ph="SELECT yt_id... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="132087:132177" ph="SELECT video... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="132996:133108" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="147807:147893" ph="SELECT * FRO... pm_tags" />
+            <marker date="1526008808025" expanded="true" signature="148423:148489" ph="SELECT * FRO... pm_tags" />
+            <marker date="1526008808025" expanded="true" signature="148900:148980" ph="SELECT tag_i... pm_tags" />
+            <marker date="1526008808025" expanded="true" signature="150234:150365" ph="INSERT INTO pm_log... " />
+            <marker date="1526008808025" expanded="true" signature="150687:150833" ph="INSERT INTO pm_chart... " />
+            <marker date="1526008808025" expanded="true" signature="150967:151140" ph="SELECT pm_ch... pm_chart" />
+            <marker date="1526008808025" expanded="true" signature="151606:151742" ph="UPDATE pm_ch... " />
+            <marker date="1526008808025" expanded="true" signature="151786:151822" ph="DELETE FROM " />
+            <marker date="1526008808025" expanded="true" signature="153057:153081" ph="SELECT * FRO... pm_sources" />
+            <marker date="1526008808025" expanded="true" signature="154025:154143" ph="SELECT COUNT... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="154341:154380" ph="SELECT COUNT... pm_users" />
+            <marker date="1526008808025" expanded="true" signature="154559:154641" ph="SELECT COUNT... pm_users" />
+            <marker date="1526008808025" expanded="true" signature="156282:156367" ph="SELECT * FRO... pm_favorites" />
+            <marker date="1526008808025" expanded="true" signature="156887:156983" ph="SELECT COUNT... pm_reports" />
+            <marker date="1526008808025" expanded="true" signature="157166:157376" ph="INSERT INTO pm_reports... " />
+            <marker date="1526008808025" expanded="true" signature="157555:157582" ph="SELECT * FRO... pm_config" />
+            <marker date="1526008808025" expanded="true" signature="157859:157897" ph="SELECT * FRO... pm_config" />
+            <marker date="1526008808025" expanded="true" signature="158142:158223" ph="INSERT INTO pm_config... " />
+            <marker date="1526008808025" expanded="true" signature="158582:158660" ph="UPDATE pm_co... " />
+            <marker date="1526008808025" expanded="true" signature="160301:160453" ph="INSERT INTO pm_meta... " />
+            <marker date="1526008808025" expanded="true" signature="160841:160907" ph="SELECT meta_... pm_meta" />
+            <marker date="1526008808025" expanded="true" signature="160932:161085" ph="SELECT meta_... pm_meta" />
+            <marker date="1526008808025" expanded="true" signature="161407:161433" ph="UPDATE pm_me... " />
+            <marker date="1526008808025" expanded="true" signature="161603:161782" ph="UPDATE pm_me... " />
+            <marker date="1526008808025" expanded="true" signature="162083:162143" ph="DELETE FROM " />
+            <marker date="1526008808025" expanded="true" signature="162168:162267" ph="DELETE FROM " />
+            <marker date="1526008808025" expanded="true" signature="162502:162625" ph="SELECT meta_... pm_meta" />
+            <marker date="1526008808025" expanded="true" signature="163445:163550" ph="SELECT * FRO... pm_meta" />
+            <marker date="1526008808025" expanded="true" signature="174921:175017" ph="INSERT INTO pm_internal_log... " />
+            <marker date="1526008808025" expanded="true" signature="178410:178551" ph="SELECT COUNT... pm_comments_reported" />
+            <marker date="1526008808025" expanded="true" signature="189076:189148" ph="SELECT * FRO... pm_preroll_ads" />
+            <marker date="1526008808025" expanded="true" signature="191638:191673" ph="SELECT * FRO... pm_preroll_ads" />
+            <marker date="1526008808025" expanded="true" signature="193464:193581" ph="SELECT id, h... pm_videoads" />
+            <marker date="1526008808025" expanded="true" signature="196614:197824" ph="INSERT INTO pm_videos... " />
+            <marker date="1526008808025" expanded="true" signature="198014:198066" ph="UPDATE pm_ca... " />
+            <marker date="1526008808025" expanded="true" signature="198445:198600" ph="INSERT INTO pm_videos_urls... " />
+            <marker date="1526008808025" expanded="true" signature="198695:198819" ph="INSERT INTO pm_embed_code... " />
+            <marker date="1526008808025" expanded="true" signature="198979:199100" ph="INSERT INTO pm_embed_code... " />
+            <marker date="1526008808025" expanded="true" signature="199340:199435" ph="UPDATE pm_me... " />
+            <marker date="1526008808025" expanded="true" signature="199801:199908" ph="INSERT INTO pm_tags... " />
+            <marker date="1526008808025" expanded="true" signature="200439:200531" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="202307:202399" ph="SELECT id FR... pm_videos" />
+            <marker date="1526008808025" expanded="true" signature="208141:208148" ph="×" />
+            <marker date="1526008808025" expanded="true" signature="209651:209742" ph="SELECT list_... pm_playlists" />
+            <marker date="1526008808025" expanded="true" signature="210905:211305" ph="INSERT INTO pm_playlists... " />
+            <marker date="1526008808025" expanded="true" signature="211443:211487" ph="DELETE FROM " />
+            <marker date="1526008808025" expanded="true" signature="211559:211610" ph="DELETE FROM " />
+            <marker date="1526008808025" expanded="true" signature="211717:212000" ph="UPDATE pm_pl... " />
+            <marker date="1526008808025" expanded="true" signature="212478:212536" ph="SELECT * FRO... pm_playlists" />
+            <marker date="1526008808025" expanded="true" signature="215094:215151" ph="SELECT usern... pm_users" />
+            <marker date="1526008808025" expanded="true" signature="215694:215756" ph="SELECT list_... pm_playlists" />
+            <marker date="1526008808025" expanded="true" signature="217016:217067" ph="SELECT * FRO... pm_playlists" />
+            <marker date="1526008808025" expanded="true" signature="220874:220933" ph="SELECT usern... pm_users" />
+            <marker date="1526008808025" expanded="true" signature="221623:221725" ph="SELECT COUNT... pm_playlist_items" />
+            <marker date="1526008808025" expanded="true" signature="221962:222036" ph="SELECT MAX(p... pm_playlist_items" />
+            <marker date="1526008808025" expanded="true" signature="222212:222321" ph="INSERT INTO pm_playlist_items... " />
+            <marker date="1526008808025" expanded="true" signature="222394:222472" ph="UPDATE pm_pl... " />
+            <marker date="1526008808025" expanded="true" signature="222635:222714" ph="DELETE FROM " />
+            <marker date="1526008808025" expanded="true" signature="222798:222876" ph="UPDATE pm_pl... " />
+            <marker date="1526008808025" expanded="true" signature="223376:223439" ph="SELECT video... pm_playlist_items" />
+            <marker date="1526008808025" expanded="true" signature="226139:226239" ph="SELECT list_... pm_playlist_items" />
+            <marker date="1526008808025" expanded="true" signature="226139:226240" ph="SELECT list_... pm_playlist_items" />
+            <marker date="1526008808025" expanded="true" signature="226860:226955" ph="SELECT * FRO... pm_video_subtitles" />
+            <marker date="1526008808025" expanded="true" signature="239981:240071" ph="SELECT count... pm_comments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-categories-page.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="67" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="98" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-category.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="72" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-provider.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/memberlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+          <folding>
+            <marker date="1463769680000" expanded="true" signature="2129:2255" ph="SELECT COUNT... pm_users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/memberlist.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/community.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/community.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="208" column="27" lean-forward="false" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
+          <folding>
+            <marker date="1526011863014" expanded="true" signature="2182:2308" ph="SELECT COUNT... pm_users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="455" column="42" lean-forward="false" selection-start-line="455" selection-start-column="42" selection-end-line="455" selection-end-column="42" />
           <folding />
         </state>
       </provider>

@@ -80,7 +80,6 @@ else
 	$smarty->assign('meta_description', '');
 	$smarty->assign('template_dir', $template_f);
 	$smarty->assign('order', $sortby);
-
 	$smarty->display('video-categories-page.tpl');
 	exit();
 }

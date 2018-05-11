@@ -449,11 +449,11 @@ window.mmswitch_options = {
 				</li>
 				<li><a href="category.php" class="nav-item"><span>Categories</span></a>
 				</li>
-				<li><a href="albums.html" class="nav-item"><span>Providers</span></a>
+				<li><a href="providers.php" class="nav-item"><span>Providers</span></a>
 				</li>
-				<li><a href="models.html" class="nav-item"><span>Casinos</span></a>
+				<li><a href="casinos.php" class="nav-item"><span>Casinos</span></a>
 				</li>
-				<li><a href="channels.html" class="nav-item"><span>Community</span></a>
+				<li><a href="community.php" class="nav-item"><span>Community</span></a>
 				</li>
 				<li class="show-mob"><a href="#" class="nav-item"><span>Upload</span></a>
 				</li>

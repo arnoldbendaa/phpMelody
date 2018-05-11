@@ -227,6 +227,198 @@ function load_categories($args = array())
 	
 	return $categories;
 }
+function load_casinos($args = array())
+{
+	global $_video_casinos, $_article_casinos;
+
+	$defaults = array('db_table' => 'pm_casinos',
+					  'order_by' => 'position',
+					  'sort' => 'ASC',
+					  'columns' => '*',
+					  'with_image' => false,
+					  'reload' => false
+					);
+
+	$options = array_merge($defaults, $args);
+	extract($options);
+
+	if ( ! $reload)
+	{
+		if ($db_table == 'pm_casinos' && is_array($_video_casinos))
+		{
+			return $_video_casinos;
+		}
+		else if ($db_table == 'art_categories' && is_array($_article_categories))
+		{
+			return $_article_casinos;
+		}
+	}
+
+	if ($columns != '*' && strpos($columns, 'id') === false)
+	{
+		$columns = 'id, '.$columns;
+	}
+
+	$sql = "SELECT $columns FROM $db_table 
+			ORDER BY $order_by $sort";
+
+	$result = mysql_query($sql);
+	if ( ! $result)
+	{
+		return false;
+	}
+
+	$casinos = array();
+
+	while ($row = mysql_fetch_assoc($result))
+	{
+		if ($db_table == 'pm_casinos' && $with_image)
+		{
+			if ($row['image'] != '')
+			{
+				$row['image_url'] = _THUMBS_DIR . $row['image'];
+			}
+			else if ($row['published_videos'] > 0 && $row['parent_id'] == 0)
+			{
+				// pull thumb of newest video // EDITME @todo ease up get_video_list ... and use the $sql query again
+				$video_data = get_video_list('id', 'desc', 0, 1, $row['id']);
+				if (count($video_data) > 0)
+				{
+					$video_data = $video_data[0];
+					$row['image_url'] = show_thumb($video_data['uniq_id'], 1, $video_data);
+					// if ($row['image_url'] == _NOTHUMB){}
+				}
+			}
+			else
+			{
+				$row['image_url'] = _NOTHUMB;
+			}
+		}
+
+		$row['url'] = make_link('casinos', $row);
+		$row['attr_alt'] = htmlspecialchars($row['name']);
+		$row['description'] = filter_text_https_friendly($row['description']);
+
+		$casinos[$row['id']] = $row;
+
+		if ($row['meta_tags'] != '')
+		{
+			$temp_arr = unserialize($row['meta_tags']);
+			foreach ($temp_arr as $k => $v)
+			{
+				$casinos[$row['id']][$k] = $v;
+			}
+		}
+	}
+	mysql_free_result($result);
+
+	if ($db_table == 'pm_casinos')
+	{
+		$_video_casinos = $casinos;
+	}
+	else
+	{
+		$_article_casinos = $casinos;
+	}
+
+	return $casinos;
+}
+function load_providers($args = array())
+{
+	global $_video_providers, $_article_providers;
+
+	$defaults = array('db_table' => 'pm_providers',
+					  'order_by' => 'position',
+					  'sort' => 'ASC',
+					  'columns' => '*',
+					  'with_image' => false,
+					  'reload' => false
+					);
+
+	$options = array_merge($defaults, $args);
+	extract($options);
+
+	if ( ! $reload)
+	{
+		if ($db_table == 'pm_providers' && is_array($_video_providers))
+		{
+			return $_video_providers;
+		}
+		else if ($db_table == 'art_categories' && is_array($_article_categories))
+		{
+			return $_article_providers;
+		}
+	}
+
+	if ($columns != '*' && strpos($columns, 'id') === false)
+	{
+		$columns = 'id, '.$columns;
+	}
+
+	$sql = "SELECT $columns FROM $db_table 
+			ORDER BY $order_by $sort";
+
+	$result = mysql_query($sql);
+	if ( ! $result)
+	{
+		return false;
+	}
+
+	$providers = array();
+
+	while ($row = mysql_fetch_assoc($result))
+	{
+		if ($db_table == 'pm_providers' && $with_image)
+		{
+			if ($row['image'] != '')
+			{
+				$row['image_url'] = _THUMBS_DIR . $row['image'];
+			}
+			else if ($row['published_videos'] > 0 && $row['parent_id'] == 0)
+			{
+				// pull thumb of newest video // EDITME @todo ease up get_video_list ... and use the $sql query again
+				$video_data = get_video_list('id', 'desc', 0, 1, $row['id']);
+				if (count($video_data) > 0)
+				{
+					$video_data = $video_data[0];
+					$row['image_url'] = show_thumb($video_data['uniq_id'], 1, $video_data);
+					// if ($row['image_url'] == _NOTHUMB){}
+				}
+			}
+			else
+			{
+				$row['image_url'] = _NOTHUMB;
+			}
+		}
+
+		$row['url'] = make_link('providers', $row);
+		$row['attr_alt'] = htmlspecialchars($row['name']);
+		$row['description'] = filter_text_https_friendly($row['description']);
+
+		$providers[$row['id']] = $row;
+
+		if ($row['meta_tags'] != '')
+		{
+			$temp_arr = unserialize($row['meta_tags']);
+			foreach ($temp_arr as $k => $v)
+			{
+				$providers[$row['id']][$k] = $v;
+			}
+		}
+	}
+	mysql_free_result($result);
+
+	if ($db_table == 'pm_providers')
+	{
+		$_video_providers = $providers;
+	}
+	else
+	{
+		$_article_providers = $providers;
+	}
+
+	return $providers;
+}
 
 function categories_dropdown_display_option($parent, &$all_children, $level = 0, $options)
 {
@@ -453,6 +645,179 @@ function list_categories_display_item($item, &$all_children, $level = 0, $option
 	return $output;
 }
 
+function list_casinos_display_item($item, &$all_children, $level = 0, $options)
+{
+	$li_class = $casurl = $output = $li_item = '';
+
+	if ( ! $item)
+		return;
+
+	$padding = str_repeat($options['spacer'], $level);
+
+	// href
+	if(_SEOMOD == 1)
+	{
+		$casurl = _URL."/browse-". $item['tag'] ."-videos-1-date.html";
+	}
+	else
+	{
+		$casurl = _URL."/casinos.php?cas=". $item['tag'];
+	}
+
+	$sub_casinos = '';
+
+	if (isset($all_children[$item['id']]) && ($level < $options['max_levels'] || $options['max_levels'] == 0))
+	{
+        $sub_casinos .= "\n";
+
+		foreach ($all_children[$item['id']] as $k => $child)
+		{
+			if ( ! isset($newlevel))
+			{
+				$newlevel = true;
+//				$li_class .= 'topcat'; // @deprecated since v2.3
+				$li_class .= 'dropdown-submenu';
+//				$subcats_ul_class = ($child['id'] == $options['selected'] || $options['expand_items'] == true) ? 'visible_li' : 'hidden_li'; // @deprecated since v2.3
+				$subcasinos_ul_class = ($child['id'] == $options['selected'] || $options['expand_items'] == true) ? 'dropdown-menu' : 'dropdown-menu';
+                $sub_casinos .= $padding."<ul class='".$subcasinos_ul_class."'>\n";
+			}
+            $sub_casinos .= list_casinos_display_item($child, $all_children, $level+1, $options);
+		}
+		unset($all_children[$item['id']]);
+	}
+
+	// li class
+	if ($item['id'] == $options['selected'])
+	{
+		if ($item['parent_id'] == 0)
+		{
+			$li_class .= ' selectedcat';
+		}
+		else
+		{
+			$li_class .= ' selectedsubcat';
+		}
+	}
+	else
+	{
+		$li_class .= '';
+	}
+
+	if ($options['selected_grandfather'] > 0)
+	{
+		if ($item['id'] == $options['selected_grandfather'])
+		{
+			if ($item['parent_id'] == 0)
+			{
+				$li_class .= ' selectedcat';
+			}
+			else
+			{
+				$li_class .= ' selectedsubcat';
+			}
+		}
+	}
+
+	// li
+	$output .= $padding .'<li class="'. $li_class .'"><a href="'. $casurl .'" class="'.$li_class.'">'. htmlentities($item['name'],ENT_COMPAT,'UTF-8') .'</a>';
+	$output .= $sub_casinos;
+
+	if (isset($newlevel) && $newlevel)
+	{
+		$output .= $padding."</ul>\n";
+	}
+
+	$output .= $padding."</li>\n";
+
+	return $output;
+}
+function list_providers_display_item($item, &$all_children, $level = 0, $options)
+{
+	$li_class = $casurl = $output = $li_item = '';
+
+	if ( ! $item)
+		return;
+
+	$padding = str_repeat($options['spacer'], $level);
+
+	// href
+	if(_SEOMOD == 1)
+	{
+		$casurl = _URL."/browse-". $item['tag'] ."-videos-1-date.html";
+	}
+	else
+	{
+		$casurl = _URL."/providers.php?cas=". $item['tag'];
+	}
+
+	$sub_providers = '';
+
+	if (isset($all_children[$item['id']]) && ($level < $options['max_levels'] || $options['max_levels'] == 0))
+	{
+        $sub_providers .= "\n";
+
+		foreach ($all_children[$item['id']] as $k => $child)
+		{
+			if ( ! isset($newlevel))
+			{
+				$newlevel = true;
+//				$li_class .= 'topcat'; // @deprecated since v2.3
+				$li_class .= 'dropdown-submenu';
+//				$subcats_ul_class = ($child['id'] == $options['selected'] || $options['expand_items'] == true) ? 'visible_li' : 'hidden_li'; // @deprecated since v2.3
+				$subproviders_ul_class = ($child['id'] == $options['selected'] || $options['expand_items'] == true) ? 'dropdown-menu' : 'dropdown-menu';
+                $sub_providers .= $padding."<ul class='".$subproviders_ul_class."'>\n";
+			}
+            $sub_providers .= list_providers_display_item($child, $all_children, $level+1, $options);
+		}
+		unset($all_children[$item['id']]);
+	}
+
+	// li class
+	if ($item['id'] == $options['selected'])
+	{
+		if ($item['parent_id'] == 0)
+		{
+			$li_class .= ' selectedcat';
+		}
+		else
+		{
+			$li_class .= ' selectedsubcat';
+		}
+	}
+	else
+	{
+		$li_class .= '';
+	}
+
+	if ($options['selected_grandfather'] > 0)
+	{
+		if ($item['id'] == $options['selected_grandfather'])
+		{
+			if ($item['parent_id'] == 0)
+			{
+				$li_class .= ' selectedcat';
+			}
+			else
+			{
+				$li_class .= ' selectedsubcat';
+			}
+		}
+	}
+
+	// li
+	$output .= $padding .'<li class="'. $li_class .'"><a href="'. $casurl .'" class="'.$li_class.'">'. htmlentities($item['name'],ENT_COMPAT,'UTF-8') .'</a>';
+	$output .= $sub_providers;
+
+	if (isset($newlevel) && $newlevel)
+	{
+		$output .= $padding."</ul>\n";
+	}
+
+	$output .= $padding."</li>\n";
+
+	return $output;
+}
+
 function list_categories($parent = 0, $selected = 0, $args = array()) // deprecated: $parent 
 {
 	$output = '';
@@ -550,6 +915,200 @@ function list_categories($parent = 0, $selected = 0, $args = array()) // depreca
 	
 	return $output;
 }
+function list_casinos($parent = 0, $selected = 0, $args = array()) // deprecated: $parent
+{
+	$output = '';
+
+	$defaults = array(
+		'db_table' => 'pm_casinos',
+		'selected' => 0,
+		'order_by' => 'position',
+		'sort' => 'ASC',
+		'selected_grandfather' => 0,
+		'spacer' => "\t",
+		'max_levels' => 1,
+		'ul_wrapper' => true
+	);
+
+	$options = array_merge($defaults, $args);
+	$options['selected'] = ( ! is_object($selected)) ? $selected : 0;
+	extract($options);
+
+	$parents = $parent_ids = $children = array();
+	$casinos = load_casinos($options);
+
+	foreach ($casinos as $c_id => $c)
+	{
+		if ($c['parent_id'] == 0)
+		{
+			$parents[] = $c;
+			$parent_ids[] = $c['id'];
+		}
+		else
+		{
+			$children[$c['parent_id']][] = $c;
+		}
+	}
+
+	// find "grandfather" of selected child category
+	if (count($parent_ids) > 0 && $selected > 0 && ( ! in_array($selected, $parent_ids)))
+	{
+		$options['selected_grandfather'] = $selected;
+
+		$counter = 0;
+		$exit_limit = count($parent_ids) * 3;
+		while (( ! in_array($options['selected_grandfather'], $parent_ids)) && $counter < $exit_limit)
+		{
+			$find = $options['selected_grandfather'];
+			foreach ($children as $pid => $children_arr)
+			{
+				$found = false;
+
+				if (count($children_arr) > 0)
+				{
+					foreach ($children_arr as $k => $child)
+					{
+						if ($child['id'] == $find)
+						{
+							$found = true;
+							$options['selected_grandfather'] = $child['parent_id'];
+							break;
+						}
+					}
+					if ($found)
+					{
+						break;
+					}
+				}
+			}
+
+			$counter++;
+		}
+	}
+
+	foreach ($parents as $k => $p)
+	{
+		$options['expand_items'] = ($options['selected_grandfather'] == $p['id']) ? true : false;
+		$output .= list_casinos_display_item($p, $children, 0, $options);
+	}
+
+	if (count($children) > 0 && $options['max_levels'] == 0)
+	{
+		foreach ($children as $parent_id => $orphans)
+		{
+			foreach ($orphans as $k => $orphan)
+			{
+				$orphan['parent_id'] = 0;
+				$output .= list_casinos_display_item($orphan, $empty, 0, $options);
+			}
+		}
+	}
+
+	//	wrapper
+	if ($ul_wrapper)
+	{
+		// return "<ul id='ul_categories'>\n".$output."\n</ul>"; // @deprecated since v2.3
+	}
+
+	return $output;
+}
+function list_providers($parent = 0, $selected = 0, $args = array()) // deprecated: $parent
+{
+	$output = '';
+
+	$defaults = array(
+		'db_table' => 'pm_providers',
+		'selected' => 0,
+		'order_by' => 'position',
+		'sort' => 'ASC',
+		'selected_grandfather' => 0,
+		'spacer' => "\t",
+		'max_levels' => 1,
+		'ul_wrapper' => true
+	);
+
+	$options = array_merge($defaults, $args);
+	$options['selected'] = ( ! is_object($selected)) ? $selected : 0;
+	extract($options);
+
+	$parents = $parent_ids = $children = array();
+	$providers = load_providers($options);
+
+	foreach ($providers as $c_id => $c)
+	{
+		if ($c['parent_id'] == 0)
+		{
+			$parents[] = $c;
+			$parent_ids[] = $c['id'];
+		}
+		else
+		{
+			$children[$c['parent_id']][] = $c;
+		}
+	}
+
+	// find "grandfather" of selected child category
+	if (count($parent_ids) > 0 && $selected > 0 && ( ! in_array($selected, $parent_ids)))
+	{
+		$options['selected_grandfather'] = $selected;
+
+		$counter = 0;
+		$exit_limit = count($parent_ids) * 3;
+		while (( ! in_array($options['selected_grandfather'], $parent_ids)) && $counter < $exit_limit)
+		{
+			$find = $options['selected_grandfather'];
+			foreach ($children as $pid => $children_arr)
+			{
+				$found = false;
+
+				if (count($children_arr) > 0)
+				{
+					foreach ($children_arr as $k => $child)
+					{
+						if ($child['id'] == $find)
+						{
+							$found = true;
+							$options['selected_grandfather'] = $child['parent_id'];
+							break;
+						}
+					}
+					if ($found)
+					{
+						break;
+					}
+				}
+			}
+
+			$counter++;
+		}
+	}
+
+	foreach ($parents as $k => $p)
+	{
+		$options['expand_items'] = ($options['selected_grandfather'] == $p['id']) ? true : false;
+		$output .= list_providers_display_item($p, $children, 0, $options);
+	}
+
+	if (count($children) > 0 && $options['max_levels'] == 0)
+	{
+		foreach ($children as $parent_id => $orphans)
+		{
+			foreach ($orphans as $k => $orphan)
+			{
+				$orphan['parent_id'] = 0;
+				$output .= list_providers_display_item($orphan, $empty, 0, $options);
+			}
+		}
+	}
+
+	//	wrapper
+	if ($ul_wrapper)
+	{
+		// return "<ul id='ul_categories'>\n".$output."\n</ul>"; // @deprecated since v2.3
+	}
+
+	return $output;
+}
 
 function smarty_html_list_categories($params, &$smarty)
 {
@@ -593,6 +1152,70 @@ function list_subcategories($parent = 0, $selected)
 	}
 
 	return $subcategories;
+}
+function list_subcasinos($parent = 0, $selected)
+{
+	if (empty($parent))
+	{
+		return '';
+	}
+
+	$subcasinos = '';
+	$url = '';
+
+	$casinos = load_casinos();
+
+	foreach ($casinos as $c_id => $c)
+	{
+		if ($c['parent_id'] == $parent)
+		{
+			if (_SEOMOD == 1)
+			{
+				$url = _URL."/browse-".$c['tag']."-videos-1-date.html";
+			}
+			else
+			{
+				$url = _URL."/casinos.php?cas=".$c['tag'];
+			}
+			$subcasinos .= ($c['id'] == $selected) ? '<li class="selectedcat">' : '<li>';
+            $subcasinos .= '<a href="'. $url .'">'. $c['name'] .'</a>'; //('. $c['published_videos'] .')
+            $subcasinos .= '</li>';
+		}
+	}
+
+	return $subcasinos;
+}
+function list_subproviders($parent = 0, $selected)
+{
+	if (empty($parent))
+	{
+		return '';
+	}
+
+	$subproviders = '';
+	$url = '';
+
+	$providers = load_providers();
+
+	foreach ($providers as $c_id => $c)
+	{
+		if ($c['parent_id'] == $parent)
+		{
+			if (_SEOMOD == 1)
+			{
+				$url = _URL."/browse-".$c['tag']."-videos-1-date.html";
+			}
+			else
+			{
+				$url = _URL."/providers.php?cas=".$c['tag'];
+			}
+			$subproviders .= ($c['id'] == $selected) ? '<li class="selectedcat">' : '<li>';
+            $subproviders .= '<a href="'. $url .'">'. $c['name'] .'</a>'; //('. $c['published_videos'] .')
+            $subproviders .= '</li>';
+		}
+	}
+
+	return $subproviders;
 }
 
 function get_all_children($parent_id, &$children, &$all_descendents)
@@ -1421,6 +2044,306 @@ function get_video_list($order_by = '', $sort = '', $start = 0, $limit = 5, $cat
 	
 	return $list;
 }
+function get_video_list_by_casino($order_by = '', $sort = '', $start = 0, $limit = 5, $casino_id = 0, $video_ids = array(), $uniq_ids = array())
+{
+	global $time_now_minute;
+
+	$sql = "SELECT * FROM pm_videos 
+			 WHERE ";
+	$sql_where = '';
+
+	if ( ! $limit && (empty($casino_id) && empty($video_ids) && empty($uniq_ids)))
+	{
+		return array();
+	}
+
+	$video_ids_count = (is_array($video_ids)) ? count($video_ids) : 0;
+	$uniq_ids_count = (is_array($uniq_ids)) ? count($uniq_ids) : 0;
+
+	if ($uniq_ids_count > 0)
+	{
+		$sql_in = '';
+		foreach ($uniq_ids as $k => $uid)
+		{
+			$sql_in .= "'$uid',";
+		}
+		$sql_in = rtrim($sql_in, ',');
+		$sql_where .= ' uniq_id IN('. $sql_in .') ';
+	}
+	else if ($video_ids_count > 0)
+	{
+		$sql_in = '';
+		foreach ($video_ids as $k => $vid)
+		{
+			$sql_in .= "'$vid',";
+		}
+		$sql_in = rtrim($sql_in, ',');
+		$sql_where .= ' id IN('. $sql_in .') ';
+	}
+	else if ($casino_id != 0)
+	{
+		$sql_where .= " (casino LIKE '%,$casino_id,%' or casino like '%,$casino_id' or casino like '$casino_id,%' or casino='$casino_id') ";
+	}
+
+	if ( ! $uniq_ids_count && ! $video_ids_count )
+	{
+		$sql_where .= ($sql_where != '') ? ' AND ' : '';
+		$sql_where .= " added <= ". $time_now_minute;
+	}
+
+	$sql .= $sql_where;
+
+	$sql .= ( ! empty($order_by)) ? " ORDER BY $order_by $sort " : '';
+	$sql .= ( ! empty($limit)) ? " LIMIT $start, $limit " : '';
+
+	$list = array();
+	$i = 0;
+
+	$result = mysql_query($sql);
+	while ($row = mysql_fetch_assoc($result))
+	{
+		$list[$i] = $row;
+
+		$sql_date = date('Y-m-d', $row['added']);
+		$date_diff = round( abs(strtotime(date('Y-m-d'))-strtotime($sql_date)) / 86400, 0 );
+
+		$list[$i]['attr_alt'] = htmlspecialchars(stripslashes($row['video_title']));
+		$list[$i]['excerpt'] = generate_excerpt($row['description'], 255);
+
+		if ($date_diff < _ISNEW_DAYS)
+		{
+			$list[$i]['mark_new'] = true;
+		}
+
+		if ($row['site_views'] > _ISPOPULAR)
+		{
+			$list[$i]['mark_popular'] = true;
+		}
+
+		if (function_exists('bin_rating_get_item_meta'))
+		{
+			$rating_meta = bin_rating_get_item_meta($row['uniq_id']);
+			$balance = bin_rating_calc_balance($rating_meta['up_vote_count'], $rating_meta['down_vote_count']);
+
+			$list[$i]['up_vote_count'] = (int) $rating_meta['up_vote_count'];
+			$list[$i]['likes'] = $list[$i]['up_vote_count'];
+			$list[$i]['down_vote_count'] = (int) $rating_meta['down_vote_count'];
+			$list[$i]['dislikes'] = $list[$i]['down_vote_count'];
+
+			$list[$i]['up_vote_count_formatted'] = pm_number_format($list[$i]['up_vote_count']);
+			$list[$i]['down_vote_count_formatted'] = pm_number_format($list[$i]['down_vote_count']);
+			$list[$i]['up_vote_count_compact'] = pm_compact_number_format($list[$i]['up_vote_count']);
+			$list[$i]['down_vote_count_compact'] = pm_compact_number_format($list[$i]['down_vote_count']);
+
+			$list[$i]['likes_formatted'] = $list[$i]['up_vote_count_formatted'];
+			$list[$i]['dislikes_formatted'] = $list[$i]['down_vote_count_formatted'];
+			$list[$i]['likes_compact'] = $list[$i]['up_vote_count_compact'];
+			$list[$i]['dislikes_compact'] = $list[$i]['down_vote_count_compact'];
+
+			$list[$i] = array_merge($list[$i], $balance);
+		}
+
+		$author_data = fetch_user_info($row['submitted']);
+
+		$list[$i]['duration'] = sec2hms($row['yt_length']);
+		$list[$i]['video_href'] = makevideolink($row['uniq_id'], $row['video_title'], $row['video_slug']);
+		$list[$i]['video_href_urldecoded'] = urldecode($list[$i]['video_href']); // otherwise it looks encoded for cyrillic, arabic and other non-latin charsets.
+		$list[$i]['thumb_img_url'] = show_thumb($row['uniq_id'], 1, $row);
+		$list[$i]['author_data'] = $author_data; // @since v2.6; keep the rest for backwards compat
+		$list[$i]['author_username'] = $row['submitted'];
+		$list[$i]['author_user_id'] = $author_data['id'];
+		$list[$i]['author_power'] = $author_data['power'];
+		$list[$i]['author_name'] = $author_data['name'];
+		$list[$i]['author_avatar_url'] = $author_data['avatar_url'];
+		$list[$i]['author_profile_href'] = ($row['submitted'] != 'bot') ? $author_data['profile_url'] : '#';
+
+
+		$list[$i]['html5_datetime'] = date('Y-m-d\TH:i:sO', $row['added']); // ISO 8601
+		$list[$i]['full_datetime'] = date('l, F j, Y g:i A', $row['added']);
+		$list[$i]['time_since_added'] = time_since($row['added']);
+		$list[$i]['views_compact'] = pm_compact_number_format($row['site_views']);
+		$list[$i]['video_title'] = stripslashes($list[$i]['video_title']);
+
+		$i++;
+	}
+	mysql_free_result($result);
+
+	// preserve order for given $video_ids or $uniq_ids
+	if (empty($order_by) && ($video_ids_count > 0 || $uniq_ids_count > 0))
+	{
+		$i = 0;
+		$new_list = array();
+		$order = ($video_ids_count > 0) ? $video_ids : $uniq_ids;
+		$search_attr = ($video_ids_count > 0) ? 'id' : 'uniq_id';
+
+		foreach ($order as $k => $id)
+		{
+			foreach ($list as $kk => $video_data)
+			{
+				if ($video_data[$search_attr] == $id)
+				{
+					$new_list[$i] = (array) $video_data;
+					break;
+				}
+			}
+			$i++;
+		}
+
+		return $new_list;
+	}
+
+	return $list;
+}
+function get_video_list_by_provider($order_by = '', $sort = '', $start = 0, $limit = 5, $provider_id = 0, $video_ids = array(), $uniq_ids = array())
+{
+	global $time_now_minute;
+
+	$sql = "SELECT * FROM pm_videos 
+			 WHERE ";
+	$sql_where = '';
+
+	if ( ! $limit && (empty($provider_id) && empty($video_ids) && empty($uniq_ids)))
+	{
+		return array();
+	}
+
+	$video_ids_count = (is_array($video_ids)) ? count($video_ids) : 0;
+	$uniq_ids_count = (is_array($uniq_ids)) ? count($uniq_ids) : 0;
+
+	if ($uniq_ids_count > 0)
+	{
+		$sql_in = '';
+		foreach ($uniq_ids as $k => $uid)
+		{
+			$sql_in .= "'$uid',";
+		}
+		$sql_in = rtrim($sql_in, ',');
+		$sql_where .= ' uniq_id IN('. $sql_in .') ';
+	}
+	else if ($video_ids_count > 0)
+	{
+		$sql_in = '';
+		foreach ($video_ids as $k => $vid)
+		{
+			$sql_in .= "'$vid',";
+		}
+		$sql_in = rtrim($sql_in, ',');
+		$sql_where .= ' id IN('. $sql_in .') ';
+	}
+	else if ($provider_id != 0)
+	{
+		$sql_where .= " (provider LIKE '%,$provider_id,%' or provider like '%,$provider_id' or provider like '$provider_id,%' or provider='$provider_id') ";
+	}
+
+	if ( ! $uniq_ids_count && ! $video_ids_count )
+	{
+		$sql_where .= ($sql_where != '') ? ' AND ' : '';
+		$sql_where .= " added <= ". $time_now_minute;
+	}
+
+	$sql .= $sql_where;
+
+	$sql .= ( ! empty($order_by)) ? " ORDER BY $order_by $sort " : '';
+	$sql .= ( ! empty($limit)) ? " LIMIT $start, $limit " : '';
+
+	$list = array();
+	$i = 0;
+
+	$result = mysql_query($sql);
+	while ($row = mysql_fetch_assoc($result))
+	{
+		$list[$i] = $row;
+
+		$sql_date = date('Y-m-d', $row['added']);
+		$date_diff = round( abs(strtotime(date('Y-m-d'))-strtotime($sql_date)) / 86400, 0 );
+
+		$list[$i]['attr_alt'] = htmlspecialchars(stripslashes($row['video_title']));
+		$list[$i]['excerpt'] = generate_excerpt($row['description'], 255);
+
+		if ($date_diff < _ISNEW_DAYS)
+		{
+			$list[$i]['mark_new'] = true;
+		}
+
+		if ($row['site_views'] > _ISPOPULAR)
+		{
+			$list[$i]['mark_popular'] = true;
+		}
+
+		if (function_exists('bin_rating_get_item_meta'))
+		{
+			$rating_meta = bin_rating_get_item_meta($row['uniq_id']);
+			$balance = bin_rating_calc_balance($rating_meta['up_vote_count'], $rating_meta['down_vote_count']);
+
+			$list[$i]['up_vote_count'] = (int) $rating_meta['up_vote_count'];
+			$list[$i]['likes'] = $list[$i]['up_vote_count'];
+			$list[$i]['down_vote_count'] = (int) $rating_meta['down_vote_count'];
+			$list[$i]['dislikes'] = $list[$i]['down_vote_count'];
+
+			$list[$i]['up_vote_count_formatted'] = pm_number_format($list[$i]['up_vote_count']);
+			$list[$i]['down_vote_count_formatted'] = pm_number_format($list[$i]['down_vote_count']);
+			$list[$i]['up_vote_count_compact'] = pm_compact_number_format($list[$i]['up_vote_count']);
+			$list[$i]['down_vote_count_compact'] = pm_compact_number_format($list[$i]['down_vote_count']);
+
+			$list[$i]['likes_formatted'] = $list[$i]['up_vote_count_formatted'];
+			$list[$i]['dislikes_formatted'] = $list[$i]['down_vote_count_formatted'];
+			$list[$i]['likes_compact'] = $list[$i]['up_vote_count_compact'];
+			$list[$i]['dislikes_compact'] = $list[$i]['down_vote_count_compact'];
+
+			$list[$i] = array_merge($list[$i], $balance);
+		}
+
+		$author_data = fetch_user_info($row['submitted']);
+
+		$list[$i]['duration'] = sec2hms($row['yt_length']);
+		$list[$i]['video_href'] = makevideolink($row['uniq_id'], $row['video_title'], $row['video_slug']);
+		$list[$i]['video_href_urldecoded'] = urldecode($list[$i]['video_href']); // otherwise it looks encoded for cyrillic, arabic and other non-latin charsets.
+		$list[$i]['thumb_img_url'] = show_thumb($row['uniq_id'], 1, $row);
+		$list[$i]['author_data'] = $author_data; // @since v2.6; keep the rest for backwards compat
+		$list[$i]['author_username'] = $row['submitted'];
+		$list[$i]['author_user_id'] = $author_data['id'];
+		$list[$i]['author_power'] = $author_data['power'];
+		$list[$i]['author_name'] = $author_data['name'];
+		$list[$i]['author_avatar_url'] = $author_data['avatar_url'];
+		$list[$i]['author_profile_href'] = ($row['submitted'] != 'bot') ? $author_data['profile_url'] : '#';
+
+
+		$list[$i]['html5_datetime'] = date('Y-m-d\TH:i:sO', $row['added']); // ISO 8601
+		$list[$i]['full_datetime'] = date('l, F j, Y g:i A', $row['added']);
+		$list[$i]['time_since_added'] = time_since($row['added']);
+		$list[$i]['views_compact'] = pm_compact_number_format($row['site_views']);
+		$list[$i]['video_title'] = stripslashes($list[$i]['video_title']);
+
+		$i++;
+	}
+	mysql_free_result($result);
+
+	// preserve order for given $video_ids or $uniq_ids
+	if (empty($order_by) && ($video_ids_count > 0 || $uniq_ids_count > 0))
+	{
+		$i = 0;
+		$new_list = array();
+		$order = ($video_ids_count > 0) ? $video_ids : $uniq_ids;
+		$search_attr = ($video_ids_count > 0) ? 'id' : 'uniq_id';
+
+		foreach ($order as $k => $id)
+		{
+			foreach ($list as $kk => $video_data)
+			{
+				if ($video_data[$search_attr] == $id)
+				{
+					$new_list[$i] = (array) $video_data;
+					break;
+				}
+			}
+			$i++;
+		}
+
+		return $new_list;
+	}
+
+	return $list;
+}
 
 function get_related_video_list($category_id = 0, $video_title = '', $limit = 5, $video_id = 0)
 {
@@ -1657,10 +2580,60 @@ function get_catid($tag)
 	}
 	return false;
 }
+function get_casinosid($tag)
+{
+	$casinos = load_casinos();
+	foreach ($casinos as $c_id => $c)
+	{
+		if ($c['tag'] == $tag)
+		{
+			return $c_id;
+		}
+	}
+	return false;
+}
+function get_providersid($tag)
+{
+	$providers = load_providers();
+	foreach ($providers as $c_id => $c)
+	{
+		if ($c['tag'] == $tag)
+		{
+			return $c_id;
+		}
+	}
+	return false;
+}
+
+
 function get_catname($tag) 
 {
 	$categories = load_categories();
 	foreach ($categories as $c_id => $c)
+	{
+		if ($c['tag'] == $tag)
+		{
+			return $c['name'];
+		}
+	}
+	return '';
+}
+function get_casinosname($tag)
+{
+    $casinos = load_casinos();
+	foreach ($casinos as $c_id => $c)
+	{
+		if ($c['tag'] == $tag)
+		{
+			return $c['name'];
+		}
+	}
+	return '';
+}
+function get_providersname($tag)
+{
+    $providers = load_providers();
+	foreach ($providers as $c_id => $c)
 	{
 		if ($c['tag'] == $tag)
 		{
@@ -3558,7 +4531,6 @@ function make_link($type = '', $args = array())
 		
 		case 'category-single':
 		case 'category':
-		
 			if (_SEOMOD)
 			{
 				$url .= 'browse-'. $args['tag'] .'-videos-'; 
@@ -3572,9 +4544,38 @@ function make_link($type = '', $args = array())
 				$url .= ($args['page'] != '') ? '&page='. $args['page'] : '';
 				$url .= ($args['sortby'] != '') ? '&sortby='. $args['sortby'] : '';
 			}
-			
 		break;
-		
+		case 'casinos':
+			if (_SEOMOD)
+			{
+				$url .= 'browse-'. $args['tag'] .'-videos-';
+				$url .= ($args['page'] != '') ? $args['page'] : '1';
+				$url .= ($args['sortby'] != '') ? '-'. $args['sortby'] : '-date';
+				$url .= '.html';
+			}
+			else
+			{
+				$url .= 'casinos.php?cas='. $args['tag'];
+				$url .= ($args['page'] != '') ? '&page='. $args['page'] : '';
+				$url .= ($args['sortby'] != '') ? '&sortby='. $args['sortby'] : '';
+			}
+		break;
+		case 'providers':
+			if (_SEOMOD)
+			{
+				$url .= 'browse-'. $args['tag'] .'-videos-';
+				$url .= ($args['page'] != '') ? $args['page'] : '1';
+				$url .= ($args['sortby'] != '') ? '-'. $args['sortby'] : '-date';
+				$url .= '.html';
+			}
+			else
+			{
+				$url .= 'providers.php?provider='. $args['tag'];
+				$url .= ($args['page'] != '') ? '&page='. $args['page'] : '';
+				$url .= ($args['sortby'] != '') ? '&sortby='. $args['sortby'] : '';
+			}
+		break;
+
 		case 'memberlist':
 			
 			$url .= 'memberlist.'. _FEXT;
