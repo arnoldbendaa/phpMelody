@@ -70,11 +70,15 @@ if ( ! empty ($cat_name))
 else
 {
 	$categories_data = load_categories(array('db_table' => 'pm_categories', 'with_image' => true));
-	
+	$casinos_data = load_casinos(array('db_table' => 'pm_casinos', 'with_image' => true));
+	$providers_data = load_providers(array('db_table' => 'pm_providers', 'with_image' => true));
+
 	$smarty->assign('list_categories', list_categories());
 	
 	$smarty->assign('categories_data', $categories_data);
-	
+	$smarty->assign('casinos_data', $casinos_data);
+	$smarty->assign('providers_data', $providers_data);
+
 	$smarty->assign('meta_title', htmlspecialchars(_SITENAME .' - '. $lang['_categories']));
 	$smarty->assign('meta_keywords', '');
 	$smarty->assign('meta_description', '');
@@ -269,6 +273,8 @@ $smarty->assign('pag_right', $pag_right);
 
 $smarty->assign('results', $videos);
 $smarty->assign('categories_data', load_categories()); // @since v2.7 -- use smarty var {$_video_categories} instead
+$smarty->assign('casinos_data', load_casinos()); // @since v2.7 -- use smarty var {$_video_categories} instead
+$smarty->assign('providers_data', load_providers()); // @since v2.7 -- use smarty var {$_video_categories} instead
 // --- DEFAULT SYSTEM FILES - DO NOT REMOVE --- //
 $smarty->assign('meta_title', htmlspecialchars($meta_title));
 $smarty->assign('meta_keywords', $meta_keywords);

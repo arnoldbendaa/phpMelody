@@ -207,3 +207,4 @@ $smarty->assign('meta_title', htmlspecialchars($meta_title));
 $smarty->assign('meta_description', htmlspecialchars($meta_description));
 $smarty->assign('template_dir', $template_f);
 $smarty->display('community.tpl');
+echo json_encode($user_list);

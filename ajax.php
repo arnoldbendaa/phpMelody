@@ -3393,10 +3393,11 @@ switch ($page)
 								// INSERT INTO pm_temp, disregarding the current configuration
 								// with special title. 
 								$sql = "INSERT INTO pm_temp
-												(url, video_title, description, yt_length, tags, category, username, user_id, 
+												(url, video_title, description, yt_length, tags, category,casino,provider, username, user_id, 
 												 added, source_id, language, thumbnail, yt_id, url_flv, mp4)
-										VALUES ('". $new_name ."', 'n/a', '". secure_sql($tmp_description) ."', 0, '', 0, '". $userdata['username'] ."', 
+										VALUES ('". $new_name ."', 'n/a', '". secure_sql($tmp_description) ."', 0, '', 0, 0,0,'". $userdata['username'] ."', 
 												'". $userdata['id'] ."', '". time() ."', 1, 1, '', '', '', '')";
+//								echo $sql;
 								$result = @mysql_query($sql);
 								
 								if ( ! $result)
@@ -3524,6 +3525,8 @@ switch ($page)
 				$nonce = csrfguard_raw($nonce_name);
 				$del_tmp_file = false;
 				$category_id = (int) $_POST['category'];
+				$casino_id = (int) $_POST['casino'];
+				$provider_id = (int) $_POST['provider'];
 				$img = $_FILES['capture'];
 				$thumbnail = '';
 				$modframework->trigger_hook('upload_start');
@@ -3543,6 +3546,14 @@ switch ($page)
 				if ($category_id <= 0)
 				{
 					$errors['category'] = $lang['choose_category'];
+				}
+				if ($casino_id <= 0)
+				{
+					$errors['casino'] = "Please select a casino";
+				}
+				if ($provider_id <= 0)
+				{
+					$errors['provider'] = "Please select a provider";
 				}
 				$modframework->trigger_hook('upload_thumb_before');
 		
@@ -3651,6 +3662,8 @@ switch ($page)
 									$video_details['video_title'] = $video_title;
 									$video_details['description'] = $description;
 									$video_details['category'] = $category_id;
+									$video_details['casino'] = $casino_id;
+									$video_details['provider'] = $provider_id;
 									$video_details['yt_length'] = $duration;
 									$video_details['tags'] = $tags;
 									$video_details['language'] = 1;
@@ -3678,8 +3691,9 @@ switch ($page)
 											$video_details['yt_thumb'] = $uniq_id . '-1.'. $ext;
 										}
 									}
-		
-		
+
+
+
 									// insert to database
 									$new_video = insert_new_video($video_details, $new_video_id);
 									if ($new_video !== true)

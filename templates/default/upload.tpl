@@ -131,6 +131,22 @@
 								</div>
 							</div>
 						</div>
+						<div class="wrap-list-selector">
+							<div class="form-row">
+								<div class="flabel">Casino</div>
+								<div class="list-selector-popup-inner">
+                                    {$casinos_dropdown}
+								</div>
+							</div>
+						</div>
+						<div class="wrap-list-selector">
+							<div class="form-row">
+								<div class="flabel">Provider</div>
+								<div class="list-selector-popup-inner">
+                                    {$providers_dropdown}
+								</div>
+							</div>
+						</div>
 
 						<div class="control-group">
 							<label class="control-label" for="tags">{$lang.tags}</label>

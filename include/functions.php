@@ -557,6 +557,198 @@ function categories_dropdown($args = array())
 	
 	return $output;
 }
+function casinos_dropdown($args = array())
+{
+	global $lang;
+
+	$output = '';
+
+	$defaults = array(
+		'db_table' => 'pm_casinos',
+		'attr_name' => 'casino',
+		'attr_class' => 'casino_dropdown',
+		'attr_id' => 'casino_dropdown',
+		'other_attr' => '',
+		'selected' => 0,
+		'select_all_option' => true,
+		'first_option_text' => $lang['select'],
+		'first_option_value' => '-1',
+		'no_options_text' => 'No casinos',
+		'order_by' => 'position',
+		'sort' => 'ASC',
+		'parents_only' => false,
+		'options_only' => false,
+		'value_attr_db_col' => 'id',
+		'spacer' => '&nbsp;&nbsp;&nbsp;',
+		'option_attr_id' => ''
+	);
+	$empty = array();
+
+	$options = array_merge($defaults, $args);
+	extract($options);
+
+	$parents = $parent_ids = $children = array();
+
+	$casinos = load_casinos($options);
+	$count = count($casinos);
+
+	if($count > 0)
+	{
+		foreach ($casinos as $c_id => $c)
+		{
+			if ($c['parent_id'] == 0)
+			{
+				$parents[] = $c;
+				$parent_ids[] = $c['id'];
+			}
+			else
+			{
+				$children[$c['parent_id']][] = $c;
+			}
+		}
+	}
+
+	if ( ! $options_only)
+	{
+		$output .= "<select name='$attr_name' id='$attr_id' class='$attr_class' $other_attr>\n";
+	}
+
+	if ($select_all_option)
+	{
+		$first_opt_selected = (empty($selected)) ? 'selected="selected"' : '';
+		$output .= "<option value='$first_option_value' $first_opt_selected>$first_option_text</option>\n";
+	}
+
+	if ($count)
+	{
+		foreach ($parents as $k => $p)
+		{
+			if ($parents_only == true)
+			{
+				$output .= categories_dropdown_display_option($p, $empty, 0, $options);
+			}
+			else
+			{
+				$output .= categories_dropdown_display_option($p, $children, 0, $options);
+			}
+
+		}
+	}
+
+	if (count($children) > 0 && ( ! $parents_only))
+	{
+		foreach ($children as $parent_id => $orphans)
+		{
+			foreach ($orphans as $k => $orphan)
+			{
+				$output .= casinos_dropdown_display_option($orphan, $empty, 0, $options);
+			}
+		}
+	}
+
+	if ( ! $options_only)
+	{
+		$output .= "</select>\n";
+	}
+
+	return $output;
+}
+function providers_dropdown($args = array())
+{
+	global $lang;
+
+	$output = '';
+
+	$defaults = array(
+		'db_table' => 'pm_providers',
+		'attr_name' => 'provider',
+		'attr_class' => 'provider_dropdown',
+		'attr_id' => 'provider_dropdown',
+		'other_attr' => '',
+		'selected' => 0,
+		'select_all_option' => true,
+		'first_option_text' => $lang['select'],
+		'first_option_value' => '-1',
+		'no_options_text' => 'No providers',
+		'order_by' => 'position',
+		'sort' => 'ASC',
+		'parents_only' => false,
+		'options_only' => false,
+		'value_attr_db_col' => 'id',
+		'spacer' => '&nbsp;&nbsp;&nbsp;',
+		'option_attr_id' => ''
+	);
+	$empty = array();
+
+	$options = array_merge($defaults, $args);
+	extract($options);
+
+	$parents = $parent_ids = $children = array();
+
+	$providers = load_providers($options);
+	$count = count($providers);
+
+	if($count > 0)
+	{
+		foreach ($providers as $c_id => $c)
+		{
+			if ($c['parent_id'] == 0)
+			{
+				$parents[] = $c;
+				$parent_ids[] = $c['id'];
+			}
+			else
+			{
+				$children[$c['parent_id']][] = $c;
+			}
+		}
+	}
+
+	if ( ! $options_only)
+	{
+		$output .= "<select name='$attr_name' id='$attr_id' class='$attr_class' $other_attr>\n";
+	}
+
+	if ($select_all_option)
+	{
+		$first_opt_selected = (empty($selected)) ? 'selected="selected"' : '';
+		$output .= "<option value='$first_option_value' $first_opt_selected>$first_option_text</option>\n";
+	}
+
+	if ($count)
+	{
+		foreach ($parents as $k => $p)
+		{
+			if ($parents_only == true)
+			{
+				$output .= categories_dropdown_display_option($p, $empty, 0, $options);
+			}
+			else
+			{
+				$output .= categories_dropdown_display_option($p, $children, 0, $options);
+			}
+
+		}
+	}
+
+	if (count($children) > 0 && ( ! $parents_only))
+	{
+		foreach ($children as $parent_id => $orphans)
+		{
+			foreach ($orphans as $k => $orphan)
+			{
+				$output .= categories_dropdown_display_option($orphan, $empty, 0, $options);
+			}
+		}
+	}
+
+	if ( ! $options_only)
+	{
+		$output .= "</select>\n";
+	}
+
+	return $output;
+}
 
 function list_categories_display_item($item, &$all_children, $level = 0, $options)
 {
@@ -7270,7 +7462,7 @@ function insert_new_video($video_details, &$insert_id) // moved from /admin/func
 		$video_details['submitted_user_id'] = username_to_id($video_details['submitted']);
 	}
 	
-	$sql = "INSERT INTO pm_videos (uniq_id, video_title, description, yt_id, yt_length, yt_thumb, category, submitted_user_id, submitted, added, url_flv, source_id, language, age_verification, yt_views, site_views, featured, restricted, allow_comments, allow_embedding, video_slug)
+	$sql = "INSERT INTO pm_videos (uniq_id, video_title, description, yt_id, yt_length, yt_thumb, category,casino,provider, submitted_user_id, submitted, added, url_flv, source_id, language, age_verification, yt_views, site_views, featured, restricted, allow_comments, allow_embedding, video_slug)
 			VALUES ('". $video_details['uniq_id'] ."', 
 					'". secure_sql($video_details['video_title']) ."', 
 					'". secure_sql($video_details['description']) ."', 
@@ -7278,6 +7470,8 @@ function insert_new_video($video_details, &$insert_id) // moved from /admin/func
 					'". (int) $video_details['yt_length'] ."', 
 					'". $video_details['yt_thumb'] ."', 
 					'". $video_details['category'] ."', 
+					'". $video_details['casino'] ."', 
+					'". $video_details['provider'] ."', 
 					'". $video_details['submitted_user_id'] ."',
 					'". $video_details['submitted'] ."', 
 					'". $video_details['added'] ."', 
@@ -7292,7 +7486,6 @@ function insert_new_video($video_details, &$insert_id) // moved from /admin/func
 					'". (int) $video_details['allow_comments'] ."',
 					'". (int) $video_details['allow_embedding'] ."',
 					'". secure_sql($video_details['video_slug']) ."')";
-	
 	
 	if (is_array($video_details))
 	{
@@ -7310,6 +7503,16 @@ function insert_new_video($video_details, &$insert_id) // moved from /admin/func
 	$sql .= " WHERE id IN(". $video_details['category'] .")";
 	mysql_query($sql);
 	
+	$sql = "UPDATE pm_casino SET total_videos=total_videos+1 ";
+	$sql .= ($video_details['added'] <= $time_now) ? ", published_videos = published_videos + 1 " : '';
+	$sql .= " WHERE id IN(". $video_details['casino'] .")";
+	mysql_query($sql);
+
+	$sql = "UPDATE pm_provider SET total_videos=total_videos+1 ";
+	$sql .= ($video_details['added'] <= $time_now) ? ", published_videos = published_videos + 1 " : '';
+	$sql .= " WHERE id IN(". $video_details['provider'] .")";
+	mysql_query($sql);
+
 	update_config('total_videos', $config['total_videos'] + 1);
 	
 	if ($video_details['added'] <= $time_now)

@@ -105,6 +105,8 @@ else
 	{
 		$del_tmp_file = false;
 		$category_id = (int) $_POST['category'];
+		$casino_id = (int) $_POST['casino'];
+		$provider_id = (int) $_POST['provider'];
 		$img = $_FILES['capture'];
 		$thumbnail = '';
 		$modframework->trigger_hook('upload_start');
@@ -123,6 +125,14 @@ else
 		if ($category_id <= 0)
 		{
 			$errors['category'] = $lang['choose_category'];
+		}
+		if ($casino_id <= 0)
+		{
+			$errors['casino'] = "Please select a casino";
+		}
+		if ($provider_id <= 0)
+		{
+			$errors['provider'] = "Please select a provider";
 		}
 		$modframework->trigger_hook('upload_thumb_before');
 
@@ -219,6 +229,8 @@ else
 							$video_details['video_title'] = $video_title;
 							$video_details['description'] = $description;
 							$video_details['category'] = $category_id;
+							$video_details['casino'] = $casino_id;
+							$video_details['provider'] = $provider_id;
 							$video_details['yt_length'] = $duration;
 							$video_details['tags'] = $tags;
 							$video_details['language'] = 1;
@@ -246,7 +258,8 @@ else
 									$video_details['yt_thumb'] = $uniq_id . '-1.'. $ext;
 								}
 							}
-
+                            error_log(json_encode($video_details),3,"detail.log");
+							echo json_encode($video_details);
 
 							// insert to database
 							$new_video = insert_new_video($video_details, $new_video_id);
@@ -303,6 +316,8 @@ else
 										   yt_length = '". $duration ."',
 										   tags = '". $tags ."',
 										   category = '". $category_id ."',
+										   casino = '". $casino_id ."',
+										   category = '". $provider_id ."',
 										   added = '". time() ."',
 										   thumbnail = '". $thumbnail ."'
 									WHERE id = ". secure_sql($mysql_insert_id);
@@ -372,6 +387,8 @@ $smarty->assign('form_csrfguard_token', $nonce['_pmnonce_t']);
 $smarty->assign('form_action', $form_action);
 $smarty->assign('errors', $errors);
 $smarty->assign('categories_dropdown', categories_dropdown(array('selected' => $_POST['category'], 'attr_class' => 'span5 form-control')));
+$smarty->assign('casinos_dropdown', casinos_dropdown(array('selected' => $_POST['casino'], 'attr_class' => 'span5 form-control')));
+$smarty->assign('providers_dropdown', providers_dropdown(array('selected' => $_POST['provider'], 'attr_class' => 'span5 form-control')));
 $smarty->assign('max_file_size', $max_filesize_bytes);
 $smarty->assign('upload_limit', readable_filesize($max_filesize_bytes));
 $smarty->assign('meta_title', htmlspecialchars($meta_title));
