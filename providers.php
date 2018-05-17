@@ -52,7 +52,6 @@ elseif($sortby == 'title') {
     $sql_sortby = 'video_title';
     $order = 'ASC';
 }
-
 if ( ! empty ($provider_name))
 {
     $providers = $provider_id = get_providersid($provider_name); // $cats is from before refactoring; may be used in plugins
@@ -78,7 +77,6 @@ else
     $smarty->assign('categories_data', $categories_data);
     $smarty->assign('casinos_data', $casinos_data);
     $smarty->assign('providers_data', $providers_data);
-
     $smarty->assign('meta_title', htmlspecialchars(_SITENAME .' - '. $lang['_categories']));
     $smarty->assign('meta_keywords', '');
     $smarty->assign('meta_description', '');

@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        {include file="sidebar.tpl" }
+        {include file="sidebar.tpl" pageName="providers"}
     </div>
 </div>
 

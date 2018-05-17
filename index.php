@@ -266,33 +266,37 @@ if ($total_videos > 0)
             case 'top_lastWeek':
             case 'top_lastMonth':
             case 'top_allTime':
+                $orderBy = "score";
                 $sql = "SELECT id, COALESCE(pm_bin_rating_meta.score, 0) as score 
                             FROM pm_videos 
                             LEFT JOIN pm_bin_rating_meta ON (pm_videos.uniq_id = pm_bin_rating_meta.uniq_id) 
                             WHERE added >= '". $time_start ."'
                             AND added <= '". $time_end ."' 
-                            ORDER BY score DESC 
+                            ORDER BY $orderBy DESC 
                             LIMIT $from, $limit" ;
+
                 break;
             case 'popular_today':
             case 'popular_lastWeek':
             case 'popular_lastMonth':
             case 'popular_allTime':
+                $orderBy = "site_views";
                 $sql = "SELECT id, COALESCE(pm_bin_rating_meta.score, 0) as score 
                                 FROM pm_videos 
                                 LEFT JOIN pm_bin_rating_meta ON (pm_videos.uniq_id = pm_bin_rating_meta.uniq_id) 
                                 WHERE added >= '". $time_start ."'
                                 AND added <= '". $time_end ."' 
-                                ORDER BY site_views DESC 
+                                ORDER BY $orderBy DESC 
                                 LIMIT $from, $limit" ;
                 break;
             case 'longest':
+                $orderBy = "yt_length";
                 $sql = "SELECT id, COALESCE(pm_bin_rating_meta.score, 0) as score 
                             FROM pm_videos 
                             LEFT JOIN pm_bin_rating_meta ON (pm_videos.uniq_id = pm_bin_rating_meta.uniq_id) 
                             WHERE added >= '". $time_start ."'
                             AND added <= '". $time_end ."' 
-                            ORDER BY yt_length DESC 
+                            ORDER BY $orderBy DESC 
                             LIMIT $from, $limit" ;
                 break;
         }
@@ -306,7 +310,9 @@ if ($total_videos > 0)
     }
     mysql_free_result($result);
 
-    $list = get_video_list('added', 'DESC', 0, 0, 0, $ids);
+//    $list = get_video_list('added', 'DESC', 0, 0, 0, $ids);
+    $list = get_video_list($orderBy, 'DESC', 0, 30, 0, $ids);
+    if(count($list)>30) $loadmoreVisible = 1;
 }
 // define meta tags & common variables
 $meta_title = $lang['nv_page_title'];
@@ -325,7 +331,9 @@ $smarty->assign('results', $list);
 $smarty->assign('categories_list', $categories_list);
 $smarty->assign('pagination', $pagination);
 $smarty->assign('order',$order);
-
+$smarty->assign('loadmoreVisible',$loadmoreVisible);
+$smarty->assign('orderBy',$orderBy);
+$smarty->assign('ids',json_encode($ids));
 
 
 
@@ -395,6 +403,6 @@ else
 //    exit();
 }
 
-
+$smarty->assign('sortby',$sortby);
 $smarty->assign('catResult', $videos);
 $smarty->display('index.tpl');

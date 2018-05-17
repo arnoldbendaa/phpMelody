@@ -3304,7 +3304,6 @@ switch ($page)
 			
 			case 'upload-media-file': // file sent by flash/jquery uploader on 'Upload video' page
 			case 'useruploadvideo': // backwards compat 
-				
 				$error_msg = '';
 				$max_filesize_bytes = return_bytes($config['allow_user_uploadvideo_bytes']);
 				
@@ -3385,7 +3384,7 @@ switch ($page)
 							while (file_exists(_VIDEOS_DIR_PATH . $new_name));
 							
 							$modframework->trigger_hook('upload_moveupload');
-							
+
 							if ($move = @move_uploaded_file($file['tmp_name'], _VIDEOS_DIR_PATH . $new_name))
 							{
 								@chmod(_VIDEOS_DIR_PATH . $new_name, 0644); // @since v2.7
@@ -3408,11 +3407,12 @@ switch ($page)
 								{
 									$temp_video_id = mysql_insert_id();
 								}
-								
+
 								$modframework->trigger_hook('upload_insertvideo_after');
 							}
 							else
 							{
+
 								$error_msg = $lang['upload_errmsg1'];
 							}
 						}
@@ -3944,7 +3944,24 @@ switch ($page)
                 break;
         }	//	end switch ($page)
     break;
+    case 'index':
+        switch ($action){
+            case 'loadmore':
+                $index = $_GET['index'];
+                $orderBy = $_GET['orderBy'];
+                $jsonIds = $_GET['ids'];
+                $ids = json_decode($jsonIds);
+                if(empty($orderBy))
+                    $orderBy = 'added';
+                $list = get_video_list($orderBy, 'DESC', 30*$index, 30, 0, $ids);
+                $smarty->assign("results",$list);
+                $html = $smarty->fetch('indexVideoList.tpl');
+                echo $html;
+                exit();
+                break;
+//                echo $index;
 
+        }
 }	//	end switch ($page)
 
 exit();

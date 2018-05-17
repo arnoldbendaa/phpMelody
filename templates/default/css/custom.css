@@ -28,3 +28,10 @@ div#wrapper{
  .fancybox-wrap{
      background-color:white;
  }
+.nav-drop ul li a svg.active{
+    color:#fc5773;
+}
+.swiper-slide{
+    max-width:15%;
+}
+

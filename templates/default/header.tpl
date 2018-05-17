@@ -406,31 +406,31 @@ window.mmswitch_options = {
 						<ul style="margin:0;">
 							<li>
 								<a href="{$smarty.const._URL}"  class="wrap-icon">
-									<svg class="svg-icon" width="40px" height="40.031px">
+									<svg class="svg-icon {if $sortby==''}active{/if}" width="40px" height="40.031px">
 										<use xlink:href="#new"></use>
 									</svg>
 									<span>Newest</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="wrap-icon">
-									<svg class="svg-icon" width="40px" height="40px">
+								<a href="{$smarty.const._URL}?sortby=views" class="wrap-icon">
+									<svg class="svg-icon {if $sortby=='views'}active{/if}" width="40px" height="40px">
 										<use xlink:href="#eye"></use>
 									</svg>
 									<span>Popular</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="wrap-icon">
-									<svg class="svg-icon" width="39.97px" height="37px">
+								<a href="{$smarty.const._URL}?sortby=rating" class="wrap-icon">
+									<svg class="svg-icon {if $sortby=='rating'}active{/if}" width="39.97px" height="37px">
 										<use xlink:href="#top-rated"></use>
 									</svg>
 									<span>Top rated</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="wrap-icon">
-									<svg class="svg-icon" width="40px" height="37px">
+								<a href="{$smarty.const._URL}?sortby=title" class="wrap-icon">
+									<svg class="svg-icon {if $sortby=='title'}active{/if}" width="40px" height="37px">
 										<use xlink:href="#list"></use>
 									</svg>
 									<span>Playlists</span>

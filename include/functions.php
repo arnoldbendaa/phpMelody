@@ -7503,12 +7503,13 @@ function insert_new_video($video_details, &$insert_id) // moved from /admin/func
 	$sql .= " WHERE id IN(". $video_details['category'] .")";
 	mysql_query($sql);
 	
-	$sql = "UPDATE pm_casino SET total_videos=total_videos+1 ";
+	$sql = "UPDATE pm_casinos SET total_videos=total_videos+1 ";
 	$sql .= ($video_details['added'] <= $time_now) ? ", published_videos = published_videos + 1 " : '';
 	$sql .= " WHERE id IN(". $video_details['casino'] .")";
+    echo $sql;
 	mysql_query($sql);
 
-	$sql = "UPDATE pm_provider SET total_videos=total_videos+1 ";
+	$sql = "UPDATE pm_providers SET total_videos=total_videos+1 ";
 	$sql .= ($video_details['added'] <= $time_now) ? ", published_videos = published_videos + 1 " : '';
 	$sql .= " WHERE id IN(". $video_details['provider'] .")";
 	mysql_query($sql);

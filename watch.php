@@ -302,7 +302,39 @@ $smarty->assign('template_dir', $template_f);
 //}
 //$smarty->assign('my_playlists', $my_playlists);
 
+$video_id = $video['id'];
 
+$my_playlists_count = (int) count_entries('pm_playlists', 'user_id', $userdata['id']);
+$my_playlists = get_user_playlists($userdata['id'], false, false, 0, $my_playlists_count);
+
+$playlist_ids = array();
+
+foreach ($my_playlists as $k => $playlist_data)
+{
+    // remove 'History' and 'Liked' from this list
+    if ($playlist_data['type'] == PLAYLIST_TYPE_HISTORY || $playlist_data['type'] == PLAYLIST_TYPE_LIKED)
+    {
+        unset($my_playlists[$k]);
+        continue;
+    }
+
+    $playlist_ids[] = $playlist_data['list_id'];
+}
+
+$playlist_ids = playlist_has_video($playlist_ids, $video_id);
+
+if ($playlist_ids)
+{
+    foreach ($my_playlists as $k => $playlist_data)
+    {
+        if (in_array($playlist_data['list_id'], $playlist_ids))
+        {
+            $my_playlists[$k]['has_current_video'] = true;
+        }
+    }
+    unset($playlist_ids);
+}
+$smarty->assign('my_playlists', $my_playlists);
 
 
 
