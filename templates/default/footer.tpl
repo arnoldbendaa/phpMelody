@@ -1,8 +1,3 @@
-<a id="back-top" class="hidden-phone hidden-tablet" title="{$lang.top}">
-	<i class="icon-chevron-up"></i>
-	<span></span>
-</a>
-
 {if $ad_6}
 <div class="floating_ad_left sticky_ads">
 {$ad_6}
@@ -17,59 +12,145 @@
 
 </div><!-- end wrapper -->
 
-<div class="row-fluid fixed960">
-	<div class="row-fluid">
-	{if $tpl_name == "video-category"}
-	<a href="{$smarty.const._URL}/rss.php?c={$cat_id}" title="{$meta_title} RSS" class="pm-rss-link"><i class="pm-vc-sprite ico_rss"></i> RSS</a>
-	{elseif $tpl_name == "video-new"}
-	<a href="{$smarty.const._URL}/rss.php" title="{$meta_title} RSS" class="pm-rss-link"><i class="pm-vc-sprite ico_rss"></i> RSS</a>
-	{elseif $tpl_name == "video-top"}
-	<a href="{$smarty.const._URL}/rss.php?feed=topvideos" title="{$meta_title} RSS" class="pm-rss-link"><i class="pm-vc-sprite ico_rss"></i> RSS</a>
-	{elseif $tpl_name == "article-category" || $tpl_name == "article-read"}
-	<a href="{$smarty.const._URL}/rss.php?c={$cat_id}&feed=articles" title="{$meta_title} RSS" class="pm-rss-link"><i class="pm-vc-sprite ico_rss"></i> RSS</a>
-	{else}
-	<a href="{$smarty.const._URL}/rss.php" title="{$meta_title} RSS" class="pm-rss-link"><i class="pm-vc-sprite ico_rss"></i> RSS</a>
-	{/if}
-	</div>
-</div>
 
 {if $ad_2 != ''}
 <div class="pm-ad-zone" align="center">{$ad_2}</div>
 {/if}
 
-<footer>
-<div class="row-fluid fixed960">
-	<div class="span8">
-	<ul>
-		{if $smarty.const.MOBILE_MELODY && $smarty.const.USER_DEVICE == 'mobile'}
-			<li><a href="{$_footer_switch_ui_link}" rel="nofollow">{$lang.switch_to_mobile_ui}</a></li>
-		{/if}
-		<li><a href="{$smarty.const._URL}/index.{$smarty.const._FEXT}">{$lang.homepage}</a></li>
-		<li><a href="{$smarty.const._URL}/contact_us.{$smarty.const._FEXT}">{$lang.contact_us}</a></li>
-		{if $logged_in != '1' && $allow_registration == '1'}
-			{if $allow_facebook_login || $allow_twitter_login}
-			<li><a class="primary ajax-modal" data-toggle="modal" data-backdrop="true" data-keyboard="true" href="#header-register-form">{$lang.register}</a></li>
-			{else}
-			<li><a href="{$smarty.const._URL}/register.{$smarty.const._FEXT}">{$lang.register}</a></li>
-			{/if}
-		{/if}
-		{if $logged_in == '1' && $s_power == '1'}<li><a href="{$smarty.const._URL}/{$smarty.const._ADMIN_FOLDER}/">{$lang.admin_area}</a></li>{/if}
-		{if is_array($footer_page_links)}
-		  {foreach from=$footer_page_links key=k item=page_data}
-			<li><a href="{$page_data.page_url}">{$page_data.title}</a></li>
-		  {/foreach}
-		{/if}
-	</ul>
-	<p>
-	{if $smarty.const._POWEREDBY == 1}{$lang.powered_by}<br />{/if}
-	&copy; {$smarty.now|date_format:'%Y'} {$smarty.const._SITENAME}. {$lang.rights_reserved}
-	</p>
-	</div>
-	<div class="span3">
 
+<footer class="footer">
+	<div class="container">
+		<div class="footer-inner">
+			<div class="footer-wrap-logo">
+				<a href="index.html" class="flogo">
+					<img src="static/img/assets/logo/logo-temp.png" alt="">
+				</a>
+				<div class="fsotial">
+					<a href="#" style="background: #31e328;" class="wrap-icon tumbler">
+						<svg class="svg-icon" width="512px" height="512px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tumbler"></use>
+						</svg>
+					</a>
+					<a href="#" style="background: #557fdb;" class="wrap-icon wordpress">
+						<svg class="svg-icon" width="56.693px" height="56.693px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wordpress"></use>
+						</svg>
+					</a>
+					<a href="#" style="background: #26bdee;" class="wrap-icon tumbler">
+						<svg class="svg-icon" width="512px" height="512px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tumbler"></use>
+						</svg>
+					</a>
+					<a href="#" style="background: #f29d2f;" class="wrap-icon rss">
+						<svg class="svg-icon" width="16px" height="16px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rss"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="footer-panel">
+				<div class="wrap-overflow">
+					<div class="footer-menu">
+						<div class="fm-col">
+							<div class="fm-title">Information</div>
+							<ul>
+								<li>
+									<a href="#">Terms &amp; Conditions</a>
+								</li>
+								<li>
+									<a href="#">Privacy Policy</a>
+								</li>
+								<li>
+									<a href="#">DMCA</a>
+								</li>
+								<li>
+									<a href="#">2257</a>
+								</li>
+							</ul>
+						</div>
+						<div class="fm-col">
+							<div class="fm-title">Support &amp; Help</div>
+							<ul>
+								<li>
+									<a href="#">FAQ</a>
+								</li>
+								<li>
+									<a href="#">Contact Support</a>
+								</li>
+								<li>
+									<a href="#">Feedback Forum</a>
+								</li>
+								<li>
+									<a href="#">Sitemap</a>
+								</li>
+							</ul>
+						</div>
+						<div class="fm-col">
+							<div class="fm-title">Work with us</div>
+							<ul>
+								<li>
+									<a href="#">Content Partners</a>
+								</li>
+								<li>
+									<a href="#">Advertise</a>
+								</li>
+								<li>
+									<a href="#">Webmasters</a>
+								</li>
+								<li>
+									<a href="#">Press</a>
+								</li>
+							</ul>
+						</div>
+						<div class="fm-col">
+							<div class="fm-title">Support &amp; Help</div>
+							<ul>
+								<li>
+									<a href="#">Upload videos</a>
+								</li>
+								<li>
+									<a href="#">Content partners wanted</a>
+								</li>
+								<li>
+									<a href="#">Advertise on GotPorn</a>
+								</li>
+								<li>
+									<a href="#">Webmasters - Make money</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-overflow">
+					<div class="footer-companies">
+						<a href="https://www.google.com" target="_blank" class="footer-companies-item">
+							<img src="static/img/assets/footer/company1.png" alt="">
+						</a>
+						<a href="https://www.google.com" target="_blank" class="footer-companies-item">
+							<img src="static/img/assets/footer/company2.png" alt="">
+						</a>
+						<a href="https://www.google.com" target="_blank" class="footer-companies-item">
+							<img src="static/img/assets/footer/company3.png" alt="">
+						</a>
+					</div>
+					<div class="footer-text">
+						<p>All persons depicted herein were at least 18 years of age at the time of production.</p>
+						<p class="dark">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</p>
+						<p>18 U.S.C. 2257 documentation is maintained by the individual users of this site.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
 </footer>
+<a class="link-top lt-is-visible pulse">
+            <span class="wrap-icon">
+                <svg class="svg-icon" width="5px" height="3px">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arr-up"></use>
+                </svg>
+            </span>
+</a>
+
 <div id="lights-overlay"></div>
 
 {literal}

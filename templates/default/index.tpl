@@ -270,5 +270,35 @@
 		</script>
 	{/literal}
 
+    <div class="spots-bottom">
+        <div class="container">
+            <div class="spots-bottom-inner">
+               {$ad_14}{$ad_14}{$ad_14}{$ad_14}{$ad_14}
+            </div>
+        </div>
+    </div>
+
+
+
+	<div class="article">
+		<div class="container">
+			<div class="wrap-heading clearfix">
+				<div class="block-heading clearfix">
+					<div>About <span class="site-name">Video-<span>tube </span></span>
+					</div>
+				</div>
+			</div>
+			<div class="article-body">
+				<p> <span class="site-name">Video-<span>tube  </span></span>is the best destination for free porn movies that get you off. Listing more than 2 million videos porno enthusiast can choose from makes us a top tube site. We have a great
+					recommendation engine to offer the best XXX vids tailored to your taste. You can also search our sex videos library or start from one of our categories, like teen porn, lesbian porn, mature porn, big tits and milf videos. Our
+					channels page showcase the best porn sites on earth so you can get in the mood with free HD sex trailers featuring naked girls and pornstars with their pussy wet and tits out.</p>
+				<p>Viewing and downloading all movies on <span class="site-name">Video-<span>tube    </span></span>is completely FREE! Press CTRL+D (that's CMD+D for you Mac users) now so you don't need another freeporn site opened in your browser
+					ever again. Oh and our site works on all devices - desktop, mobile, tablet, you name it, so check us out on your favorite platform and start building your porn collection. We are ready to hear your feedback and improve our
+					site based on your recommendations so <span class="site-name">Video-<span>tube  </span></span>achieves the #1 spot on the list of hottest porn sites!</p>
+			</div>
+		</div>
+	</div>
+
+
 
 {include file="footer.tpl" tpl_name="video-categories-page"}

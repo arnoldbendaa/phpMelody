@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99fc3c99-095b-407b-ab21-eb1c9091e8ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/default/indexVideoList.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax.php" afterPath="$PROJECT_DIR$/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/functions.php" afterPath="$PROJECT_DIR$/include/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/providers.php" afterPath="$PROJECT_DIR$/providers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/css/custom.css" afterPath="$PROJECT_DIR$/templates/default/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/css/index.css" afterPath="$PROJECT_DIR$/templates/default/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/css/main.min.css" afterPath="$PROJECT_DIR$/templates/default/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/header.tpl" afterPath="$PROJECT_DIR$/templates/default/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/footer.tpl" afterPath="$PROJECT_DIR$/templates/default/footer.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/index.tpl" afterPath="$PROJECT_DIR$/templates/default/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/my-player.tpl" afterPath="$PROJECT_DIR$/templates/default/my-player.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/sidebar.tpl" afterPath="$PROJECT_DIR$/templates/default/sidebar.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/video-provider.tpl" afterPath="$PROJECT_DIR$/templates/default/video-provider.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/video-watch-playlists.tpl" afterPath="$PROJECT_DIR$/templates/default/video-watch-playlists.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/watch.php" afterPath="$PROJECT_DIR$/watch.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="video-categories-page.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="video-categories-page.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/default/video-categories-page.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+            <state relative-caret-position="93">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -64,34 +54,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video-providers-page.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/default/video-providers-page.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="33" column="45" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/default/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="944">
+              <caret line="303" column="19" lean-forward="false" selection-start-line="303" selection-start-column="19" selection-end-line="303" selection-end-column="19" />
               <folding>
                 <element signature="e#556#2877#0#Smarty" expanded="false" />
-                <marker date="1526540588285" expanded="false" signature="6068:6106" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="watch.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/watch.js">
+      <file leaf-file-name="footer.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/footer.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="322">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+                <element signature="e#1698#1703#0#HTML" expanded="true" />
+                <element signature="e#2004#2009#0#HTML" expanded="true" />
+                <element signature="e#2739#2744#0#HTML" expanded="true" />
+                <marker date="1526632387422" expanded="true" signature="8642:8649" ph="×" />
+                <marker date="1526632387422" expanded="true" signature="8985:8995" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/default/css/main.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="4" column="30503" lean-forward="false" selection-start-line="4" selection-start-column="30503" selection-end-line="4" selection-end-column="30503" />
               <folding />
             </state>
           </provider>
@@ -100,7 +109,7 @@
       <file leaf-file-name="ajax.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
+            <state relative-caret-position="1817">
               <caret line="3956" column="40" lean-forward="false" selection-start-line="3956" selection-start-column="33" selection-end-line="3956" selection-end-column="40" />
               <folding>
                 <element signature="e#1483#10519#0#PHP" expanded="false" />
@@ -185,20 +194,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video-provider.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/default/video-provider.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1288">
-              <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
+            <state relative-caret-position="47725">
               <caret line="2088" column="9" lean-forward="false" selection-start-line="2088" selection-start-column="9" selection-end-line="2088" selection-end-column="9" />
               <folding>
                 <element signature="e#187255#188733#0#PHP" expanded="false" />
@@ -320,11 +319,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pm_</find>
-      <find>pm_p</find>
-      <find>pm_provi</find>
-      <find>pm_provid</find>
-      <find>pm_provider</find>
       <find>$providers_data</find>
       <find>$config</find>
       <find>_SEOMOD</find>
@@ -350,6 +344,11 @@
       <find>results</find>
       <find>loadmore</find>
       <find>$ids</find>
+      <find>ad_</find>
+      <find>&lt;sty</find>
+      <find>.footer-menu ul li{</find>
+      <find>&lt;footer</find>
+      <find>back-top</find>
     </findStrings>
     <replaceStrings>
       <replace>{$smarty.const._URL}/templates/{$template_dir}/img</replace>
@@ -373,7 +372,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../PHP Melody/include/securimage/securimage.php" />
         <option value="$PROJECT_DIR$/templates/default/user-register-form.tpl" />
         <option value="$PROJECT_DIR$/js/jquery.browser.min.js" />
         <option value="$PROJECT_DIR$/templates/default/helpers/signup.html" />
@@ -411,7 +409,6 @@
         <option value="$PROJECT_DIR$/templates/default/my-player.tpl" />
         <option value="$PROJECT_DIR$/templates/default/video-watch-playlists.tpl" />
         <option value="$PROJECT_DIR$/js/menu.js" />
-        <option value="$PROJECT_DIR$/templates/default/footer.tpl" />
         <option value="$PROJECT_DIR$/templates/default/css/custom.css" />
         <option value="$PROJECT_DIR$/templates/default/video-categories-page.tpl" />
         <option value="$PROJECT_DIR$/templates/default/video-providers-page.tpl" />
@@ -419,11 +416,13 @@
         <option value="$PROJECT_DIR$/providers.php" />
         <option value="$PROJECT_DIR$/templates/default/video-provider.tpl" />
         <option value="$PROJECT_DIR$/templates/default/sidebar.tpl" />
-        <option value="$PROJECT_DIR$/templates/default/css/main.min.css" />
         <option value="$PROJECT_DIR$/templates/default/indexVideoList.tpl" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/ajax.php" />
         <option value="$PROJECT_DIR$/templates/default/index.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/css/main.min.css" />
+        <option value="$PROJECT_DIR$/templates/default/footer.tpl" />
+        <option value="$PROJECT_DIR$/templates/default/css/index.css" />
       </list>
     </option>
   </component>
@@ -458,8 +457,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -697,21 +696,22 @@
       <workItem from="1526296498463" duration="1001000" />
       <workItem from="1526359311327" duration="15767000" />
       <workItem from="1526433926571" duration="20416000" />
-      <workItem from="1526534291275" duration="3844000" />
+      <workItem from="1526534291275" duration="4783000" />
+      <workItem from="1526629988783" duration="3710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358219000" />
+    <option name="totallyTimeSpent" value="362868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2391" y="-9" width="2418" height="1318" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1445993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -724,7 +724,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1445993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -748,19 +747,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/videos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/casino.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_0.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="422" column="9" lean-forward="false" selection-start-line="422" selection-start-column="9" selection-end-line="422" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/footer.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18078">
-          <caret line="786" column="31" lean-forward="true" selection-start-line="786" selection-start-column="31" selection-end-line="786" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/melody.dev.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3197">
@@ -988,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="824" column="9" lean-forward="false" selection-start-line="824" selection-start-column="9" selection-end-line="824" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,13 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/css/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="4" column="39990" lean-forward="false" selection-start-line="4" selection-start-column="39989" selection-end-line="4" selection-end-column="39990" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/default/video-providers-page.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -1068,7 +1044,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/watch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="391">
           <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding />
         </state>
@@ -1076,7 +1052,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
+        <state relative-caret-position="47725">
           <caret line="2088" column="9" lean-forward="false" selection-start-line="2088" selection-start-column="9" selection-end-line="2088" selection-end-column="9" />
           <folding>
             <element signature="e#187255#188733#0#PHP" expanded="false" />
@@ -1185,22 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/video-categories-page.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/sidebar.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/default/indexVideoList.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
@@ -1211,7 +1171,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
+        <state relative-caret-position="1817">
           <caret line="3956" column="40" lean-forward="false" selection-start-line="3956" selection-start-column="33" selection-end-line="3956" selection-end-column="40" />
           <folding>
             <element signature="e#1483#10519#0#PHP" expanded="false" />
@@ -1285,6 +1245,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="4" column="30503" lean-forward="false" selection-start-line="4" selection-start-column="30503" selection-end-line="4" selection-end-column="30503" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+            <element signature="e#1698#1703#0#HTML" expanded="true" />
+            <element signature="e#2004#2009#0#HTML" expanded="true" />
+            <element signature="e#2739#2744#0#HTML" expanded="true" />
+            <marker date="1526632387422" expanded="true" signature="8642:8649" ph="×" />
+            <marker date="1526632387422" expanded="true" signature="8985:8995" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="303" column="19" lean-forward="false" selection-start-line="303" selection-start-column="19" selection-end-line="303" selection-end-column="19" />
+          <folding>
+            <element signature="e#556#2877#0#Smarty" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
@@ -1299,14 +1303,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/index.tpl">
+    <entry file="file://$PROJECT_DIR$/templates/default/sidebar.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="e#556#2877#0#Smarty" expanded="false" />
-            <marker date="1526540588285" expanded="false" signature="6068:6106" ph="..." />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/video-categories-page.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
